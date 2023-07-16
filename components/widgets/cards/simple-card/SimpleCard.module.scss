@@ -1,0 +1,18 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+
+.light{
+  background:$light;
+}
+
+.brick{
+  background:$brick;
+}
+
+.outline-dark-grey {
+  border: 1px solid rgba(57, 61, 70, .2);
+}
+
+.outline-dark-grey {
+  border: 1px solid #B48965;
+}

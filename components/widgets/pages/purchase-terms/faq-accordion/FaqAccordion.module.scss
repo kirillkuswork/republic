@@ -1,0 +1,202 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+.section_container {
+    padding-top: wv-1460(167px);
+    padding-bottom: wv-1460(160px);
+    @include wrapper();
+    @include laptop() {
+        padding-top: wv-1200(167px);
+        padding-bottom: wv-1200(160px);
+    }
+    @include tablet() {
+        padding-top: wv-768(167px);
+        padding-bottom: wv-768(160px);
+    }
+    @include mobile() {
+        padding-top: wv-380(79px);
+        padding-bottom: wv-380(60px);
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+.section_header {
+    border-bottom: 1px solid rgba(57, 61, 70, 0.2);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    padding-bottom: wv-1460(5px);
+    @include laptop() {
+        padding-top: wv-1200(5px);
+    }
+    @include tablet() {
+        padding-top: wv-768(5px);
+    }
+    @include mobile() {
+        border-bottom: 0;
+        padding-bottom: wv-380(35px);
+        @include wrapper();
+    }
+}
+.h3 {
+    @include H3();
+}
+.h4 {
+    @include H4();
+}
+.qa_block {
+    display: flex;
+    gap: wv-1460(80px);
+    padding-top: wv-1460(20px);
+    @include laptop() {
+        gap: wv-1200(80px);
+        padding-top: wv-1200(20px);
+    }
+    @include tablet() {
+        gap: wv-768(80px);
+        padding-top: wv-768(20px);
+    }
+    @include mobile() {
+        flex-direction: column;
+        padding-top: 0;
+        gap: wv-380(54px);
+    }
+}
+.tab_qa {
+    display: flex;
+    flex-direction: row;
+    gap: wv-1460(5px);
+    width: wv-1460(520px);
+    flex-wrap: wrap;
+    height: fit-content;
+    flex-shrink: 0;
+    @include laptop() {
+        gap: wv-1200(5px);
+        width: 40%;
+    }
+    @include tablet() {
+        gap: wv-768(5px);
+        width: 40%;
+    }
+}
+.qa_question {
+    width: 100%;
+    @include mobile() {
+        @include wrapper();
+    }
+}
+//стили аккордеона
+.accordion_details {
+    display: flex;
+    padding-top: wv-1460(21px);
+    padding-bottom: wv-1460(25px);
+    border-bottom: 1px solid rgb(57, 61, 70, 0.2);
+    @include laptop() {
+        padding-top: wv-1200(21px);
+        padding-bottom: wv-1200(25px);
+    }
+    @include tablet() {
+        padding-top: wv-768(21px);
+        padding-bottom: wv-768(25px);
+    }
+    @include mobile() {
+        padding-top: wv-380(14px);
+        padding-bottom: wv-380(16px);
+    }
+    &:first-of-type {
+        padding-top: 0;
+    }
+    &:last-of-type {
+        border-bottom: none;
+    }
+    &[open] {
+        padding-bottom: wv-1460(58px);
+        @include laptop() {
+            padding-bottom: wv-1200(58px);
+        }
+        @include tablet() {
+            padding-bottom: wv-768(58px);
+        }
+        @include mobile() {
+            padding-bottom: wv-380(36px);
+        }
+    }
+    .accordion_title {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::-webkit-details-marker {
+            display: none;
+        }
+        .accordion_title_text {
+            @include T0-bold();
+            width: wv-1460(750px);
+            @include laptop() {
+                width: 90%;
+            }
+            @include tablet() {
+                width: 85%;
+            }
+            @include mobile() {
+                @include T1-bold();
+                width: 80%;
+                &:hover {
+                    color: $dark-grey !important;
+                }
+            }
+            @include hover() {
+                &:hover {
+                    color: $brick;
+                }
+            }
+        }
+        .accordion_btn {
+            position: relative;
+        }
+    }
+    .accordion_answer {
+        @include T0();
+        margin-top: wv-1460(25px);
+        border-top: 1px solid $brick;
+        padding-top: wv-1460(21px);
+        a {
+            color: $brick;
+        }
+        @include laptop() {
+            margin-top: wv-1200(25px);
+            padding-top: wv-1200(21px);
+        }
+        @include tablet() {
+            margin-top: wv-768(25px);
+            padding-top: wv-768(21px);
+        }
+        @include mobile() {
+            padding-top: wv-380(16px);
+            margin-top: wv-380(16px);
+            @include T1();
+        }
+        p {
+            width: wv-1460(750px);
+            @include laptop() {
+                width: 90%;
+            }
+            @include tablet() {
+                width: 85%;
+            }
+            @include mobile() {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.button {
+  &_active {
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  svg {
+    transition: transform 0.2s ease-in-out;
+  }
+}

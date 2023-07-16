@@ -1,0 +1,92 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+.section_container{
+  padding-top:wv-1460(108px);
+  @include laptop() {
+    padding-top:wv-1200(108px);
+  }
+  @include tablet() {
+    padding-top:wv-768(114px);
+  }
+  @include mobile() {
+    padding-top:wv-380(73px);
+  }
+  @include wrapper;
+}
+.section_container_dinamic{
+  padding-top:wv-1460(108px);
+  @include wrapper;
+  @include laptop() {
+    padding-top:wv-1200(108px);
+  }
+  @include tablet() {
+    padding-top:wv-768(114px);
+  }
+  @include mobile() {
+    padding-top:wv-380(73px);
+    padding-right:wv-380(0px) !important;
+    padding-left:wv-380(0px) !important;
+    .section_header{
+      @include wrapper;
+    }
+  }
+}
+.section_header{
+  display:flex;
+  flex-direction: row;
+  padding-bottom: wv-1460(26px);
+  gap:wv-1460(4px);
+  @include laptop() {
+    gap:wv-1200(4px);
+    padding-bottom: wv-1200(26px);
+  }
+  @include tablet() {
+    gap:wv-768(4px);
+    padding-bottom: wv-768(26px);
+  }
+  @include mobile() {
+    gap:wv-380(4px);
+    padding-bottom: wv-380(26px);
+  }
+}
+.h3{
+  @include H3();
+}
+.h4{
+  @include H4();
+
+}
+
+//общий контейнер для карточек
+.card_container{
+  display:flex;
+  flex-direction: row;
+  gap:wv-1460(20px);
+  @include laptop() {
+    gap:wv-1200(20px);
+  }
+  @include tablet() {
+    gap:wv-768(20px);
+  }
+  @include mobile() {
+    flex-direction: column;
+    gap:wv-380(20px);
+  }
+}
+.card_container__wrap{
+  display:flex;
+  flex-direction: row;
+  gap:wv-1460(20px);
+  flex-wrap: wrap;
+
+  @include laptop() {
+    gap:wv-1200(20px);
+  }
+  @include tablet() {
+    gap:wv-768(20px);
+  }
+  @include mobile() {
+    gap:wv-380(20px);
+    flex-direction: row;
+  }
+}

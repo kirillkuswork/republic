@@ -1,0 +1,112 @@
+@import "../../../../styles/vars";
+
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  z-index: 1000;
+}
+
+.wrapper {
+  @include wrapper;
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding-top: wv-1460(20px);
+  padding-bottom: wv-1460(30px);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include laptop() {
+    padding-top: wv-1200(20px);
+    padding-bottom: wv-1200(30px);
+  }
+
+  @include tablet() {
+    padding-top: wv-768(20px);
+    padding-bottom: wv-768(30px);
+  }
+
+  @include mobile() {
+    padding-top: wv-380(20px);
+    padding-bottom: wv-380(20px);
+  }
+
+  &.light {
+    background-color: $light;
+  }
+
+  &.white {
+    background-color: $white;
+  }
+
+  &.darker_light {
+    background-color: $darker-light;
+  }
+}
+
+.closeBtnMobile {
+  position: absolute;
+  top: wv-380(20px);
+  right: wv-380(20px);
+}
+
+.title {
+  @include H4();
+  color: $brick;
+  padding-right: 35px;
+  margin-bottom: 10px;
+  line-height: wv-380(38px) !important;
+}
+
+.text {
+  border-top: 1px solid rgb(22%, 24%, 27%, 0.15);
+  margin-top: 3.3vh;
+  padding-top: wv-380(17px);
+  padding-left: wv-380(110px);
+  @include T2();
+}
+
+.logo {
+  height: 4.5vh;
+  width: auto;
+}
+
+.logoDiv {
+  height: 4.5vh;
+}
+
+.number {
+  @include H1();
+  color: $brick;
+  margin-bottom: wv-380(10px);
+}
+
+.imgDiv {
+  width: 100%;
+  height: 45.45vh;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .arrows {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    display: flex;
+    column-gap: 5px;
+
+    @include mobile(){
+      min-width:65px;
+      justify-content: space-between;
+    }
+  }
+}

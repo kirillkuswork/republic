@@ -1,0 +1,238 @@
+@import "../../../../styles/vars";
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.flat {
+  position: relative;
+  @include wrapper;
+  display: grid;
+  grid-template-columns: wv-1460(340px) wv-1460(1055px);
+  grid-template-rows: repeat(5, auto);
+  grid-column-gap: wv-1460(20px);
+
+  @include laptop() {
+    grid-column-gap: wv-1200(20px);
+    grid-template-columns: wv-1200(310px) wv-1200(835px);
+  }
+
+  @include tablet() {
+    grid-column-gap: 0;
+    grid-template-columns: 35% 65%;
+    padding-bottom: wv-768(80px);
+  }
+
+  @include mobile {
+    grid-column-gap: 0;
+    grid-template-columns: 35% 65%;
+    padding-bottom: wv-380(80px);
+  }
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.title {
+  @include H1;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  color: $brick;
+  margin-bottom: wv-1460(15px);
+
+  @include laptop() {
+    margin-bottom: wv-1200(20px);
+  }
+
+  @include tablet() {
+    margin-bottom: 0;
+  }
+
+  @include mobile() {
+    margin-bottom: 0;
+  }
+}
+
+.details {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  @include tablet() {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+  }
+
+  @include mobile() {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+  }
+}
+
+.buttons {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: wv-1460(5px);
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: wv-1460(20px);
+
+  @include laptop() {
+    gap: wv-1200(5px);
+    margin-bottom: wv-1200(20px);
+  }
+
+  @include tablet() {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    gap: wv-768(5px);
+    margin-bottom: wv-768(20px);
+    margin-left: 0;
+    margin-right: auto;
+    align-items: flex-end;
+  }
+
+  @include mobile() {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    gap: wv-380(5px);
+    margin-bottom: wv-380(20px);
+    margin-left: 0;
+    margin-right: auto;
+    align-items: flex-end;
+  }
+}
+
+
+.price_block {
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: wv-1460(15px);
+  margin-bottom: wv-1460(55px);
+  border-top: 1px solid rgb($dark-grey, 0.15);
+
+  @include laptop() {
+    padding-top: wv-1200(15px);
+    margin-bottom: wv-1200(40px);
+  }
+
+  @include tablet() {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+    padding-top: wv-768(15px);
+    margin-bottom: wv-768(55px);
+  }
+
+  @include mobile() {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+    padding-top: wv-380(15px);
+    margin-bottom: wv-380(55px);
+  }
+}
+
+.deadline {
+  width: wv-1460(150px);
+
+    @include laptop() {
+      width: wv-1200(120px);
+      }
+
+      @include tablet() {
+        width: wv-768(150px);
+      }
+
+      @include mobile() {
+        width: wv-380(150px);
+      }
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: wv-1460(10px);
+  grid-row: 5 / 6;
+  grid-column: 1 / 2;
+  margin-bottom: wv-1460(20px);
+
+  @include laptop() {
+    flex-direction: column;
+    margin-bottom: wv-1200(20px);
+    gap: wv-1200(10px);
+  }
+
+  @include tablet() {
+    grid-column: 1 / 3;
+    margin-bottom: wv-768(20px);
+    gap: wv-768(10px);
+  }
+
+  @include mobile() {
+    grid-column: 1 / 3;
+    margin-bottom: wv-380(20px);
+    gap: wv-380(10px);
+  }
+
+  &__absolute {
+    position: absolute;
+    right: wv-1460(40px);
+    bottom: wv-1460(20px);
+
+    @include laptop() {
+      right: wv-1200(40px);
+      bottom: wv-1200(20px);
+    }
+
+    @include tablet() {
+      grid-column: 1 / 3;
+      position: relative;
+      width: fit-content;
+      right: auto;
+      bottom: auto;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    @include mobile() {
+      grid-column: 1 / 3;
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  & > * {
+    width: 100%;
+  }
+
+  & path {
+    stroke: $dark-grey;
+  }
+}
+
+.schemes {
+  grid-row: 1 / 6;
+  grid-column: 2 / 3;
+
+  @include tablet() {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+
+  @include mobile() {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+}

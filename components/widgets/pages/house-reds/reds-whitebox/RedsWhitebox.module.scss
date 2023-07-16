@@ -1,0 +1,177 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+
+.modal {
+  position: relative;
+  margin-left: 24.7vw;
+  background-color: $light;
+  outline: none;
+  transition: all 1s ease;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  @include padding-top();
+  padding-bottom: wv-1460(65px);
+  padding-right: 1.35vw;
+  padding-left: 1.35vw;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(57, 61, 70, 0.7) !important;
+}
+
+.titleContent {
+  border-bottom: 1px solid rgba(57, 61, 70, 0.2);
+  .title {
+    @include H2(); 
+    color: $brick;
+    margin-bottom: wv-1460(144px);
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: 1.35vw;
+    top: 1.35vw;
+  }
+}
+
+.text {
+  @include T1();
+  margin-left: 32.88vw;
+  margin-top: wv-1460(54px);
+  margin-bottom: wv-1460(54px);
+}
+
+.imageDiv {
+  position: relative;
+  width: 72.6vw;
+  height: 41.1vw;
+
+  .whiteBoxImg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .number {
+    position: absolute;
+    border-radius: 50%;
+
+    .tooltipText {
+      // visibility: hidden;
+      width: 23.39vw;
+      background-color: $light;
+      padding: 0.96vw 1.37vw;
+      @include T1();
+      color: $dark-grey;
+    
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      // opacity: 0;
+      transition: opacity 0.3s;
+
+      .tooltipArrow {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        
+        background-color: $light;
+        transform: rotate(-45deg);
+      }
+    }
+    .tooltipTextRight {
+      left: 130%;
+      .tooltipArrow {
+        left: -4px;
+        top: 10px;
+      }
+    }
+    .tooltipTextLeft {
+      right: 130%;
+      .tooltipArrow {
+        right: -4px;
+        top: 10px;
+      }
+    }
+
+    // &:hover{
+    //   .tooltipText {
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    // } 
+  }
+
+
+}
+
+
+.descriptionsDiv {
+  margin-top: wv-1460(55px);
+
+
+  .description {
+    display: flex;
+    margin-bottom: wv-1460(50px);
+  }
+
+  .part {
+    width: 45.28%;
+    @include H5();
+  }
+
+  .details {
+    width: 54.72%;
+  }
+
+  .detail {
+    display: flex;
+    margin-bottom: 0.68vw;
+  }
+
+  .detailIcon {
+    width: 1.37vw;
+    min-width: 1.37vw;
+    height: 1.37vw;
+    background: $dark-grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    font-family: $primary-700-font;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @media screen and (max-width: 1460px) {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      min-height: 20px;
+      font-size: 12px;
+    }
+  }
+
+  .detailTitle {
+    @include T1();
+    margin-left: 1.35vw;
+    width: fit-content;
+  }
+}
+
+
+.disabled {
+  display: none;
+}
+
+.arrowUp {
+	margin-left: auto;
+}

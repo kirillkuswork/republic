@@ -1,0 +1,65 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23.6%;
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+    }
+
+    div {
+        @media screen and (max-width: 1023px) {
+            align-self: flex-end;
+            @include padding-right();
+        }
+    }
+}
+
+.map {
+    svg {
+        display: block;
+        width: wv-1460(220px);
+        @media screen and (max-width: 1023px) {
+            margin-top: 51px;
+            margin-bottom: 30px;
+        }
+        @include laptop() {
+            width: wv-1200(220px);
+        }
+        @include tablet() {
+            width: wv-768(220px);
+        }
+        @include mobile() {
+            width: wv-380(120px);
+        }
+    }
+}
+
+.title {
+    @include H4();
+    color: #ad7c53;
+}
+
+.arrows {
+    display: flex;
+    column-gap: 5px;
+    margin-top: wv-1460(40px);
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+    div {
+        width: fit-content;
+        padding: 0;
+        svg {
+            width: fit-content;
+        }
+    }
+}
+
+.disabled {
+    display: none;
+}

@@ -1,0 +1,47 @@
+@import "../../../styles/vars";
+
+.component {
+  display: block;
+  width: wv-1460(42px);
+  height: wv-1460(53px);
+
+  @include laptop() {
+    width: wv-1200(42px);
+    height: wv-1200(53px);
+  }
+
+  @include tablet() {
+    width: wv-768(42px);
+    height: wv-768(53px);
+  }
+
+  @include mobile() {
+    width: wv-380(42px);
+    height: wv-380(53px);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.rotate {
+  width: wv-1460(64px);
+  height: wv-1460(68px);
+
+  @include laptop() {
+    width: wv-1200(64px);
+    height: wv-1200(68px);
+  }
+
+  @include tablet() {
+    width: wv-768(64px);
+    height: wv-768(68px);
+  }
+
+  @include mobile() {
+    width: wv-380(64px);
+    height: wv-380(68px);
+  }
+}

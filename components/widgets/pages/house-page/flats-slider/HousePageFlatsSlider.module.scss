@@ -1,0 +1,58 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+$transition: all .3s ease;
+
+
+.sliderSection {
+  width: 100%;
+  overflow-x: hidden;
+
+  .slider {
+    padding-top: wv-1460(219px);
+    padding-bottom: wv-1460(100px);
+    position: relative;
+    background-color: $dark-grey;
+    @include mobile() {
+      padding-top: wv-380(108px);
+    }
+
+    svg {
+      path {
+        fill: $light;
+      }
+
+      @media (pointer: fine) {
+        &:hover {
+          path {
+            fill: $brick;
+          }
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        path {
+          fill: $light
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      &:after {
+        background-color: $dark-grey;
+        width: 2px;
+        @include mobile() {
+          display: none;
+        }
+        @include tablet() {
+          display: none; 
+        }
+      }
+    }
+
+    .img {
+      object-fit: cover;
+    }
+  }
+  
+}

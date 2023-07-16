@@ -1,0 +1,203 @@
+@import "../../../../../styles/functions";
+@import "../../../../../styles/vars";
+
+.panoramaContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: $dark-grey;
+  overflow: hidden;
+
+  .title {
+    @include H1;
+    color: $light;
+    position: absolute;
+    z-index: 1;
+    transition: all 1.2s;
+
+    &_text1 {
+      top: wv-1460(26px);
+      left: wv-1460(15px);
+
+      @include laptop() {
+        top: wv-1200(26px);
+        left: wv-1200(15px);
+      }
+
+      @include tablet() {
+        top: wv-768(17px);
+        left: wv-768(15px);
+      }
+
+      @include mobile() {
+        top: wv-380(17px);
+        left: wv-380(18px);
+      }
+    }
+
+    &_text2 {
+      top: wv-1460(26px);
+      right: wv-1460(15px);
+
+      @include laptop() {
+        top: wv-1200(26px);
+        right: wv-1200(15px);
+      }
+
+      @include tablet() {
+        top: wv-768(17px);
+        right: wv-768(15px);
+      }
+
+      @include mobile() {
+        top: wv-380(77px);
+        right: wv-380(18px);
+      }
+    }
+
+    &_text3 {
+      top: wv-1460(169px);
+      left: wv-1460(649px);
+
+      @include laptop() {
+        top: wv-1200(148px);
+      }
+
+      @include tablet() {
+        top: wv-768(70px);
+        left: wv-768(350px)
+      }
+
+      @include mobile() {
+        top: wv-380(137px);
+        left: wv-380(18px)
+      }
+    }
+  }
+
+  .wrapper {
+    height: 100vh;
+    cursor: url("/images/location/scrollable-indicator.svg"), pointer;
+
+    @media screen and (min-width: 1024px) and (max-height: 767px) {
+      cursor: pointer;
+    }
+
+    @include tablet() {
+      cursor: pointer;
+    }
+
+    @include mobile() {
+      cursor: pointer;
+    }
+
+    .panorama {
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 60%;
+    }
+  }
+
+  .scrollableIndicator {
+    position: absolute;
+    top: wv-1460(262px);
+    left: wv-1460(335px);
+    transition: all 0.6s;
+
+    @include laptop() {
+      top: wv-1200(262px);
+      left: wv-1200(335px);
+    }
+
+    @include tablet() {
+      top: wv-768(100px);
+      left: wv-768(18px);
+    }
+
+    @include mobile() {
+      left: wv-380(18px);
+      top: wv-380(84px);
+    }
+
+    .desktop {
+      display: none;
+
+      @media screen and (min-width: 1024px) and (max-height: 767px) {
+        display: block;
+      }
+
+      @include tablet() {
+        display: none;
+      }
+
+      @include mobile() {
+        display: none;
+      }
+      .svg {
+        width: wv-1460(50px);
+        height: wv-1460(50px);
+
+        @include laptop() {
+          width: wv-1200(50px);
+          height: wv-1200(50px);
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .cursor {
+        position: absolute;
+        bottom: wv-1460(-20px);
+        left: wv-1460(20px);
+
+        @include laptop() {
+          bottom: wv-1200(-20px);
+          left: wv-1200(20px);
+        }
+
+        svg {
+          width: wv-1460(25px);
+          height: wv-1460(25px);
+
+          @include laptop() {
+            width: wv-1200(25px);
+            height: wv-1200(25px);
+          }
+        }
+      }
+    }
+
+    .mobile {
+      display: none;
+
+      @include tablet() {
+        display: block;
+
+        svg {
+          width: wv-768(18px);
+          height: wv-768(14px);
+        }
+      }
+
+      @include mobile() {
+        display: block;
+
+        svg {
+          width: wv-380(18px);
+          height: wv-380(14px);
+        }
+      }
+    }
+
+    &_show {
+      opacity: 1;
+    }
+
+    &_hide {
+      opacity: 0;
+    }
+  }
+}

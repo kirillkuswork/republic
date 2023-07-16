@@ -1,0 +1,93 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/functions';
+
+.modal {
+    position: relative;
+    outline: none;
+    height: 100vh;
+    overflow-y: scroll;
+    width: wv-1460(1100px);
+    padding-top: wv-1460(26px);
+    padding-bottom: wv-1460(65px);
+    margin-left: auto;
+    // background-color: transparent !important;
+
+    @media screen and (orientation: portrait) {
+        position: relative;
+        outline: none;
+        height: 100vh;
+        overflow-y: scroll;
+        width: 100%;
+        padding-top: wv-1460(26px);
+        padding-bottom: wv-1460(65px);
+        margin-left: auto;
+    }
+
+    @include laptop() {
+        width: wv-1200(1000px);
+    }
+
+    @include tablet() {
+        width: 100%;
+    }
+
+    @include mobile {
+        padding-top: wv-380(16px);
+        padding-bottom: wv-380(80px);
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($dark-grey, 0.9) !important;
+}
+
+.title {
+    @include H2;
+    color: $brick;
+    margin-bottom: wv-1460(5px);
+
+    @include mobile {
+        max-width: 90%;
+        margin-bottom: wv-380(12px);
+    }
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-bottom: wv-1460(179px);
+
+    @include laptop() {
+        margin-bottom: wv-1200(100px);
+    }
+
+    @include tablet() {
+        margin-bottom: wv-768(100px);
+    }
+
+    @include mobile {
+        margin-bottom: wv-380(60px);
+    }
+
+    svg {
+        margin-right: wv-1460(11px);
+
+        @include mobile {
+            margin-right: wv-380(11px);
+        }
+    }
+
+    &__text {
+        @include C1;
+        color: $brick;
+    }
+}
+
+.sliderWrapper {
+    margin-top: wv-1460(-25px);
+}

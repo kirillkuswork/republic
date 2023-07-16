@@ -1,0 +1,126 @@
+@import "../../../../../styles/vars";
+
+.top {
+  position: relative;
+  @include padding-left();
+  display: flex;
+  justify-content: flex-end;
+  height: 90vh;
+  width: 100%;
+
+  @include tablet {
+    @include padding-right();
+    height: wv-768(1010px);
+  }
+
+  @include mobile {
+    @include padding-right();
+    height: wv-380(580px);
+  }
+}
+
+.image {
+  position: relative;
+  height: 100%;
+  width: 73%;
+
+  img {
+    object-fit: cover;
+  }
+
+  @include tablet() {
+    margin-top: wv-768(250px);
+    height: wv-768(730px);
+    width: 100%;
+  }
+
+  @include mobile() {
+    margin-top: wv-380(165px);
+    height: wv-380(400px);
+    width: 100%;
+  }
+}
+
+.title {
+  @include H1();
+  @include wrapper();
+  position: absolute;
+  color: $light;
+  top: 10px;
+  left: 0;
+  z-index: 2;
+
+  @include laptop() {
+    // top: wv-1200(80px);
+  }
+
+  @include tablet() {
+    display: flex;
+    flex-direction: column;
+    top: wv-768(30px);
+    // @include padding-left;
+    // @include padding-right;
+    //Для более красивого отображения взяты размеры шрифта из laptop()
+    font-size: wv-1200(139px);
+    line-height: wv-1200(130px);
+    width: 100%;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    line-height: wv-380(60px);
+    // @include padding-left;
+    // @include padding-right;
+    padding-left: wv-380(18px);
+    padding-right: wv-380(15px);
+    width: 100%;
+  }
+
+  span {
+    display: inline-block;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__highlighted {
+    color: $brick-light;
+    z-index: 3;
+    position: relative;
+    top: wv-1460(-20px);
+    line-height: 120%;
+
+    @include mobile {
+      align-self: flex-start;
+    }
+  }
+
+  &__1 {
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    top: wv-1460(-40px);
+
+    @include tablet {
+      align-self: flex-end;
+    }
+
+    @include mobile {
+      align-self: flex-end;
+    }
+  }
+
+  &__2 {
+    z-index: 1;
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: wv-1460(-40px);
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../../styles/vars';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: wv-1460(340px);
+    min-height: wv-1460(400px);
+    padding: wv-1460(25px) wv-1460(21px);
+    padding-bottom: wv-1460(20px);
+    padding-right: wv-1460(15px);
+    background-color: $brick;
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        width: wv-1200(300px);
+        padding: wv-1200(17px);
+    }
+
+    @include tablet() {
+        width: wv-768(300px);
+        padding: wv-768(17px);
+    }
+
+    @include mobile {
+        width: 100%;
+        min-height: wv-380(181px);
+        padding: wv-380(17px);
+        padding-bottom: wv-380(20px);
+        border: 1px solid rgba($light, 0.3);
+        background-color: transparent;
+    }
+
+    p {
+        @include H5;
+        color: $light;
+    }
+
+    @include laptop() {
+        width: wv-1200(340px);
+        min-height: wv-1200(400px);
+    }
+}
+
+.button {
+    align-self: flex-start;
+    margin-top: wv-1460(36px);
+    // width: wv-1460(147px);
+
+    @include laptop() {
+        // width: wv-1200(147px);
+    }
+
+    @include tablet-p() {
+        // width: wv-1200(147px);
+    }
+
+    @include tablet {
+        // width: wv-768(147px);
+    }
+
+    @include mobile {
+        // width: wv-380(147px);
+        margin-top: wv-380(21px);
+    }
+}

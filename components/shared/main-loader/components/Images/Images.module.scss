@@ -1,0 +1,322 @@
+@import '../../../../../styles/vars';
+
+.image {
+    position: absolute;
+
+    img {
+        object-fit: cover;
+    }
+
+    &__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%);
+    }
+
+    &_1560 {
+        &_1 {
+            width: wv-1460(460px);
+            height: wv-1460(514px);
+            top: 22%;
+            left: 7%;
+
+            transform-origin: right !important;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1560_1_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(170px / 1.2);
+                height: wv-380(190px / 1.2);
+                top: 45%;
+                left: 4%;
+            }
+
+            @include mobile {
+                width: wv-380(170px);
+                height: wv-380(190px);
+                top: 45%;
+                left: 4%;
+            }
+        }
+    }
+
+    &_1800 {
+        &_1 {
+            width: wv-1460(460px);
+            height: wv-1460(510px);
+            top: 16.5%;
+            left: 50%;
+
+            transform-origin: left !important;
+            z-index: 3;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1800_1_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(200px);
+                height: wv-380(220px);
+                top: 29%;
+                left: 43%;
+            }
+
+            @include mobile {
+                width: wv-380(200px);
+                height: wv-380(220px);
+                top: 29%;
+                left: 43%;
+            }
+        }
+
+        &_2 {
+            width: wv-1460(340px);
+            height: wv-1460(226px);
+            top: 54.5%;
+            left: 42%;
+
+            z-index: 2;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1800_2_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(140px);
+                height: wv-380(90px);
+                top: 53%;
+                left: 28%;
+            }
+
+            @include mobile {
+                width: wv-380(140px);
+                height: wv-380(90px);
+                top: 53%;
+                left: 28%;
+            }
+        }
+
+        &_3 {
+            width: wv-1460(220px);
+            height: wv-1460(146px);
+            top: 25.5%;
+            left: 25.5%;
+
+            z-index: 2;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1800_3_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(90px);
+                height: wv-380(60px);
+                top: 36%;
+                left: 5%;
+            }
+
+            @include mobile {
+                width: wv-380(90px);
+                height: wv-380(60px);
+                top: 36%;
+                left: 5%;
+            }
+        }
+    }
+
+    &_1920 {
+        &_1 {
+            width: wv-1460(340px);
+            height: wv-1460(226px);
+            top: 54%;
+            left: 49%;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1920_1_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(140px);
+                height: wv-380(90px);
+                top: 50%;
+                left: 59%;
+            }
+
+            @include mobile {
+                width: wv-380(140px);
+                height: wv-380(90px);
+                top: 50%;
+                left: 59%;
+            }
+        }
+
+        &_2 {
+            width: wv-1460(460px);
+            height: wv-1460(360px);
+            top: 27.5%;
+            left: 16.5%;
+
+            transform-origin: right !important;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1920_2_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(200px);
+                height: wv-380(150px);
+                top: 31%;
+                left: 4%;
+            }
+
+            @include mobile {
+                width: wv-380(200px);
+                height: wv-380(150px);
+                top: 31%;
+                left: 4%;
+            }
+        }
+    }
+
+    &_1980 {
+        &_1 {
+            width: wv-1460(460px);
+            height: wv-1460(360px);
+            top: 45.5%;
+            left: 50.5%;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1980_1_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(190px);
+                height: wv-380(150px);
+                top: 46.5%;
+                left: 45%;
+            }
+
+            @include mobile {
+                width: wv-380(190px);
+                height: wv-380(150px);
+                top: 46.5%;
+                left: 45%;
+            }
+        }
+
+        &_2 {
+            width: wv-1460(170px);
+            height: wv-1460(200px);
+            top: 27.5%;
+            left: 25%;
+            z-index: 2;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1980_2_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(70px);
+                height: wv-380(80px);
+                top: 36%;
+                left: 5%;
+            }
+
+            @include mobile {
+                width: wv-380(70px);
+                height: wv-380(80px);
+                top: 36%;
+                left: 5%;
+            }
+        }
+
+        &_3 {
+            width: wv-1460(220px);
+            height: wv-1460(146px);
+            top: 42.5%;
+            left: 26.5%;
+            z-index: 1;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/1980_3_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(90px);
+                height: wv-380(60px);
+                top: 45%;
+                left: 8%;
+            }
+
+            @include mobile {
+                width: wv-380(90px);
+                height: wv-380(60px);
+                top: 45%;
+                left: 8%;
+            }
+        }
+    }
+
+    &_2022 {
+        &_1 {
+            width: wv-1460(460px);
+            height: wv-1460(324px);
+            top: 45.5%;
+            left: 19%;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/2022_1_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(170px);
+                height: wv-380(120px);
+                top: 48%;
+                left: 4%;
+            }
+
+            @include mobile {
+                width: wv-380(170px);
+                height: wv-380(120px);
+                top: 48%;
+                left: 4%;
+            }
+        }
+
+        &_2 {
+            width: wv-1460(280px);
+            height: wv-1460(330px);
+            top: 32.5%;
+            left: 65.5%;
+            z-index: 2;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/2022_2_desktop_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(103px);
+                height: wv-380(122px);
+                top: 41%;
+                left: 66%;
+            }
+
+            @include mobile {
+                width: wv-380(103px);
+                height: wv-380(122px);
+                top: 41%;
+                left: 66%;
+            }
+        }
+
+        &_3 {
+            width: wv-1460(220px);
+            height: wv-1460(140px);
+            top: 23.5%;
+            left: 54%;
+            z-index: 1;
+
+            will-change: transform, opacity;
+            backface-visibility: hidden;
+
+			background: no-repeat center/cover url('../../../../../public/images/loader/intro-bg_lq.jpg');
+
+            @include tablet-p() {
+                width: wv-380(81px);
+                height: wv-380(51px);
+                top: 35.5%;
+                left: 55%;
+            }
+
+            @include mobile {
+                width: wv-380(81px);
+                height: wv-380(51px);
+                top: 35.5%;
+                left: 55%;
+            }
+        }
+    }
+}

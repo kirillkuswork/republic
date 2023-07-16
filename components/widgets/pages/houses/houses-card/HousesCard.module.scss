@@ -1,0 +1,110 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.card {
+    width: wv-1460(820px);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include laptop() {
+        width: wv-1200(670px);
+    }
+
+    @include tablet() {
+        width: wv-768(620px);
+    }
+
+    @include mobile() {
+        width: wv-380(330px);
+    }
+}
+
+.topText {
+    position: relative;
+    z-index: 2;
+    @include C1();
+    text-align: left;
+    color: #f9f5f3;
+    opacity: 0.5;
+    padding-top: 16px;
+    padding-left: 20px;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include mobile() {
+        display: none;
+    }
+}
+
+.nameText {
+    position: relative;
+    z-index: 2;
+    @include H5();
+    color: #f9f5f3;
+    padding-top: 3px;
+    padding-left: 20px;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include mobile() {
+        display: none;
+    }
+}
+
+.bottomText {
+    @include H1();
+    color: #f9f5f3;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    z-index: 2;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    @include mobile() {
+        padding-bottom: 10px;
+        padding-left: 18px;
+    }
+}
+
+
+.button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  z-index: 2;
+}
+
+
+.shadow {
+  filter: brightness(0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.noShadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.img {
+  object-fit: cover;
+}

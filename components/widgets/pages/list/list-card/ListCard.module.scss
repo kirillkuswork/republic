@@ -1,0 +1,110 @@
+@import "../../../../../styles/vars";
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto;
+  border-top: 1px solid rgb(22%, 24%, 27%, 0.15);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 98%;
+
+  @include tablet() {
+    padding: wv-768(20px) 0;
+    grid-row-gap: wv-768(28px);
+    grid-column-gap: wv-768(20px);
+    grid-template-columns: wv-768(250px) auto auto;
+  }
+
+  @include mobile() {
+    padding: wv-380(18px) 0;
+    grid-row-gap: wv-380(28px);
+    grid-column-gap: wv-380(14px);
+    grid-template-columns: wv-380(80px) auto auto;
+  }
+}
+
+.image {
+  position: relative;
+
+  @include tablet() {
+    width: wv-768(200px);
+    height: wv-768(120px);
+  }
+
+  @include mobile() {
+    width: wv-380(80px);
+    height: wv-380(60px);
+  }
+}
+
+.flex {
+  @include H5;
+  display: flex;
+  align-items: center;
+
+  @include tablet() {
+    margin-bottom: wv-768(4px);
+  }
+
+  @include mobile() {
+    margin-bottom: wv-380(4px);
+  }
+
+  span {
+    display: block;
+  }
+
+  span + span {
+    @include tablet() {
+      margin-left: wv-768(10px);
+    }
+
+    @include mobile() {
+      margin-left: wv-380(10px);
+    }
+  }
+}
+
+.params {
+  @include T2;
+  display: block;
+}
+
+.favorite {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.svg {
+  display: flex;
+  justify-content: flex-end;
+  gap: wv-1460(5px);
+
+  @include laptop() {
+    gap: wv-1200(5px);
+  }
+
+  @include tablet() {
+    gap: wv-768(5px);
+  }
+
+  @include mobile() {
+    gap: wv-380(5px);
+  }
+
+  svg {
+    display: block;
+    width: wv-1460(20px);
+
+    @include laptop() {
+      width: wv-1200(20px);
+    }
+
+    @include tablet() {
+      width: wv-768(20px);
+    }
+
+    @include mobile() {
+      width: wv-380(20px);
+    }
+  }
+}

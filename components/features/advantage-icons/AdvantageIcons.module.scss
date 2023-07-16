@@ -1,0 +1,289 @@
+@import "../../../styles/vars";
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: wv-1460(5px);
+  position: relative;
+
+  @include laptop() {
+    gap: wv-1200(5px);
+  }
+
+  @include tablet() {
+    gap: wv-768(5px);
+  }
+
+  @include mobile() {
+    gap: wv-380(5px);
+  }
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    gap: wv-1460(8px);
+    flex-wrap: wrap;
+
+    @include laptop() {
+      gap: wv-1200(5px);
+    }
+
+    @include tablet() {
+      gap: wv-768(5px);
+    }
+
+    @include mobile() {
+      gap: wv-380(5px);
+    }
+
+    @include hover() {
+      div:hover {
+        svg {
+          [data-bg="stroke"],
+          [data-bg="fill"] {
+            transition: all .3s ease;
+          }
+        }
+
+        & svg [data-bg="stroke"] {
+          stroke: $brick-light;
+        }
+        & svg [data-bg="fill"] {
+          fill: $brick-light;
+        }
+      }
+    }
+  }
+
+  &__special {
+    cursor: pointer !important;
+    font-family: $primary-600-font !important;
+    font-size: wv-1460(20px);
+    line-height: wv-1460(22px);
+    color: $dark-grey;
+    font-variation-settings: 'wdth' 75 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: wv-1460(30px);
+    height: wv-1460(30px);
+    border: 1px solid $dark-grey;
+    border-radius: 50%;
+
+    @include laptop() {
+      width: wv-1200(30px);
+      height: wv-1200(30px);
+    }
+
+    @include tablet() {
+      width: wv-768(30px);
+      height: wv-768(30px);
+    }
+
+    @include mobile() {
+      width: wv-380(30px);
+      height: wv-380(30px);
+    }
+
+    @include hover() {
+      &:hover .btn__hidename {
+        display: block;
+      }
+
+      &:hover {
+        background: transparent;
+        border: 1px solid $brick-light;
+      }
+
+      &:hover > svg > path {
+        stroke: $brick-light;
+        fill: white;
+      }
+
+      &:hover > svg > path + path {
+        stroke: $brick-light;
+        fill: white;
+      }
+
+      &:hover #dressingRoom > path + path {
+        stroke: $brick-light;
+        fill: $brick-light;
+      }
+
+      &:hover > div {
+        color: $dark-grey !important;
+      }
+    }
+
+    &:focus {
+      color: $dark-grey !important;
+      background: transparent !important;
+    }
+
+    &:focus > div {
+      color: $dark-grey !important;
+      background: transparent !important;
+    }
+
+    &__unvisible {
+      cursor: pointer !important;
+      @include T1-bold;
+      font-family: $content-400-font !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: wv-1460(30px);
+      height: wv-1460(30px);
+      border: 1px solid $dark-grey;
+      border-radius: 50%;
+      color: $dark-grey;
+
+      &.light {
+        color: $light;
+        border: 1px solid $light;
+      }
+
+      @include laptop() {
+        width: wv-1200(30px);
+        height: wv-1200(30px);
+      }
+
+      @include tablet() {
+        width: wv-768(30px);
+        height: wv-768(30px);
+      }
+
+      @include mobile() {
+        width: wv-380(30px);
+        height: wv-380(30px);
+      }
+
+      @include hover() {
+        &:hover {
+          background: transparent;
+          border: 1px solid $brick-light;
+          color: $brick-light;
+        }
+
+        &:focus > div {
+          color: $dark-grey !important;
+          background: transparent !important;
+        }
+      }
+    }
+
+    & > div {
+      text-transform: none;
+      line-height: 140%;
+    }
+  }
+
+  &__advantages {
+    position: relative;
+    display: flex;
+
+    &__wrapp {
+      display: flex;
+      border-radius: wv-1460(37px);
+    }
+  }
+
+  &__hidename {
+    position: absolute;
+    bottom: wv-1460(-45px);
+    transform: translateX(0%);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    gap: wv-1460(15px);
+    background: $light;
+    @include T1;
+    color: $dark-grey;
+    width: max-content;
+    padding: wv-1460(10px);
+
+    @include laptop() {
+      padding: wv-1200(10px);
+    }
+
+    @include tablet() {
+      padding: wv-768(10px);
+    }
+
+    @include mobile() {
+      padding: wv-380(10px);
+    }
+
+    &::after {
+      position: absolute;
+      top: wv-1460(-7px);
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+
+      border-left: wv-1460(7px) solid transparent;
+      border-right: wv-1460(7px) solid transparent;
+      border-bottom: wv-1460(8px) solid $brick-light;
+    }
+  }
+
+  &__hideAdv {
+    box-shadow: 0 0 20px rgba(57, 61, 70, 0.2);
+    position: absolute;
+    top: 2px;
+    left: wv-1460(40px);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: wv-1460(15px);
+    background: $light;
+    @include T1;
+    color: $dark-grey;
+    width: max-content;
+    padding: wv-1460(10px);
+    transition: all .3s ease;
+    text-transform: none;
+    font-variation-settings: "wdth" 100;
+
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @include laptop() {
+      left: wv-1200(40px);
+      padding: wv-1200(10px);
+      gap: wv-1200(15px);
+    }
+
+    @include tablet() {
+      left: wv-768(38px);
+      padding: wv-768(10px);
+      gap: wv-768(5px);
+    }
+
+    @include mobile() {
+      top: 100%;
+      transform: translateY(10px);
+      padding: wv-380(10px);
+      gap: wv-380(5px);
+
+      &.right {
+        transform: translateY(12px);
+        left: auto;
+        right: wv-380(-25px);
+      }
+
+      &.details {
+        left: auto;
+        right: wv-380(-10px);
+      }
+    }
+  }
+}

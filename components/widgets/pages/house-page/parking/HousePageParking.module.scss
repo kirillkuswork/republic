@@ -1,0 +1,203 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+
+.container {
+  // width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: $dark-grey;
+  @include wrapper();
+  @include padding-top();
+  padding-bottom:  wv-1460(240px);
+
+  @include mobile() {
+    padding-bottom:  wv-380(30px);
+  }
+
+  .title {
+    position: absolute;
+    @include H3();
+    color: $light;
+    width: 41.6vw;
+    z-index: 2;
+    @include mobile() {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .parkingDiv {
+    position: relative;
+    border-top: wv-1460(190px) solid $dark-grey;
+    margin-left: 24.7vw;
+    margin-right: 4.8vw;
+
+    @include tablet() {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mobile() {
+      border-top: none;
+      margin-top: wv-380(-20px);
+      margin-right: 0;
+      margin-left: 23.6vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .imgBigDiv {
+      z-index: 1;
+      position: relative;
+      width: 47.9vw;
+      height: 47.9vw;
+      overflow: hidden;
+
+      @include mobile() {
+        width: 65.7vw;
+        height: 65.7vw;
+      }
+    }
+
+    .imgBig {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .storeDiv {
+      z-index: 1;
+      position: absolute;
+      // top: 32.9%;
+      top: 15.75vw;
+      // left: 60.6%;
+      left: 41.1vw;
+      width: 13.7vw;
+      height: 13.7vw;
+      cursor: pointer;
+      overflow: hidden;
+      &:hover {
+        svg{
+          rect {
+            fill: $brick;
+          }
+    
+          path {
+            stroke: $light;
+          }
+        }
+      }
+      
+
+      @include mobile() {
+        cursor: default;
+        width: 23.7vw;
+        height: 23.7vw;
+        top: 28.9vw;
+        left: -11.8vw;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .svgIcon {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        @include mobile() {
+          display: none;
+        }
+      }
+    }
+
+    .storeText {
+      position: absolute;
+      top: 0;
+      // right: 0;
+      left: 47.9vw;
+      width: 18.5vw;
+      @include T1();
+      color: $light;
+      margin-left: 20px;
+
+      @include tablet() {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        margin-left: 0;
+        width: 100%;
+        margin-top: 11.6vw;
+      }
+
+      @include mobile() {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        margin-left: 0;
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: wv-380(80px);
+      }
+    }
+
+    .parkingSpacesDiv {
+      padding: 20px;
+      position: absolute;
+      right: 0;
+      // bottom: 8.6%;
+      top: 20.5vw;
+      width: 23.3vw;
+      height: 23.3vw;
+      border: 1px solid $brick;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include tablet() {
+      //   position: relative;
+      //   align-self: flex-end;
+      //   flex-direction: column-reverse;
+      //   align-items: flex-start;
+        top: 32vw;
+      }
+      @include mobile() {
+        position: relative;
+        align-self: flex-end;
+        width: 42.1vw;
+        height: 42.1vw;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        top: auto;
+      }
+
+      .parkingSpacesText {
+        @include C1();
+        color: $brick;
+
+        @include mobile() {
+          align-self: flex-end;
+          text-align: end;
+        }
+      }
+
+      .parkingSpacesNumber {
+        @include H1();
+        color: $brick;
+        line-height: 60%;
+      }
+    }
+  }
+}
+
+
+.disabled {
+  display: none;
+}

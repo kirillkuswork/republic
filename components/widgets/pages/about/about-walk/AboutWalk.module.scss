@@ -1,0 +1,373 @@
+@import "../../../../../styles/functions";
+@import "../../../../../styles/vars";
+
+.walk {
+  position: relative;
+  background: $darker-light;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+
+  .wrapper {
+    width: 100%;
+    background: $darker-light;
+
+    .titleContainer {
+      width: 100%;
+      height: wv-1460(350px);
+      position: absolute;
+      top: 0;
+
+      @include laptop() {
+        height: wv-1200(300px);
+      }
+
+      @include tablet() {
+        height: wv-768(200px);
+      }
+
+      @include mobile() {
+        height: wv-380(200px);
+      }
+
+      .title {
+        @include H1;
+        transition: all 2s;
+      }
+
+      .titleBlock {
+        display: flex;
+        position: absolute;
+        left: wv-1460(13px);
+        top: wv-1460(22px);
+
+        @include laptop() {
+          left: wv-1200(17px);
+          top: wv-1200(28px);
+        }
+
+        @include tablet() {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        @include mobile() {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text1 {
+        margin-right: wv-1460(25px);
+
+        @include laptop() {
+          margin-right: wv-1200(25px);
+        }
+
+        @include tablet() {
+          position: absolute;
+          top: wv-768(14px);
+          left: wv-768(16px);
+          margin-right: unset;
+        }
+
+        @include mobile() {
+          position: absolute;
+          top: wv-380(15px);
+          left: wv-380(18px);
+          margin-right: unset;
+        }
+      }
+
+      .text3 {
+        @include tablet() {
+          position: absolute;
+          top: wv-768(72px);
+          right: wv-768(21px);
+        }
+
+        @include mobile() {
+          position: absolute;
+          top: wv-380(74px);
+          right: wv-380(22px);
+        }
+      }
+
+      .text2 {
+        color: $brick;
+        position: absolute;
+        right: wv-1460(16px);
+        top: wv-1460(175px);
+
+        @include laptop() {
+          right: wv-1200(20px);
+          top: wv-1200(162px);
+        }
+
+        @include tablet() {
+          right: unset;
+          left: wv-768(16px);
+          top: wv-768(130px);
+        }
+
+        @include mobile() {
+          right: unset;
+          left: wv-380(17px);
+          top: wv-380(133px);
+        }
+      }
+    }
+
+    .descriptionBlock {
+      @include wrapper;
+      padding-top: wv-1460(534px);
+      display: flex;
+      justify-content: flex-end;
+
+      @include laptop() {
+        padding-top: wv-1200(534px);
+      }
+
+      @include tablet() {
+        padding-top: wv-768(264px);
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      @include mobile() {
+        padding-top: wv-380(264px);
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &_text {
+        width: wv-1460(270px);
+        @include T1;
+        color: $dark-grey;
+        transition: all 1s;
+
+        @include laptop() {
+          width: wv-1200(270px);
+        }
+
+        @include tablet() {
+          width: wv-768(250px);
+        }
+
+        @include mobile() {
+          width: wv-380(250px);
+        }
+
+        &:not(:last-child) {
+          margin-right: wv-1460(40px);
+
+          @include laptop() {
+            margin-right: wv-1200(40px);
+          }
+
+          @include tablet() {
+            margin-right: unset;
+            margin-bottom: wv-768(10px);
+          }
+
+          @include mobile() {
+            margin-right: unset;
+            margin-bottom: wv-380(10px);
+          }
+        }
+      }
+    }
+
+    .slider {
+      margin-top: wv-1460(36px);
+      user-select: none;
+
+      @include laptop() {
+        margin-top: wv-1200(36px);
+      }
+
+      @include tablet() {
+        margin-top: wv-768(126px);
+      }
+
+      @include mobile() {
+        margin-top: wv-380(126px);
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .textAboutTree {
+      @include wrapper;
+      margin-top: wv-1460(24px);
+      width: wv-1460(630px);
+      @include H4;
+      color: $brick;
+
+      @include laptop() {
+        margin-top: wv-1200(24px);
+        width: wv-1200(630px);
+      }
+
+      @include tablet() {
+        margin-top: wv-768(23px);
+        width: 100%;
+      }
+
+      @include mobile() {
+        margin-top: wv-380(23px);
+        width: 100%;
+      }
+    }
+
+    .aboutTrees {
+      @include wrapper;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: wv-1460(20px);
+      margin-top: wv-1460(225px);
+
+      @include laptop() {
+        padding-bottom: wv-1200(20px);
+        margin-top: wv-1200(225px);
+      }
+
+      @include tablet() {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: wv-768(31px);
+      }
+
+      @include mobile() {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: wv-380(31px);
+      }
+
+      &_schema {
+        width: wv-1460(180px);
+        height: 100%;
+
+        @include laptop() {
+          width: wv-1200(180px);
+        }
+
+        @include tablet() {
+          width: wv-768(120px);
+        }
+
+        @include mobile() {
+          width: wv-380(120px);
+        }
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &_image {
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+
+        .treeImage {
+          position: relative;
+          width: wv-1460(620px);
+          height: wv-1460(800px);
+          margin-left: wv-1460(365px);
+
+          @include laptop() {
+            width: wv-1200(620px);
+            height: wv-1200(800px);
+            margin-left: wv-1200(100px);
+          }
+
+          @include tablet() {
+            width: wv-768(543px);
+            height: wv-768(700px);
+            margin-left: wv-768(310px);
+          }
+
+          @include mobile() {
+            width: wv-380(310px);
+            height: wv-380(400px);
+            margin-left: wv-380(125px);
+          }
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &_square {
+        display: flex;
+        flex-direction: column;
+
+        .squareText {
+          width: wv-1460(242px);
+          margin-left: wv-1460(220px);
+          margin-bottom: wv-1460(27px);
+          @include C1;
+          color: $dark-grey;
+
+          @include laptop() {
+            width: wv-1200(242px);
+            margin-left: wv-1200(220px);
+            margin-bottom: wv-1200(27px);
+          }
+
+          @include tablet() {
+            margin-left: wv-768(145px);
+            margin-top: wv-768(180px);
+            margin-bottom: wv-768(18px);
+            width: wv-768(215px);
+          }
+
+          @include mobile() {
+            margin-left: unset;
+            margin-top: wv-380(180px);
+            margin-bottom: wv-380(18px);
+            width: wv-380(145px);
+          }
+        }
+
+        .sixGa {
+          width: wv-1460(537px);
+          height: wv-1460(400px);
+
+          @include laptop() {
+            width: wv-1200(537px);
+            height: wv-1200(400px);
+          }
+
+          @include tablet() {
+            width: wv-768(350px);
+            height: wv-768(260px);
+          }
+
+          @include mobile() {
+            width: wv-380(161px);
+            height: wv-380(120px);
+          }
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

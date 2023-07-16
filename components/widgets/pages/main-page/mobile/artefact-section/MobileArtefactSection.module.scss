@@ -1,0 +1,126 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/main_page_functions";
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color:$dark-grey;
+  z-index: 4;
+}
+.content_wrapper {
+  @include wrapper();
+  padding-top: wv-380(20px);
+  padding-bottom: wv-380(76px);
+  &__page_title {
+    @include H5();
+    color:$brick;
+    width: wv-380(200px);
+  }
+  &__artefact_title_brick {
+    @include H4();
+    color:$light;
+    margin-top: wv-380(77px);
+    width: wv-380(200px);
+    transition: all 1.2s;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  }
+
+  &__artefact_title{
+    @include H4();
+    color:$light;
+    margin-top: wv-380(77px);
+    width: wv-380(200px);
+    transition: all 1.2s;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  }
+  &__brick_img {
+    margin-top: wv-380(123px);
+    margin-left: wv-380(25px);
+    width: wv-380(281px);
+    height: wv-380(138px);
+    background-image: url("../../../../../../public/images/main-page/brick.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__brick_button {
+    z-index: 83;
+    position: absolute;
+    right: wv-380(45px);
+    top:  wv-380(320px);
+  }
+  &__brick_block{
+    z-index: 83;
+    margin-top: wv-380(40px);
+    margin-left: wv-380(58px);
+    text-align: right;
+    opacity:0;
+    &__title{
+      @include H2();
+      color:$brick;
+    }
+    &__desc{
+      @include T1();
+      color:  #F5F5F5;
+      padding-top:wv-380(8px);
+      width:wv-380(310px);
+    }
+  }
+  &__desc {
+    padding-top: wv-380(14px);
+    @include T1();
+    color:$light;
+    transition: all 1.2s;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  }
+  &__btn_img{
+    width:wv-380(38px);
+    height:wv-380(37px);
+    div{
+      width:38px;
+      height:37px;
+    }
+    float: right;
+    svg{
+      width:wv-380(29px) !important;
+      height:wv-380(30px)!important;
+      cursor:pointer;
+    }
+  }
+  //плитка
+  &__cast_iron_img{
+    margin-top: wv-380(123px);
+    margin-left: wv-380(25px);
+    width: wv-380(265px);
+    height: wv-380(261px);
+    background-image: url("../../../../../../public/images/main-page/cast_iron.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__cast_iron_button{
+    z-index: 83;
+    position: absolute;
+    right: wv-380(95px);
+    top:  wv-380(800px);
+  }
+  &__cast_iron_block{
+    z-index: 83;
+    margin-top: wv-380(40px);
+    margin-left: wv-380(58px);
+    text-align: right;
+    opacity:0;
+    &__title{
+      @include H2();
+      color:$brick;
+    }
+    &__desc{
+      @include T1();
+      color:  #F5F5F5;
+      padding-top:wv-380(8px);
+      width: wv-380(260px);
+    }
+  }
+}
+

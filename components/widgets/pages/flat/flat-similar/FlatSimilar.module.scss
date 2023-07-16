@@ -1,0 +1,73 @@
+@import "../../../../../styles/vars";
+
+.container {
+  @include wrapper;
+  background-color: $darker-light;
+  padding-bottom: wv-1460(180px);
+
+  @include laptop() {
+    padding-bottom: wv-1200(180px);
+  }
+
+  @include tablet() {
+    padding-bottom: wv-768(80px);
+  }
+
+  @include mobile() {
+    padding-bottom: wv-380(80px);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: wv-1460(20px);
+
+  @include laptop() {
+    margin-bottom: wv-1200(20px);
+  }
+
+  @include tablet() {
+    padding: wv-768(10px) 0;
+    margin: 0;
+  }
+
+  @include mobile() {
+    padding: wv-380(10px) 0;
+    margin: 0;
+  }
+}
+
+.title {
+  @include H3;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: wv-1460(20px);
+
+  @include laptop() {
+    grid-gap: wv-1200(20px);
+  }
+
+  @include tablet() {
+    grid-gap: wv-768(15px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile() {
+    grid-gap: wv-380(20px);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.button {
+  &__mobile {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-top: wv-380(20px);
+  }
+}

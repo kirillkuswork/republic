@@ -1,0 +1,239 @@
+@import "../../../../styles/vars";
+
+.container {
+  @include wrapper();
+}
+
+.title {
+  @include H2;
+  padding-bottom: wv-1460(110px);
+  border-bottom: 1px solid rgb(22%, 24%, 27%, 0.2);
+
+  & span {
+    display: block;
+  }
+
+  & span:first-of-type {
+    color: $brick;
+  }
+
+  & span:last-of-type {
+    color: $dark-grey;
+    transform: translateY(-5px);
+
+    @include tablet() {
+      transform: translateY(0);
+    }
+
+    @include mobile() {
+      transform: translateY(0);
+    }
+  }
+
+  @include laptop() {
+    padding-bottom: wv-1200(110px);
+  }
+
+  @include tablet() {
+    @include H4;
+    padding-bottom: wv-768(77px);
+  }
+
+  @include mobile() {
+    @include H4;
+    padding-bottom: wv-380(77px);
+  }
+}
+
+.content {
+  display: block;
+  width: 49%;
+  margin: 0 auto;
+  padding: wv-1460(50px) 0 wv-1460(210px);
+
+  @include laptop() {
+    padding: wv-1460(50px) 0 wv-1200(210px);
+  }
+
+  @include tablet() {
+    width: 100%;
+    padding: wv-1200(24px) 0 wv-768(76px);
+  }
+
+  @include mobile() {
+    width: 100%;
+    padding: wv-380(24px) 0 wv-380(76px);
+  }
+}
+
+.subtext {
+  @include T0-bold;
+  margin-bottom: wv-1460(54px);
+
+  @include laptop() {
+    margin-bottom: wv-1200(54px);
+  }
+
+  @include tablet() {
+    @include T1-bold;
+    letter-spacing: -0.03px;
+    margin-bottom: wv-768(25px);
+  }
+
+  @include mobile() {
+    @include T1-bold;
+    letter-spacing: -0.03px;
+    margin-bottom: wv-380(25px);
+  }
+}
+
+.list {
+  b {
+    @include T0-bold;
+
+    @include tablet() {
+      @include T1-bold;
+    }
+
+    @include mobile() {
+      @include T1-bold;
+    }
+  }
+
+  & + & {
+    margin-top: wv-1460(44px);
+
+    @include laptop() {
+      margin-top: wv-1200(44px);
+    }
+
+    @include tablet() {
+      margin-top: wv-768(24px);
+    }
+
+    @include mobile() {
+      margin-top: wv-380(24px);
+    }
+  }
+
+  &__title {
+    @include H4;
+    margin-bottom: wv-1460(27px);
+
+    @include laptop() {
+      margin-bottom: wv-1200(27px);
+    }
+
+    @include tablet() {
+      margin-bottom: wv-768(20px);
+    }
+
+    @include mobile() {
+      margin-bottom: wv-380(20px);
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    @include T0;
+    padding-left: wv-1460(30px);
+    margin-bottom: wv-1460(12px);
+
+    @include laptop() {
+      padding-left: wv-1200(30px);
+      margin-bottom: wv-1200(12px);
+    }
+
+    @include tablet() {
+      @include T1;
+      margin-bottom: wv-768(12px);
+      padding-left: wv-768(30px);
+    }
+
+    @include mobile() {
+      @include T1;
+      margin-bottom: wv-380(12px);
+      padding-left: wv-380(30px);
+    }
+
+    & span {
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__block {
+    & + & {
+      margin-top: wv-1460(18px);
+
+      @include laptop() {
+        margin-top: wv-1200(18px);
+      }
+
+      @include tablet() {
+        margin-top: wv-768(18px);
+      }
+
+      @include mobile() {
+        margin-top: wv-380(18px);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include T0;
+    padding-left: wv-1460(74px);
+
+    @include laptop() {
+      padding-left: wv-1200(74px);
+    }
+
+    @include tablet() {
+      @include T1;
+      padding-left: wv-768(50px);
+    }
+
+    @include mobile() {
+      @include T1;
+      padding-left: wv-380(50px);
+    }
+
+    & + & {
+      margin-top: wv-1460(16px);
+
+      @include laptop() {
+        margin-top: wv-1200(16px);
+      }
+
+      @include tablet() {
+        margin-top: wv-768(10px);
+      }
+
+      @include mobile() {
+        margin-top: wv-380(10px);
+      }
+    }
+
+    & span {
+      position: absolute;
+      display: inline-block;
+      left: wv-1460(24px);
+      top: 0;
+
+      @include laptop() {
+        left: wv-1200(24px);
+      }
+
+      @include tablet() {
+        left: 0;
+      }
+
+      @include mobile() {
+        left: 0;
+      }
+    }
+  }
+}

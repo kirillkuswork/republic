@@ -1,0 +1,80 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+.card {
+  border: 1px solid rgba($dark-grey, 0.2);
+  padding: 20px;
+  width: wv-1460(340px);
+  min-height: wv-1460(360px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablet() {
+    width: 100%;
+    min-height: wv-768(200px);
+  }
+
+  @include mobile() {
+    width: 100%;
+    min-height: wv-380(160px);
+  }
+
+  &Title {
+    @include H5();
+    margin-bottom: wv-1460(8px);
+
+    @include tablet() {
+      margin-bottom: wv-768(11px);
+    }
+
+    @include mobile() {
+      margin-bottom: wv-380(11px);
+    }
+  }
+
+  &Subtitle {
+    @include T1();
+  }
+
+  &Bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $content-300-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: wv-1460(14px);
+    line-height: wv-1460(16px);
+    color: $dark-grey;
+
+    @include laptop() {
+      font-size: wv-1200(14px);
+      line-height: wv-1200(16px);
+    }
+
+    @include tablet() {
+      font-size: wv-768(14px);
+      line-height: wv-768(16px);
+    }
+
+    @include mobile() {
+      font-size: wv-380(12px);
+      line-height: wv-380(14px);
+    }
+  }
+
+  &Date {
+    @include margin-left();
+
+    @include mobile() {
+      margin-left: wv-380(12px);
+    }
+  }
+}
+
+.pdfButton{
+  svg {
+    width: 60%;
+  }
+}

@@ -1,0 +1,247 @@
+@import '../../../styles/vars';
+@import '../../../styles/functions';
+
+.scrollTopButton {
+    position: absolute;
+    top: wv-1460(20px);
+    right: 0;
+
+    @include tablet() {
+        display: none;
+    }
+
+    @include mobile() {
+        display: none;
+    }
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    @include wrapper();
+    background-color: $dark-grey;
+    @include T2();
+    color: rgba(#f9f5f3, 0.6);
+
+    &Breadcrumbs {
+        @include padding-top();
+        @include padding-bottom();
+
+        border-bottom: 1px solid rgba(#f9f5f3, 0.15);
+    }
+
+    &Main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: vh-900(160px);
+        @include padding-top();
+        @include padding-bottom();
+
+        @media screen and (max-height: 899px) {
+            gap: vh-900(20px);
+            margin-bottom: auto;
+        }
+
+        @include tablet() {
+            gap: 80px;
+        }
+
+        @include mobile() {
+            gap: 80px;
+        }
+
+        &Top {
+            display: flex;
+            justify-content: space-between;
+
+            @include tablet() {
+                flex-direction: column;
+                gap: 77px;
+            }
+
+            @include mobile() {
+                flex-direction: column;
+                gap: 77px;
+            }
+        }
+
+        &Bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &Right {
+            width: 41vw;
+
+            @include tablet() {
+                width: auto;
+            }
+
+            @include mobile() {
+                width: auto;
+            }
+        }
+    }
+
+    &Logo {
+        @include padding-top();
+        @include padding-bottom();
+        border-top: 1px solid rgba(#f9f5f3, 0.15);
+
+        svg {
+            @media screen and (max-height: 899px) and (orientation: landscape) {
+                height: 37vh;
+            }
+        }
+    }
+
+    &Bottom {
+        @include padding-top();
+        @include padding-bottom();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(#f9f5f3, 0.15);
+        gap: 50px;
+
+        @include tablet() {
+            flex-direction: column;
+        }
+
+        @include mobile() {
+            flex-direction: column;
+        }
+
+        &Link {
+            color: rgba(#f9f5f3, 0.6);
+            transition: all 0.2s ease;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &Design {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &Right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include tablet() {
+                width: 100%;
+            }
+
+            @include mobile() {
+                width: 100%;
+            }
+        }
+
+        &Forma {
+            display: none;
+            @include tablet() {
+                display: flex;
+                align-items: center;
+            }
+
+            @include mobile() {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.Info {
+    &Tel {
+        display: block;
+        @include H3();
+        color: $brick;
+        @include padding-bottom();
+    }
+
+    &Address {
+        color: $light;
+        margin-bottom: 8px;
+    }
+}
+
+.Nav {
+    display: flex;
+    gap: 9.5vw;
+    padding-top: 6px;
+
+    @include tablet() {
+        gap: 15vw;
+    }
+
+    @include mobile() {
+        gap: 21vw;
+    }
+}
+
+.AdditionalInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include tablet() {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @include mobile() {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contacts {
+        display: flex;
+        align-items: center;
+
+         & a:not(:last-of-type) {
+            margin-right: 5px;
+        }
+    }
+}
+
+.forma {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet() {
+        display: none;
+    }
+
+    @include mobile() {
+        display: none;
+    }
+
+    &Mail {
+        @include C1();
+        color: $light;
+    }
+
+    &Logo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.tg {
+    svg {
+        width: 50%;
+    }
+}

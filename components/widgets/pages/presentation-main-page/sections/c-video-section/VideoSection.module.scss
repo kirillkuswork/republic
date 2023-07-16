@@ -1,0 +1,23 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+
+
+.wrapper {
+  z-index: 31;
+  position: fixed;
+  left: wv-1460(1460px);
+  top:0;
+  width: wv-1460(1460px);
+  height: 100%;
+
+  background-color: #393D46;
+}
+
+.wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

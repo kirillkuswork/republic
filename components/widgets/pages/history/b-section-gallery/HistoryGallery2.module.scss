@@ -1,0 +1,138 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+// second block
+.song {
+    @include padding-top();
+    @include padding-left();
+    @include padding-bottom();
+    background-color: $dark-grey;
+    position: relative;
+    z-index: 5;
+    @include T1();
+    color: $light;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    gap: wv-1460(60px);
+    box-shadow: 12px 0 8px -4px $dark-grey;
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        flex-direction: column;
+        @include padding-right();
+        gap: 76px;
+        height: auto;
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        @include padding-right();
+        gap: 76px;
+        height: auto;
+    }
+
+    &Desc {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: stretch;
+        max-width: wv-1460(870px);
+        width: 100%;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            flex-direction: column;
+        }
+
+        @include mobile() {
+            max-width: wv-380(342px);
+            flex-direction: column;
+        }
+    }
+
+    &DescTitle {
+        @include H1();
+        max-width: wv-1460(600px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        line-height: 0.9;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            max-width: 100%;
+            margin-bottom: 68px;
+        }
+
+        @include mobile() {
+            max-width: 100%;
+            margin-bottom: 68px;
+        }
+
+        &First {
+            color: $light;
+        }
+
+        &Second {
+            margin-left: auto;
+            color: $brick;
+        }
+    }
+
+    &DescText {
+        max-width: wv-1460(270px);
+        white-space: normal;
+        overflow-wrap: break-word;
+        margin-left: auto;
+
+        @include laptop() {
+            max-width: wv-1200(400px);
+        }
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        @include mobile() {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &ImgWrapper {
+        width: wv-1460(580px);
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            width: 100%;
+            height: 600px;
+        }
+
+        @include mobile() {
+            width: 100%;
+            height: wv-380(420px);
+        }
+    }
+
+    &Img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 580 / 860;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: bottom;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

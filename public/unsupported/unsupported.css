@@ -1,0 +1,420 @@
+/* RESET */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* FONTS */
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-SemBdSemCond";
+  font-stretch  : semi-condensed;
+  src           : url("./fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-weight   : 700;
+}
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-SemiCondensed";
+  src           : url("./fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-stretch  : semi-condensed;
+  font-weight   : 600;
+}
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-Light";
+  src           : url("./fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-weight   : 300;
+}
+
+
+/* STYLES */
+
+body {
+  background-color: #393D46;
+}
+
+.header {  
+  
+  padding-left: calc(20 / 1460 * 100vw);
+  padding-right: calc(20 / 1460 * 100vw);
+  
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(72 / 1460 * 100vw);
+  border-bottom: 1px solid rgba(249, 245, 243, 0.2);
+  /* align-self: center; */
+}
+
+.header__phone {
+  position: absolute;
+  
+  top: calc(32 / 1460 * 100vw);
+
+  right: calc(20 / 1460 * 100vw);
+
+  font-family: "Bahnschrift-SemBdSemCond", "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: calc(14 / 1460 * 100vw);
+  line-height: calc(16 / 1460 * 100vw);
+  text-decoration: none;
+  color: #F9F5F3;
+  font-weight: 700;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.header__logo svg {
+  fill: #F9F5F3;
+}
+
+.unsupported {
+  width: 100%;
+  background-color: #393D46;
+  color: #F9F5F3;
+}
+
+.unsupported__wrapper {
+  padding-top: 19.4vh;
+  padding-left: calc(20 / 1460 * 100vw);
+  padding-right: calc(20 / 1460 * 100vw);
+}
+
+.unsupported__row {
+  position: relative;
+  display: flex;
+
+  border-bottom: 1px solid rgba(249, 245, 243, 0.2);
+}
+
+.unsupported__row:not(:last-child) {
+  margin-bottom: calc(20 / 1460 * 100vw);
+}
+
+.unsupported__title {
+  margin-left: auto;
+
+  font-family: "Bahnschrift-SemiCondensed", "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-size: calc(169 / 1460 * 100vw);
+  line-height: calc(147 / 1460 * 100vw);
+  
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  font-style: normal;
+  font-weight: 600;
+  font-variation-settings: 'wdth' 75;
+}
+
+_:-ms-fullscreen, :root .unsupported__title { 
+  font-family: "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+  line-height: 120%;
+}
+
+.unsupported__title--brick {
+  color: #AD7C53;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.unsupported__text {
+  font-family: "Bahnschrift-Light", "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: calc(16 / 1460 * 100vw);
+  line-height: calc(20 / 1460 * 100vw);
+  font-style: normal;
+  font-weight: 300;
+}
+
+_:-ms-fullscreen, :root .unsupported__text { 
+  font-family: "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 120%;
+}
+
+.browser-links {
+  width: calc(320 / 1460 * 100vw);
+  margin-top: calc(-9 / 1460 * 100vw);
+}
+
+.browser-links .unsupported__text {
+  margin-bottom: calc(35 / 1460 * 100vw);
+}
+
+.browser-links__list {
+  display: flex;
+  justify-content: space-between;
+  width: 79%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+_:-ms-fullscreen, :root .browser-links__list { 
+  width: 90%; 
+}
+
+
+.browser-links__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #AD7C53;
+  text-decoration: none;
+
+ 
+}
+
+.browser-links__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(30 / 1460 * 100vw);   
+  height: calc(30 / 1460 * 100vw); 
+
+  margin-bottom: calc(8 / 1460 * 100vw);    
+  transition: color 0.2s ease-in-out;
+}
+
+.browser-links__icon svg{
+    width: 97%;
+    height: 97%;
+}
+
+.browser-links__icon path, .browser-links__icon circle {
+  transition: all 0.2s ease-in-out;
+}
+
+.browser-links__text {
+  font-family: "Bahnschrift-SemBdSemCond", "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: calc(14 / 1460 * 100vw);
+  line-height: 120%;
+  color: #AD7C53;
+
+  transition: color 0.2s ease-in-out;
+}
+
+_:-ms-fullscreen, :root .browser-links__text { 
+  font-family: "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 120%;
+}
+
+@media (any-hover: hover) {
+  .browser-links__link:hover .browser-links__text  {
+    color: #F9F5F3;
+  }
+
+  .header__phone:hover{
+    color: #AD7C53;
+  }
+
+  .browser-links__link:hover .browser-links__icon svg path,  .browser-links__link:hover .browser-links__icon svg circle {
+    stroke: #F9F5F3;
+  }
+
+  .browser-links__link .browser-links__text {
+    /* color: #F9F5F3; */
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1370px) {
+  .unsupported__wrapper {
+    padding-left: calc(20 / 1200 * 100vw);
+    padding-right: calc(20 / 1200 * 100vw);
+  }
+
+  .header__wrapper {
+    height: calc(72 / 1200 * 100vw);
+  }
+
+  .header__phone {    
+    top: calc(32 / 1200 * 100vw);  
+    right: calc(20 / 1200 * 100vw);
+
+    font-size: calc(14 / 1200 * 100vw);
+    line-height: calc(16 / 1200 * 100vw);
+  }
+
+  .unsupported__title {
+    font-size: calc(169 / 1200 * 100vw);
+    line-height: calc(147 / 1200 * 100vw);
+  }
+
+  .unsupported__text {
+    font-size: calc(16 / 1200 * 100vw);
+    line-height: calc(20 / 1200 * 100vw);
+  }
+
+  .browser-links {
+    width: calc(320 / 1200 * 100vw);
+    margin-top: calc(-9 / 1200 * 100vw);
+  }
+
+  .browser-links__text {
+    font-size: calc(14 / 1200 * 100vw);
+  }
+
+  .browser-links__icon {
+    margin-bottom: calc(8 / 1200 * 100vw);    
+    width: calc(30 / 1200 * 100vw);   
+    height: calc(30 / 1200 * 100vw);   
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 1023px) {
+  .unsupported__wrapper {
+    padding-left: calc(20 / 768 * 100vw);
+    padding-right: calc(20 / 768 * 100vw);
+  }
+
+  .header__wrapper {
+    height: calc(72 / 768 * 100vw);
+  }
+
+  .header__phone {    
+    top: calc(32 / 768 * 100vw);  
+    right: calc(20 / 768 * 100vw);
+
+    font-size: calc(14 / 768 * 100vw);
+    line-height: calc(16 / 768 * 100vw);
+  }
+
+  .unsupported__title {
+    font-size: calc(120 / 768 * 100vw);
+    line-height: calc(140 / 768 * 100vw);
+  }
+
+  .unsupported__text {
+    font-size: calc(16 / 768 * 100vw);
+    line-height: calc(20 / 768 * 100vw);
+  }
+
+  .browser-links {
+    width: calc(280 / 768 * 100vw);
+    margin-top: calc(-9 / 768 * 100vw);
+  }
+
+  .browser-links__text {
+    font-size: calc(14 / 768 * 100vw);
+  }
+
+  .browser-links__icon {
+    margin-bottom: calc(8 / 768 * 100vw);    
+    width: calc(30 / 768 * 100vw);   
+    height: calc(30 / 768 * 100vw);   
+  }
+}
+
+@media screen and (min-width: 220px) and (max-width: 540px) {
+  .unsupported__wrapper {
+    padding-top: 28.4vh;
+    padding-left: calc(20 / 380 * 100vw);
+    padding-right: calc(20 / 380 * 100vw);
+  }
+
+  .header__wrapper {
+    height: calc(72 / 380 * 100vw);
+  }
+
+  .header__phone {    
+    top: calc(32 / 380 * 100vw);  
+    right: calc(20 / 380 * 100vw);
+
+    font-size: calc(14 / 380 * 100vw);
+    line-height: calc(16 / 380 * 100vw);
+  }
+
+  .unsupported__title {
+    font-size: calc(64 / 380 * 100vw);
+    line-height: calc(73 / 380 * 100vw);
+  }
+
+  .unsupported__text {
+    font-size: calc(16 / 380 * 100vw);
+    line-height: calc(20 / 380 * 100vw);
+  }
+
+  .browser-links {
+    position: absolute;
+    top: calc(99 / 380 * 100vw);
+    width: calc(250 / 380 * 100vw); 
+
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .browser-links__text {
+    font-size: calc(12 / 380 * 100vw);
+  }
+
+  .browser-links__icon {
+    margin-bottom: calc(8 / 380 * 100vw);    
+    width: calc(30 / 380 * 100vw);   
+    height: calc(30 / 380 * 100vw);   
+  }
+
+  .browser-links__list {    
+    width: 79%;
+  }
+
+  .browser-links .unsupported__text {
+    margin-bottom: calc(14 / 380 * 100vw);
+  }
+
+
+  .unsupported__row:not(:last-child) {
+    margin-bottom: calc(15 / 380 * 100vw);
+  }
+}

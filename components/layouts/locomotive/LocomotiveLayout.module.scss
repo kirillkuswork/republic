@@ -1,0 +1,48 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+
+.container {
+  min-height: 100vh;
+  height: fit-content;
+  overflow-x: hidden;
+  @include laptop(){
+    min-height: fit-content;
+  }
+  @include tablet(){
+    min-height: fit-content;
+  }
+  @include mobile(){
+    min-height: fit-content;
+  }
+}
+
+.dark {
+  background-color: $dark-grey;
+}
+
+.light {
+  background-color: $light;
+}
+
+.dark-light {
+  background-color: $darker-light;
+}
+
+.transparent {
+  background-color: transparent;
+  padding-top: 0;
+}
+
+.fit-content {
+
+}
+
+.one-screen {
+  height: 100vh;
+
+  @media screen and (max-height: 630px) and (max-width: 1023px) {
+    height: 170vh;
+  }
+}
+
+

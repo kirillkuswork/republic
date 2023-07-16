@@ -1,0 +1,59 @@
+@import "../../../styles/vars";
+
+.info {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $dark-grey;
+  padding: wv-1460(20px);
+  width: wv-1460(220px);
+  z-index: 300;
+  transition: transform .4s ease, left .4s ease, top .4s ease, opacity .1s ease;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 8px;
+    background-color: $dark-grey;
+    transform: rotate(45deg);
+  }
+
+  &.toRight:after {
+    left: -5px;
+    right: auto;
+  }
+
+  &.middle:after {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &.end:after {
+    top: auto;
+    bottom: 8px;
+  }
+
+  &.left:after {
+    left: -5px;
+  }
+
+  &.right:after {
+    right: -5px;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+
+  @include laptop() {
+    width: wv-1200(220px);
+    padding: wv-1200(20px);
+  }
+}

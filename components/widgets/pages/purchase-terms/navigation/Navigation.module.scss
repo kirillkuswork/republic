@@ -1,0 +1,41 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+.nav_container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap:wv-1460(5px);
+  overflow-y: scroll;
+  white-space: nowrap;
+  position: relative;
+  left: wv-1460(-20px);
+  padding-left: wv-1460(20px);
+  padding-right: wv-1460(20px);
+  width: 100vw;
+
+  @include laptop() {
+    gap:wv-1200(5px);
+    left: wv-1200(-20px);
+    padding-left: wv-1200(20px);
+    padding-right: wv-1200(20px);
+  }
+  @include tablet() {
+    gap:wv-768(5px);
+    left: wv-768(-20px);
+    padding-left: wv-768(20px);
+    padding-right: wv-768(20px);
+  }
+  @include mobile() {
+    gap:wv-380(4px);
+    left: wv-380(-20px);
+    padding-left: wv-380(20px);
+    padding-right: wv-380(20px);
+  }
+
+  /* Скрываем scrollbar для Chrome, Safari и Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;   /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}

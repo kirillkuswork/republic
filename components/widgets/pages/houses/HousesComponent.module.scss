@@ -1,0 +1,19 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+
+.container {
+  @include padding-left();
+  @include padding-bottom();
+  padding-top: 5px;
+  display: flex;
+  height: 100%;
+
+  @include tablet() {
+    flex-direction: column;
+  }
+
+  @include mobile() {
+    flex-direction: column;
+  }
+}
+

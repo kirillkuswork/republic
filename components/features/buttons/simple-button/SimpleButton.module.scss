@@ -1,0 +1,420 @@
+@import "../../../../styles/vars";
+
+.button {
+  height: 100%;
+
+	& button,
+	& a {
+    @include C1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: wv-1460(10px);
+    transition: all .2s ease;
+    width: 100%;
+    height: 100%;
+
+    @include laptop() {
+      gap: wv-1200(10px);
+    }
+
+    @include tablet() {
+      gap: wv-768(10px);
+    }
+
+    @include mobile() {
+      gap: wv-380(10px);
+    }
+  }
+}
+
+.default {
+
+	& button,
+	& a {
+    padding: wv-1460(6px) wv-1460(10px);
+
+    @include laptop() {
+      padding: wv-1200(6px) wv-1200(10px);
+    }
+
+    @include tablet() {
+      padding: wv-768(6px) wv-768(10px);
+    }
+
+    @include mobile() {
+      padding: wv-380(6px) wv-380(10px);
+    }
+
+    & span {
+      display: block;
+      padding-top: wv-1460(1px);
+
+      @include laptop() {
+        padding-top: wv-1200(1px);
+      }
+
+      @include tablet() {
+        padding-top: wv-768(1px);
+      }
+
+      @include mobile() {
+        padding-top: wv-380(1px);
+      }
+    }
+  }
+}
+
+.mini {
+
+	& button,
+	& a {
+    padding: wv-1460(6px) wv-1460(14px);
+
+    @include laptop() {
+      padding: wv-1200(6px) wv-1200(14px);
+    }
+
+    @include tablet() {
+      padding: wv-768(6px) wv-768(14px);
+    }
+
+    @include mobile() {
+      padding: wv-380(5px) wv-380(14px);
+    }
+  }
+}
+
+.slim {
+
+	& button,
+	& a {
+    padding: wv-1460(14px) wv-1460(10px);
+
+    @include laptop() {
+      padding: wv-1200(14px) wv-1200(10px);
+    }
+
+    @include tablet() {
+      padding: wv-768(14px) wv-768(10px);
+    }
+
+    @include mobile() {
+      padding: wv-380(14px) wv-380(10px);
+    }
+  }
+}
+
+.medium {
+
+	& button,
+	& a {
+    padding: wv-1460(12px) wv-1460(20px) wv-1460(14px);
+    gap: wv-1460(20px);
+
+    @include laptop() {
+      padding: wv-1200(12px) wv-1200(20px) wv-1200(14px);
+      gap: wv-1200(20px);
+    }
+
+    @include tablet() {
+      padding: wv-768(12px) wv-768(20px) wv-768(14px);
+      gap: wv-768(20px);
+    }
+
+    @include mobile() {
+      padding: wv-380(12px) wv-380(20px) wv-380(14px);
+      gap: wv-380(20px);
+      justify-content: space-between;
+    }
+
+    & span {
+      display: block;
+      padding-top: wv-1460(2px);
+
+      @include laptop() {
+        padding-top: wv-1200(2px);
+      }
+
+      @include tablet() {
+        padding-top: wv-768(2px);
+      }
+
+      @include mobile() {
+        padding-top: wv-380(2px);
+      }
+    }
+  }
+}
+
+.dark_grey {
+
+	& button,
+	& a {
+    border: 1px solid $dark-grey;
+    background: $dark-grey;
+    transition: all .2s ease;
+
+    & span {
+      transition: all .2s ease;
+      color: $light;
+    }
+
+    & svg path {
+      transition: all .2s ease;
+    }
+
+    @include hover() {
+      &:hover {
+        background: $brick;
+
+        & span {
+          color: $light;
+        }
+
+        & svg path {
+          stroke: $brick-light;
+        }
+      }
+    }
+  }
+}
+
+.light {
+
+	& button,
+	& a {
+    border: 1px solid $light;
+    background: $light;
+    transition: all .2s ease;
+
+    & span {
+      transition: all .2s ease;
+      color: $dark-grey;
+    }
+
+    & svg path {
+      transition: all .2s ease;
+    }
+
+    @include hover() {
+      &:hover {
+        border: 1px solid $brick;
+        background: $brick;
+
+        & span {
+          color: $light;
+        }
+
+        & svg path {
+          stroke: $brick-light;
+        }
+      }
+    }
+  }
+}
+
+.dark_grey.outline {
+
+	& button,
+	& a {
+    background: transparent;
+    border: 1px solid $dark-grey;
+    transition: all .2s ease;
+
+    & span {
+      transition: all .2s ease;
+      color: $dark-grey;
+    }
+
+    & svg path {
+      transition: all .2s ease;
+    }
+
+    @include hover() {
+      &:hover {
+        border: 1px solid $brick-light;
+
+        & span {
+          color: $brick-light;
+        }
+
+				& svg rect+path {
+          stroke: $light;
+        }
+
+				& svg>path {
+          stroke: $brick-light;
+        }
+
+        & svg rect {
+          fill: $brick-light;
+        }
+
+        & svg [data-svg='arrow-back'] {
+          stroke: transparent;
+          fill: $brick-light !important;
+        }
+      }
+    }
+  }
+}
+
+.light.outline {
+
+	& button,
+	& a {
+    background: transparent;
+    border: 1px solid $light;
+    transition: all .2s ease;
+
+    & span {
+      color: $light;
+      transition: all .2s ease;
+    }
+
+    @include hover() {
+      &:hover {
+        border: 1px solid $brick-light;
+
+        & span {
+          color: $brick-light;
+        }
+
+        & svg path {
+          stroke: $brick-light;
+        }
+
+        & svg [data-svg='arrow-back'] {
+          stroke: transparent;
+          fill: $brick-light !important;
+        }
+      }
+    }
+
+    &:disabled {
+
+      span {
+        color: $dark;
+      }
+
+      border-color: $dark;
+    }
+  }
+}
+
+.light_grey.outline {
+
+  & button,
+  & a {
+      background: transparent;
+      border: 1px solid $light;
+      transition: all 0.2s ease;
+
+      & span {
+          color: $light;
+          transition: all 0.2s ease;
+      }
+
+      & rect,
+      path {
+          transition: all 0.2s ease;
+      }
+
+      @include hover() {
+          &:hover {
+              border: 1px solid $dark-grey;
+
+              & span {
+                  color: $dark-grey;
+              }
+
+              & svg path {
+                  stroke: $light;
+              }
+
+              & svg rect {
+                  fill: $dark-grey;
+              }
+          }
+      }
+  }
+}
+
+.brick {
+
+	& button,
+	& a {
+    background-color: $brick;
+    color: $light;
+  }
+
+  &:hover {
+    @include hover() {
+
+			& button,
+			& a {
+        background-color: $brick-light;
+      }
+    }
+  }
+}
+
+.right {
+
+	& button,
+	& a {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.left {
+
+	& button,
+	& a {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.light_brick.outline {
+
+	& button,
+	& a {
+		border: 1px solid $dark-grey;
+
+		& span {
+			color: $dark-grey;
+		}
+
+		& svg path {
+			stroke: $light;
+		}
+
+		& svg rect {
+			fill: $dark-grey;
+		}
+
+		@include hover() {
+			&:hover {
+				border: 1px solid $brick;
+				background: $brick;
+
+				& span {
+					color: $light;
+					;
+				}
+
+				& svg path {
+					stroke: $light;
+				}
+
+				& svg rect {
+					fill: $light;
+				}
+			}
+		}
+	}
+}

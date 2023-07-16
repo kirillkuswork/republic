@@ -1,0 +1,35 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+.offer_table {
+  width: 100%;
+  &__header{
+    border-bottom: 1px solid rgb(51,61,70,.2);
+    padding-bottom: wv-1460(16px);
+    @include laptop() {
+      padding-bottom: wv-1200(16px);
+    }
+    @include tablet() {
+      padding-bottom:wv-768(16px);
+    }
+    span{
+      @include T2();
+      text-align: left;
+      display: inline-block;
+      &:nth-child(1){
+        width: 21.57%;
+      }
+      &:nth-child(2){
+        width:23.53%;
+      }
+      &:nth-child(3){
+        width:11.77%;
+      }
+      &:nth-child(4){
+        width:13.75%;
+      }
+      &:nth-child(5){
+        width:15.69%;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import "../../../../../styles/functions";
+@import "../../../../../styles/vars";
+
+.main {
+  @include wrapper;
+  padding-top: wv-1460(90px);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+
+  @include laptop() {
+    padding-top: wv-1200(90px);
+  }
+
+  @include tablet() {
+    padding-top: wv-768(86px);
+  }
+
+  @include mobile() {
+    padding-top: wv-380(86px);
+  }
+
+  .bgWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .bg {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .preview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    @include H1;
+    color: $light;
+    z-index: 0;
+    line-height: wv-1460(140px);
+
+    @include laptop() {
+      line-height: wv-1200(120px);
+    }
+
+    @include tablet() {
+      line-height: wv-768(65px);
+    }
+
+    @include mobile() {
+      line-height: wv-380(65px);
+    }
+  }
+
+  .text2 {
+    text-align: end;
+  }
+
+  .text3 {
+    text-align: end;
+    margin-right: wv-1460(149px);
+
+    @include laptop() {
+      margin-right: wv-1200(149px);
+    }
+  }
+  .arrowDown {
+    position: absolute;
+    bottom: wv-1460(20px);
+    right: wv-1460(20px);
+
+    @include laptop() {
+      bottom: wv-1200(20px);
+      right: wv-1200(20px);
+    }
+
+    @include tablet() {
+      bottom: wv-768(20px);
+      right: wv-768(20px);
+    }
+
+    @include mobile() {
+      bottom: wv-380(20px);
+      right: wv-380(20px);
+    }
+
+    &_wrapper {
+      width: wv-1460(14px);
+      height: wv-1460(14px);
+
+      @include laptop() {
+        width: wv-1200(14px);
+        height: wv-1200(14px);
+      }
+
+      @include tablet() {
+        width: wv-768(14px);
+        height: wv-768(14px);
+      }
+
+      @include mobile() {
+        width: wv-380(14px);
+        height: wv-380(14px);
+      }
+    }
+  }
+}

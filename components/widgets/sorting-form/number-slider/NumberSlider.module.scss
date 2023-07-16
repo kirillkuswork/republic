@@ -1,0 +1,102 @@
+@import "../../../../styles/vars";
+
+.range {
+  width: 100%;
+
+  &__container {
+    padding-left: wv-1460(2px);
+
+    @include laptop() {
+      padding-left: wv-1200(2px);
+    }
+
+    @include tablet() {
+      padding-left: wv-768(2px);
+    }
+
+    @include mobile() {
+      padding-left: wv-380(2px);
+    }
+  }
+
+  &:hover .slider {
+    border: 1px solid rgba(249, 245, 243, 1);
+  }
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgba(249, 245, 243, 0.2);
+  transition: all .2s ease;
+}
+
+.block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: wv-1460(10px);
+
+  @include laptop() {
+    padding: wv-1200(10px);
+  }
+
+  @include tablet() {
+    padding: wv-768(10px);
+  }
+
+  @include mobile() {
+    padding: wv-380(10px);
+  }
+}
+
+.input {
+  max-width: wv-1460(100px);
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  @include laptop() {
+    max-width: wv-1200(100px);
+  }
+
+  @include tablet() {
+    max-width: wv-768(100px);
+  }
+
+  @include mobile() {
+    max-width: wv-380(100px);
+  }
+
+  & span {
+    font-family: $primary-700-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $light;
+
+    & sup {
+      top: -0.45em;
+      font-size: 65%;
+    }
+
+    @include laptop() {
+      font-size: wv-1200(14px);
+      line-height: wv-1200(16px);
+    }
+
+    @include tablet() {
+      font-size: wv-768(14px);
+      line-height: wv-768(16px);
+    }
+
+    @include mobile() {
+      font-size: wv-380(14px);
+      line-height: wv-380(16px);
+    }
+  }
+}

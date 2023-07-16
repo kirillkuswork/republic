@@ -1,0 +1,35 @@
+.columns {
+    display: grid;
+    grid-template-columns: repeat(9, wv-1460(100px));
+    gap: wv-1460(20px);
+
+    @include laptop() {
+        grid-template-columns: repeat(9, 1fr);
+        gap: wv-1200(20px);
+    }
+}
+
+.column {
+    &__2 {
+        grid-column: 5 / -1;
+        display: flex;
+    }
+}
+
+.interior,
+.exterior {
+    color: $dark-grey;
+
+    &__title {
+        @include C1;
+        margin-bottom: wv-1460(9px);
+    }
+
+    &__text {
+        @include T1;
+    }
+}
+
+.exterior {
+    margin-right: wv-1460(40px);
+}

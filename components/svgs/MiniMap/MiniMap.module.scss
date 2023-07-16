@@ -1,0 +1,63 @@
+.dark {
+  .activeBuilding  {
+    cursor: pointer;
+
+    polygon , path , polyline , line  {
+      stroke: #C99264;
+      fill: #ad7c53;
+    }
+  }
+  
+  .standartBuilding {
+    cursor: pointer;
+    
+    polygon , path , polyline , line  {
+      fill: #606571;
+      stroke: #777A80;
+    }
+  }
+
+  .standartBuildingNoCursor {
+    cursor: default;
+  }
+
+  .base {
+    polygon , path , polyline , line  {
+      fill: #4a4f5a;
+      stroke: #777A80;
+    }
+  }
+}
+
+
+.light {
+  position: relative;
+  
+  .activeBuilding  {
+    polygon , path , polyline , line  {
+      stroke: #AD7C53;
+      fill: #AD7C53;
+    }
+  }
+  
+  .standartBuilding {
+    polygon , path , polyline , line  {
+      fill: #F9F5F3;
+      stroke: #BEBDBD;
+    }
+  }
+
+  .base {
+    polygon , path , polyline , line  {
+      fill: #E8E4E2;
+      stroke: #BEBDBD;
+    }
+  }
+
+
+  .separation {
+    fill: #F9F5F3 !important;
+    stroke: #BEBDBD !important;
+  }
+}
+

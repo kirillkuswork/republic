@@ -1,0 +1,113 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/main_page_functions";
+
+.wrapper {
+  z-index: 91;
+  position: fixed;
+  left: 0;
+  top: vh-900(900px);
+  width: wv-1460(1460px);
+  height: vh-900(900px);
+  clip-path: inset(0);
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../../../public/images/main-page/history_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.content_wrapper {
+  position: absolute;
+  left: wv-1460(20px);
+  top: vh-900(20px);
+  width: wv-1460(1420px);
+
+  &__title{
+    @include CUSTOM_H3();
+    color:$brick;
+    width: wv-1460(570px);
+  }
+  &__history_button{
+    padding-top:wv-1460(30px);
+    width: wv-1460(211px);
+    min-height: 50px;
+    @include laptop() {
+      width: wv-1200(190px);
+    }
+    @include tablet() {
+      width: wv-768(183px);
+
+    }
+    div{height:100%};
+    //svg{
+    //  width:wv-1460(20px);
+    //  height:wv-1460(20px);
+    //  max-width: 30px;
+    //  max-height: 30px;
+    //  @include laptop() {
+    //    width: wv-1200(20px);
+    //    height:wv-1200(20px);
+    //  }
+    //  @include tablet() {
+    //    width: wv-768(20px);
+    //    height:wv-768(20px);
+    //  }
+    //}
+  }
+}
+.points{
+  width:100%;
+  &__wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    gap: wv-1460(20px);
+    margin-top: vh-900(130px);
+  }
+  &__point{
+    width: calc((100% / 4) - (20px / (1460px) * 100vw));
+    cursor: pointer;
+    &:hover {
+      .points__point__year {
+        opacity: 1;
+      }
+    }
+    &__active {
+      .points__point__text  {
+        & > p {
+          opacity: 1;
+        }
+        border-color: $light;
+      }
+      .points__point__year {
+        opacity: 1;
+        color: $light;
+      }
+    }
+    &__text{
+      @include CUSTOM_T1();
+      color:$light;
+      padding-top:vh-900(25px);
+      border-top: 1px solid rgba(249, 245, 243, .4);
+      transition: border 0.6s ease;
+      & > p {
+        opacity: 0;
+        margin: 0;
+        transition: opacity 1.2s ease;
+      }
+    }
+    &__year{
+      @include CUSTOM_H2();
+      color:$light;
+      opacity: 0.3;
+      margin-bottom: 11px;
+      transition: opacity 0.6s ease;
+    }
+  }
+
+}

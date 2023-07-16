@@ -1,0 +1,58 @@
+@import '../../../styles/vars';
+
+.slider {
+    width: calc(100% + #{wv-1460(40px)});
+    height: wv-1460(400px);
+    padding-left: calc(100% - #{wv-1460(558px)}) !important;
+
+    margin-left: wv-1460(-20px) !important;
+
+    @include mobile {
+        width: calc(100% + #{wv-380(40px)});
+        height: wv-380(220px);
+        margin-left: wv-380(-20px) !important;
+        padding-left: wv-380(20px) !important;
+    }
+}
+
+.slide {
+    position: relative;
+    width: wv-1460(580px) !important;
+    height: wv-1460(400px);
+
+    @include mobile {
+        width: wv-380(340px) !important;
+        height: wv-380(220px);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.navigation {
+    display: flex;
+    margin-bottom: wv-1460(20px);
+
+	svg {
+		transform: translateZ(0);
+	}
+
+    @include mobile {
+        margin-bottom: wv-380(16px);
+    }
+
+    &__next {
+        opacity: 1;
+    }
+
+    &__prev {
+        margin-right: wv-1460(5px);
+
+        @include mobile {
+            margin-right: wv-380(5px);
+        }
+    }
+}

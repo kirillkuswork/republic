@@ -1,0 +1,50 @@
+@import "../../../../../styles/vars";
+
+.element {
+  display: flex;
+  flex-direction: column;
+  padding: wv-1460(16px) 0;
+
+  @include laptop() {
+    padding: wv-1200(16px) 0;
+  }
+
+  @include tablet() {
+    padding: wv-768(12.5px) 0;
+  }
+
+  @include mobile() {
+    padding: wv-380(12.5px) 0;
+  }
+
+  &__title {
+    @include C1;
+    display: block;
+    color: $light;
+    opacity: 0.5;
+    margin-bottom: wv-1460(12px);
+
+    @include laptop() {
+      margin-bottom: wv-1200(12px);
+    }
+
+    @include tablet() {
+      margin-bottom: wv-768(4px);
+    }
+
+    @include mobile() {
+      margin-bottom: wv-380(4px);
+    }
+  }
+
+  &__content {
+    @include H4;
+    display: block;
+    color: $light;
+
+    & sup {
+      top: -0.60em;
+      font-size: 55%;
+    }
+  }
+}

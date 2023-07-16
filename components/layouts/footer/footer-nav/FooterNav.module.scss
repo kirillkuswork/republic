@@ -1,0 +1,26 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+
+.Nav {
+
+  &Item {
+    &:not(:last-of-type) {
+      margin-bottom: 4px;
+    }
+
+    @include hover() {
+      &:hover {
+        .NavLink {
+          color: $brick;
+        }
+      }
+    }
+  }
+
+  &Link {
+    @include C1();
+    color: $light;
+    transition: all .2s ease;
+  }
+}
+

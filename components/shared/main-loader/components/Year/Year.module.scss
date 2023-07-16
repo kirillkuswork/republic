@@ -1,0 +1,33 @@
+@import '../../../../../styles/vars';
+
+.year {
+    @include G1;
+    position: relative;
+    // font-family: 'Bahnschrift';
+    letter-spacing: -0.04em !important;
+    color: $brick;
+    line-height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    z-index: 100;
+
+    @include tablet-p() {
+        font-size: wv-380(120px) !important;
+        line-height: wv-380(120px) !important;
+    }
+
+    @include mobile {
+        @include H1;
+        color: $brick;
+
+        font-size: wv-380(169px) !important;
+        line-height: wv-380(160px) !important;
+        letter-spacing: -0.02em !important;
+    }
+}
+
+.char {
+    display: inline-block;
+    will-change: transform;
+    backface-visibility: hidden;
+}

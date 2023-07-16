@@ -1,0 +1,100 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+
+.container {
+  // width: 100vw;
+  width: 100%;
+  min-height: 118vh;
+  position: relative;
+  @include wrapper();
+  padding-bottom: 41.1vh;
+  overflow: hidden;
+  z-index: 1;
+
+  @include mobile {
+    min-height: auto;
+    height: 90vh;
+  }
+
+  .picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    position: relative;
+    @include H1();
+    padding-top: wv-1460(40px);
+    color: $light;
+    line-height: 80%;
+
+    @include laptop() {
+      line-height: 80%;
+      padding-top: wv-1200(40px);
+    }
+    @include tablet() {
+      line-height: 80%;
+      padding-top: wv-768(30px);
+    }
+    @include mobile() {
+      line-height: 90%;
+      padding-top: wv-380(30px);
+    }
+  }
+
+  .titleRight {
+    margin-left: wv-1460(240px);
+    @include mobile() {
+      margin-left: wv-380(68px);
+    }
+  }
+
+  .stickCard {
+    position: relative;
+    top: 31.1%;
+    left: 58.9%;
+    @include mobile() {
+      position: absolute;
+      @include wrapper();
+      bottom: 0;
+      left: 0;
+      top: inherit;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .slider {
+      height: 100%;
+      width: 20vw;
+      overflow: hidden;
+      cursor: grab;
+      @include mobile() {
+        width: 77vw;
+      }
+    }
+
+    .slide {
+      width: 20vw;
+      margin-left: 1px;
+      @include mobile() {
+        width: 77vw;
+      }
+    }
+
+    .arrows {
+      display: flex;
+      margin-top: 13vh;
+      // margin-top: 7.9vw;
+      button {
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

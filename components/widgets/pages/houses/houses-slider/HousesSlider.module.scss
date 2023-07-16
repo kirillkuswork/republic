@@ -1,0 +1,62 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+.container {
+  width: 76.4%;
+  border-left: 1px solid rgba(249, 245, 243, 0.2);
+  height: 100%;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+  }
+}
+
+.slider {
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  padding-right: 20px;
+  margin-left: wv-1460(20px) !important;
+  padding-left: 1px;
+  
+  @media screen and (max-width: 1023px) {
+    margin-left: 0;
+  }
+}
+
+.slide {
+  width: fit-content !important;
+}
+
+.nextSlide, .prevSlide {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: wv-1460(140px);
+  cursor: pointer;
+  z-index: 4 ;
+  // background-color: rgb(227, 132, 132);
+  @include laptop() {
+    width: wv-1200(140px);
+  }
+  @include tablet() {
+    width: wv-768(100px);
+  }
+  @include mobile() {
+    width: wv-380(50px);
+  }
+}
+
+.prevSlide {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.disabled {
+  display: none;
+}

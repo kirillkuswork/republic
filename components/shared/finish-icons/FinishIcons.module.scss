@@ -1,0 +1,75 @@
+@import "../../../styles/vars";
+
+.pointerNone {
+  pointer-events: none;
+
+  & > {
+    pointer-events: none;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: wv-1460(5px);
+
+  @include laptop() {
+    gap: wv-1200(5px);
+  }
+
+  @include tablet() {
+    gap: wv-768(5px);
+  }
+
+  @include mobile() {
+    gap: wv-380(5px);
+  }
+
+  & > * {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  @include hover() {
+    div:hover {
+      svg {
+        [data-bg="stroke"],
+        [data-bg="fill"] {
+          transition: all .3s ease;
+        }
+      }
+
+      & svg [data-bg="stroke"] {
+        stroke: $brick-light;
+      }
+      & svg [data-bg="fill"] {
+        fill: $brick-light;
+      }
+    }
+  }
+}
+
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: wv-1460(5px);
+
+  @include laptop() {
+    gap: wv-1200(5px);
+  }
+
+  @include tablet() {
+    gap: wv-768(5px);
+  }
+
+  @include mobile() {
+    gap: wv-380(5px);
+  }
+
+  &__text {
+    @include C1;
+    color: $light;
+    font-variation-settings: 'wdth' 80;
+  }
+}

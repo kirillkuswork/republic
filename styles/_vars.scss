@@ -1,0 +1,512 @@
+@import "functions";
+
+$white: #FFFFFF;
+$light:  #F9F5F3;
+$darker-light : #E8E4E2;
+$brick: #AD7C53;
+$brick-light : #BE8656;
+$light-grey: #BEBDBD;
+$light-grey-2: #B1B1B1;
+$grey: #737880;
+$dark-grey: #393D46;
+$dark:  #73747A;
+$error: #CE0000;
+
+
+
+//FONTS
+$primary-700-font: "Bahnschrift-SemBdSemCond", "Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$primary-600-font: "Bahnschrift-SemiCondensed", "Segoe UI", "Roboto",
+"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
+$primary-400-font: "Bahnschrift-Condensed", "Segoe UI", "Roboto",
+"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
+$content-300-font: "Bahnschrift-Light", "Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$content-400-font: "Bahnschrift", "Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+//QUERIES
+@mixin laptop() {
+  @media screen and (min-width: 1024px) and (max-width: 1370px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (min-width: 541px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tablet-l() {
+  @media screen and (min-width: 541px) and (max-width: 1023px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-p() {
+  @media screen and (min-width: 541px) and (max-width: 1023px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (min-width: 220px) and (max-width: 540px) {
+    @content;
+  }
+}
+
+@mixin isNoDesktop() {
+  @media screen and (max-width: 1090px) {
+    @content;
+  }
+}
+
+@mixin retina() {
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin hover() {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+//WRAPPER
+@mixin wrapper {
+  padding-left: wv-1460(20px);
+  padding-right: wv-1460(20px);
+
+  @include laptop() {
+    padding-left: wv-1200(20px);
+    padding-right: wv-1200(20px);
+  }
+
+  @include tablet() {
+    padding-left: wv-768(20px);
+    padding-right: wv-768(20px);
+  }
+
+  @include mobile() {
+    padding-left: wv-380(20px);
+    padding-right: wv-380(20px);
+  }
+}
+
+@mixin padding-left {
+  padding-left: wv-1460(20px);
+
+  @include laptop() {
+    padding-left: wv-1200(20px);
+  }
+
+  @include tablet() {
+    padding-left: wv-768(20px);
+  }
+
+  @include tablet-p() {
+    padding-left: wv-768(20px);
+  }
+
+  @include mobile() {
+    padding-left: wv-380(20px);
+  }
+}
+
+@mixin padding-right {
+  padding-right: wv-1460(20px);
+
+  @include laptop() {
+    padding-right: wv-1200(20px);
+  }
+
+  @include tablet() {
+    padding-right: wv-768(20px);
+  }
+
+  @include tablet-p() {
+    padding-right: wv-768(20px);
+  }
+
+  @include mobile() {
+    padding-right: wv-380(20px);
+  }
+}
+
+@mixin padding-top {
+  padding-top: wv-1460(20px);
+
+  @include laptop() {
+    padding-top: wv-1200(20px);
+  }
+
+  @include tablet() {
+    padding-top: wv-768(20px);
+  }
+
+  @include tablet-p() {
+    padding-top: wv-768(20px);
+  }
+
+  @include mobile() {
+    padding-top: wv-380(20px);
+  }
+}
+
+@mixin padding-bottom {
+  padding-bottom: wv-1460(20px);
+
+  @include laptop() {
+    padding-bottom: wv-1200(20px);
+  }
+
+  @include tablet() {
+    padding-bottom: wv-768(20px);
+  }
+
+  @include tablet-p() {
+    padding-bottom: wv-768(20px);
+  }
+
+  @include mobile() {
+    padding-bottom: wv-380(20px);
+  }
+}
+
+@mixin margin-left {
+  margin-left: wv-1460(20px);
+
+  @include laptop() {
+    margin-left: wv-1200(20px);
+  }
+
+  @include tablet() {
+    margin-left: wv-768(20px);
+  }
+
+  @include mobile() {
+    margin-left: wv-380(20px);
+  }
+}
+
+
+//TYPOGRAPHY
+
+@mixin C1() {
+  font-family: $primary-700-font;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: wv-1460(14px);
+  line-height: 120%;
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(14px);
+  }
+  
+  @include tablet-p() {
+    font-size: wv-768(14px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(14px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(12px);
+  }
+}
+
+@mixin G1() {
+  font-family: $primary-400-font;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  font-size: wv-1460(390px);
+  line-height: wv-1460(300px);
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(296px);
+    line-height: wv-1200(296px);
+  }
+}
+
+@mixin H1() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: wv-1460(169px);
+  line-height: wv-1460(160px);
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+
+  @include laptop() {
+    font-size: wv-1200(139px);
+    line-height: wv-1200(130px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(64px);
+    line-height: wv-768(70px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(64px);
+    line-height: wv-380(70px);
+  }
+}
+
+@mixin H2() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-size: wv-1460(98px);
+  line-height: wv-1460(90px);
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+
+  @include laptop() {
+    font-size: wv-1200(98px);
+    line-height: wv-1200(90px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(46px);
+    line-height: wv-768(46px);
+    letter-spacing: -0.02em;
+  }
+
+  @include mobile() {
+    font-size: wv-380(46px);
+    line-height: wv-380(46px);
+    letter-spacing: -0.02em;
+  }
+}
+
+@mixin H3() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: wv-1460(70px);
+  line-height: wv-1460(70px);
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+
+  @include laptop() {
+    font-size: wv-1200(60px);
+    line-height: wv-1200(60px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(46px);
+    line-height: wv-768(46px);
+    letter-spacing: -0.02em;
+  }
+
+  @include mobile() {
+    font-size: wv-380(46px);
+    line-height: wv-380(46px);
+    letter-spacing: -0.02em;
+  }
+}
+
+@mixin H4() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: wv-1460(40px);
+  line-height: wv-1460(40px);
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+
+  @include laptop() {
+    font-size: wv-1200(40px);
+    line-height: wv-1200(40px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(30px);
+    line-height: wv-768(30px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(30px);
+    line-height: wv-380(30px);
+  }
+}
+
+@mixin H5() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: wv-1460(26px);
+  line-height: wv-1460(30px);
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+
+  @include laptop() {
+    font-size: wv-1200(26px);
+    line-height: wv-1200(30px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(20px);
+    line-height: wv-768(22px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(20px);
+    line-height: wv-380(22px);
+  }
+}
+
+@mixin T0-bold() {
+  font-family: $content-400-font;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-size: wv-1460(18px);
+  line-height: wv-1460(24px);
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(18px);
+    line-height: wv-1200(24px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(18px);
+    line-height: wv-768(24px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(18px);
+    line-height: wv-380(24px);
+  }
+}
+
+@mixin T0() {
+  font-family: $content-300-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: wv-1460(18px);
+  line-height: wv-1460(24px);
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(18px);
+    line-height: wv-1200(24px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(18px);
+    line-height: wv-768(24px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(18px);
+    line-height: wv-380(24px);
+  }
+}
+
+@mixin T1-bold() {
+  font-family: $content-400-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: wv-1460(16px);
+  line-height: wv-1460(20px);
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(16px);
+    line-height: wv-1200(20px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(16px);
+    line-height: wv-768(20px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(16px);
+    line-height: wv-380(20px);
+  }
+}
+
+@mixin T1() {
+  font-family: $content-300-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: wv-1460(16px);
+  line-height: wv-1460(20px);
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(16px);
+    line-height: wv-1200(20px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(16px);
+    line-height: wv-768(20px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(16px);
+    line-height: wv-380(20px);
+  }
+}
+
+@mixin T2() {
+  font-family: $content-300-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: wv-1460(12px);
+  line-height: wv-1460(16px);
+  color: $dark-grey;
+
+  @include laptop() {
+    font-size: wv-1200(12px);
+    line-height: wv-1200(16px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(12px);
+    line-height: wv-768(16px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(12px);
+    line-height: wv-380(16px);
+  }
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,277 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+@mixin table-text() {
+  font-family: $primary-700-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+
+  @include laptop() {
+    font-size: wv-1200(14px);
+    line-height: wv-1200(16px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(14px);
+    line-height: wv-768(16px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(12px);
+    line-height: wv-380(14px);
+  }
+}
+// общий блок для банка. бордер только для desctop и tablet (для мобилки в details)
+.item{
+  padding-top:wv-1460(20px);
+  padding-bottom:wv-1460(19px);
+  border-bottom: 1px solid rgb(57,61,70,.2);
+  &:last-child {
+    border-bottom:none;
+  }
+  @include laptop() {
+    padding-top: wv-1200(20px);
+    padding-bottom: wv-1200(19px);
+  }
+  @include tablet() {
+    padding-top:wv-768(20px);
+    padding-bottom:wv-768(19px);
+  }
+  @include mobile() {
+    padding-top:wv-380(0px);
+    padding-bottom:wv-380(0px);
+    margin-bottom:wv-380(0px);
+    border-bottom:none;
+    &:last-child {
+      details{
+        border-bottom:none;
+      }
+    }
+  }
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  @include mobile() {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+// блок при раскрытии аккордеона
+.row_details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: wv-1460(14px);
+  width: 100%;
+  @include laptop() {
+    margin-bottom: wv-1200(14px);
+  }
+  @include tablet() {
+    margin-bottom:wv-768(14px);
+  }
+  @include mobile() {
+    flex-direction: column;
+    align-items: flex-start;
+    .type span{
+       color: $brick;
+    }
+  }
+}
+// название банка и лого
+.title{
+  width: 21.57%;
+  display: flex;
+  align-items: center;
+  @include mobile() {
+    width: 100%;
+    margin-bottom:wv-380(8px);
+  }
+  span{
+    @include table-text();
+    color:$brick;
+    padding-left: wv-1460(20px);
+    @include laptop() {
+      padding-left: wv-1200(20px);
+    }
+    @include tablet() {
+      padding-left:wv-768(20px);
+    }
+    @include mobile() {
+      padding-left:wv-380(9px);
+    }
+  }
+}
+// лого банка
+.bank_img{
+  width:30px;
+  height:30px;
+  @include mobile() {
+    width:20px;
+    height:20px;
+  }
+}
+// тип ипотеки
+.type{
+  width:23.53%;
+  @include mobile() {
+    width: 100%;
+  }
+  span{
+    @include table-text();
+  }
+}
+// процент
+.rate{
+  width:11.77%;
+  @include mobile() {
+    width: 100%;
+  }
+  span{
+    @include table-text();
+  }
+}
+// срок
+.time{
+  width:13.75%;
+  @include mobile() {
+    width: 100%;
+  }
+  span{
+    @include table-text();
+  }
+}
+// платеж в месяц
+.cost{
+  width:15.69%;
+  @include mobile() {
+    width: 100%;
+  }
+  span{
+    @include table-text();
+  }
+}
+// основной блок аккордеона
+.details{
+  display: flex;
+  @include mobile() {
+    // в мобильной версии у item убирается бордер и применяется здесь
+    padding-top:wv-380(0px);
+    padding-bottom:wv-380(7px);
+    margin-bottom:wv-380(30px);
+    border-bottom:1px solid rgb(57,61,70,.2);
+    &[open]{
+      border-bottom:none !important;
+    }
+  }
+  &__border{
+    border-bottom:1px solid rgb(57,61,70,.2)!important;
+  }
+  // блок включающий в себя row
+  &__summary{
+    display: flex;
+    pointer-events: none;
+    user-select: none;
+    &::-webkit-details-marker {
+      display:none;
+    }
+  }
+  // стили для количества предложений
+  &__block{
+    cursor:pointer;
+    pointer-events:auto;
+    display: flex;
+    align-items    : center;
+    justify-content: flex-end;
+    width:13.76%;
+    @include mobile() {
+      justify-content: space-between;
+      width:100%;
+    }
+  }
+  // текст количества предложений
+  &__title{
+    @include T2();
+    &__active{
+      @include T2();
+      color:$brick;
+    }
+  }
+  // иконка скрыть/показать
+  &__btn{
+    margin-top: wv-1460(-5px);
+    padding-left: wv-1460(20px);
+    position: relative;
+    @include laptop() {
+      margin-top: wv-1200(-5px);
+      padding-left: wv-1200(20px);
+    }
+    @include tablet() {
+      margin-top:wv-768(-5px);
+      padding-left: wv-768(20px);
+    }
+    @include mobile() {
+      margin-top:wv-380(-5px);
+      padding-left: wv-380(0px);
+    }
+  }
+  // блок при раскрытии аккордеона
+  &__content{
+    margin-top:wv-1460(19px);
+    padding-top:wv-1460(26px);
+    border-top: 1px solid $brick;
+    padding-bottom:wv-1460(39px);
+    @include laptop() {
+      margin-top: wv-1200(19px);
+      padding-top: wv-1200(26px);
+      padding-bottom: wv-1200(39px);
+    }
+    @include tablet() {
+      margin-top:wv-768(19px);
+      padding-top: wv-768(26px);
+      padding-bottom: wv-768(39px);
+    }
+    @include mobile() {
+      margin-top:wv-380(7px);
+      padding:wv-380(28px) wv-380(32px) wv-380(2px) wv-380(20px);
+      border-top: 1px solid $brick;
+      background-color: rgba(57, 61, 70, .05);
+    }
+  }
+}
+//только для мобилки
+.mortgage_table{
+  display:flex;
+  flex-direction: row;
+  padding-top:wv-380(15px);
+  padding-bottom:wv-380(15px);
+  gap: wv-380(17px);
+  &__item{
+    display:flex;
+    flex-direction: column;
+    gap:wv-380(5px);
+  }
+  &__title{
+    @include T2();
+    width: 100%;
+  }
+  &__details{
+    padding-top:wv-380(5px);
+    padding-bottom:wv-380(26px);
+    display:flex;
+    flex-direction: row;
+    gap: wv-380(20px);
+  }
+}
+
+

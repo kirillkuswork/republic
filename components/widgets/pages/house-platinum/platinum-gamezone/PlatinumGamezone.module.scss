@@ -1,0 +1,132 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+
+.container {
+  position: relative;
+  justify-content: space-between;
+  @include padding-top();
+  padding-bottom: wv-1460(180px);
+  background-color: $darker-light;
+  // width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+
+  @include mobile() {
+    padding-bottom: wv-380(80px);
+  }
+  
+  .textDiv {
+    display: flex;
+    @include wrapper();
+
+    @include mobile() {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .textSmall {
+    @include C1();
+    width: 32.9vw;
+
+    @include mobile() {
+      width: auto;
+      margin-left: 23.7vw;
+      margin-bottom:  wv-380(126px);
+    }
+
+    .textSmallText {
+      width: 13vw;
+
+      @include mobile() {
+        width: 50vw;
+      }
+    }
+  }
+
+  .textBig {
+    width: 64.4vw;
+    display: flex;
+    flex-direction: column;
+    @include mobile() {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+  }
+
+  .title {
+    @include H1();
+  }
+
+  .title2 {
+    @include H1();
+    text-align: end;
+    line-height: 70%;
+    @include mobile() {
+      line-height: 80%;
+    }
+  }
+
+  .textBigText {
+    @include T1();
+    width: 18.49vw;
+    align-self: flex-end;
+
+    @include tablet() {
+      width: 32.9vw;
+    }
+
+    @include mobile() {
+      width: wv-380(249px);
+    }
+  }
+
+  .description {
+    @include H3();
+    width: 32.9vw;
+    margin-bottom: 40px;
+    margin-top: wv-1460(66px);
+
+    
+
+    @include mobile() {
+      width: auto;
+      margin-left: 0;
+      margin-bottom: wv-380(78px);
+      margin-top: 0;
+    }
+  }
+
+  .imgTitle {
+    @include H4();
+    color: $light;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    padding: 17px 20px;
+  }
+
+  .slider {
+    button {
+      cursor: pointer;
+      
+      &:after {
+        @include mobile() {
+          display: none;
+        }
+        @include tablet() {
+          display: none; 
+        }
+      }
+    }
+
+    .imgSlide {
+      position: relative;
+    }
+
+    .img {
+      object-fit: cover;
+    }
+  }
+}
+

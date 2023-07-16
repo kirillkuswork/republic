@@ -1,0 +1,26 @@
+@import "../../../styles/vars";
+
+.deadline {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    @include C1;
+  }
+
+  span:first-of-type {
+    opacity: 0.5;
+  }
+
+  &.light {
+    span {
+      color: $light;
+    }
+  }
+
+  &.dark {
+    span {
+      color: $dark-grey;
+    }
+  }
+}

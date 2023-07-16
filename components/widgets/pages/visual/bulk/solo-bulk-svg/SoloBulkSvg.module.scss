@@ -1,0 +1,70 @@
+@import "../../../../../../styles/vars";
+
+.number {
+  @include T2;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 120px;
+    top: 5px;
+    right: 20px;
+    background-color: $dark-grey;
+    opacity: 0.2;
+  }
+}
+
+.current {
+  path, rect {
+    cursor: pointer;
+    pointer-events: all;
+    fill: transparent;
+  }
+
+  path {
+    &:hover {
+      fill: $brick;
+    }
+  }
+}
+
+.disabled {
+  path, rect {
+    fill: grey !important;
+    opacity: 0.2 !important;
+    pointer-events: none !important;
+  }
+}
+
+.labels {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.message {
+  @include T1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  // top: 140px;
+  top: wv-1460(-40px);
+
+  @include laptop() {
+    top: wv-1200(-40px);
+  }
+
+  @include tablet() {
+    top: wv-768(-40px);
+  }
+
+  @include mobile() {
+    top: wv-380(-40px);
+  }
+}

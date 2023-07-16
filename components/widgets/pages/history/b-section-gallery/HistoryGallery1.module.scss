@@ -1,0 +1,168 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.moscow {
+    @include padding-top();
+    @include padding-left();
+    @include padding-bottom();
+    background-color: $dark-grey;
+    position: relative;
+    z-index: 5;
+    @include T1();
+    color: $light;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 12px 0 8px -4px $dark-grey;
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        flex-direction: column;
+        height: auto;
+        @include padding-right();
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        height: auto;
+        @include padding-right();
+    }
+
+    &Title {
+        @include H3();
+        color: $brick;
+        max-width: wv-1460(580px);
+        white-space: normal;
+        overflow-wrap: break-word;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            max-width: 100%;
+            margin-bottom: wv-380(23px);
+        }
+
+        @include mobile() {
+            max-width: 100%;
+            margin-bottom: wv-380(23px);
+        }
+    }
+
+    &Right {
+        display: flex;
+        gap: wv-1460(20px);
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            width: 100%;
+            flex-direction: column;
+            gap: wv-380(20px);
+        }
+
+        @include mobile() {
+            width: 100%;
+            flex-direction: column;
+            gap: wv-380(20px);
+        }
+    }
+
+    &Desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &DescText {
+        max-width: wv-1460(270px);
+        white-space: normal;
+        overflow-wrap: break-word;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            max-width: wv-768(500px);
+            margin-bottom: 116px;
+        }
+
+        @include mobile() {
+            max-width: 340px;
+            margin-bottom: 116px;
+        }
+    }
+
+    &DescImgWrapper {
+        width: wv-1460(300px);
+        height: wv-1460(400px);
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            align-self: flex-end;
+            width: wv-380(160px);
+            height: wv-380(180px);
+        }
+
+        @include mobile() {
+            align-self: flex-end;
+            width: wv-380(160px);
+            height: wv-380(180px);
+        }
+    }
+
+    &DescImg {
+        width: 100%;
+        aspect-ratio: 340 / 400;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: center;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    &ImgWrapper {
+        width: wv-1460(480px);
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            align-self: flex-end;
+            width: 100%;
+            height: 600px;
+        }
+
+        @include mobile() {
+            height: wv-380(420px);
+            width: 100%;
+        }
+    }
+
+    &Img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 580 / 860;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: bottom;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @include mobile() {
+            aspect-ratio: 340 / 420;
+        }
+    }
+}

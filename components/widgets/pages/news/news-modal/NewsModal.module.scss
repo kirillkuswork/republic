@@ -1,0 +1,169 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+@import '../../../../../styles/main_page_functions';
+@mixin mobileNews() {
+    @media screen and (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin dekstopNews() {
+    @media screen and (min-width: 541px) {
+        @content;
+    }
+}
+
+.modal {
+    position: relative;
+    margin-left: 24.7vw;
+    background-color: $light;
+    outline: none;
+    transition: all 1s ease;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include padding-top();
+    padding-bottom: 50px;
+    padding-right: 1.35vw;
+    padding-left: 1.35vw;
+
+    @include mobileNews() {
+        margin-left: 0;
+        padding-bottom: wv-380(80px);
+        @include wrapper();
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(57, 61, 70, 0.9) !important;
+}
+
+.titleContent {
+    border-bottom: 1px solid rgba(57, 61, 70, 0.2);
+    padding-right: 90px;
+    padding-bottom: wv-1460(116px);
+    position: relative;
+    @include mobileNews() {
+        padding-right: 0;
+        padding-bottom: wv-380(16px);
+        margin-bottom: wv-380(52px);
+    }
+
+    .dateDiv {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: wv-1460(23px);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include mobileNews() {
+            position: relative;
+            margin-bottom: wv-380(85px);
+        }
+    }
+    .date {
+        @include CUSTOM_H3();
+        color: $brick;
+        @include mobileNews() {
+            @include H3();
+            color: $brick;
+        }
+    }
+    .month {
+        @include CUSTOM_H5();
+        color: $brick;
+        @include mobileNews() {
+            @include H5();
+            color: $brick;
+        }
+    }
+
+    .title {
+        @include H4();
+        margin-left: 32.88vw;
+
+        @include mobileNews() {
+            margin-left: 0;
+        }
+    }
+
+    .closeBtn {
+        position: absolute;
+        right: 1.35vw;
+        top: 0;
+
+        @include mobileNews() {
+            // display: none;
+        }
+    }
+
+    .closeBtnMobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include dekstopNews() {
+            display: none;
+        }
+    }
+
+    .promo {
+        position: absolute;
+        bottom: wv-1460(20px);
+        padding: wv-1460(5px) wv-1460(5px) wv-1460(3px);
+        background-color: $brick;
+        @include C1();
+        color: $light;
+        @include mobileNews() {
+            position: relative;
+            bottom: inherit;
+            width: fit-content;
+            padding: wv-380(5px) wv-380(5px) wv-380(3px);
+            margin-bottom: wv-380(13px);
+        }
+    }
+}
+
+.text {
+    @include T0();
+    margin-left: 32.88vw;
+    margin-top: wv-1460(52px);
+    margin-bottom: 56px;
+    @include mobileNews() {
+        margin-left: 0;
+        margin-top: wv-380(20px);
+    }
+    p {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: $brick;
+    }
+}
+
+.imageDiv {
+    position: relative;
+    width: 72.6vw;
+    height: 36.99vw;
+    @include mobileNews() {
+        width: 100%;
+        height: wv-380(220px);
+    }
+
+    .modalImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.disabled {
+    display: none;
+}

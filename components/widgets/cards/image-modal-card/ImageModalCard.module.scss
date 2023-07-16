@@ -1,0 +1,101 @@
+@import "../../../../styles/vars";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: wv-1460(7px);
+
+  @include laptop() {
+    gap: wv-1200(7px);
+  }
+
+  @include tablet() {
+    gap: wv-768(7px);
+  }
+
+  @include mobile() {
+    gap: wv-380(7px);
+  }
+}
+
+.main{
+  height: wv-1460(270px)!important;
+  width: 100%;
+  position: relative;
+}
+
+.img {
+  position: relative;
+  width: 100%;
+  height: 270px;
+
+  @include laptop() {
+    height: 240px;
+  }
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.displayNone {
+  display: none;
+}
+
+.imgPure {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  color: $brick !important;
+
+  &.h3 {
+    @include H3;
+  }
+
+  &.h4 {
+    @include H4;
+    font-size: 4.44vh;
+    line-height: 100%;
+    margin-top: 10px;
+
+    @media screen and (min-width: 1024px) and (max-width: 1370px) and (orientation: portrait) {
+      margin-top: 0;
+    }
+
+    &:first-line {
+      @media screen and (min-width: 1024px) and (max-width: 1370px) and (orientation: portrait) {
+        line-height: wv-1200(106px) !important;
+      }
+    }
+
+    @include laptop(){
+      line-height: wv-1200(66px) !important;
+      margin-top: 0;
+    }
+    @include tablet(){
+      line-height: wv-768(46px);
+      margin-top: 0;
+    }
+  }
+}
+
+.logo {
+  width: 23.3%;
+  height: auto;
+  margin-top: wv-1460(9px);
+
+  @include laptop() {
+    margin-top: wv-1200(9px);
+  }
+
+  @include tablet() {
+    margin-top: wv-768(9px);
+  }
+
+  @include mobile() {
+    margin-top: wv-380(9px);
+  }
+}

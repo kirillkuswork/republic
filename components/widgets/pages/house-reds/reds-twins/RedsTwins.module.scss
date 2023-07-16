@@ -1,0 +1,231 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+
+.container {
+  @include wrapper();
+  @include  padding-top();
+  padding-bottom: wv-1460(100px);
+  // margin-top: 100vh;
+  background: $darker-light;
+  overflow: hidden;
+  // width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+  
+  @include mobile() {
+    margin-top: 0;
+  }
+
+  .titleSection {
+    @include H3();
+    border-bottom: 1px solid rgba(57, 61, 70, 0.2);
+    padding-bottom: wv-1460(113px);
+
+    @include mobile() {
+      padding-bottom: wv-380(79px);
+    }
+
+    .titleColor {
+      color: $brick;
+    }
+  }
+
+  .textSection {
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .architect {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+        @include mobile {
+          margin-right: 10px;
+        }
+      }
+
+      .architectName {
+        @include C1();
+      }
+
+      .architectNameColor {
+        opacity: 0.5;
+        margin-top: 2px;
+      }
+
+    }
+    .architectText {
+      @include T1();
+      width: 18vw;
+      margin-top: 14px;
+
+      @include mobile {
+        width: 100%;
+        margin-bottom:  wv-380(77px);
+      }
+    }
+
+    .text {
+      @include H5();
+      width: 40vw;
+      margin-right: 8vw;
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .schemeSection {
+    margin-top: wv-1460(140px);
+    position: relative;
+    @include mobile {
+      margin-top: wv-380(17px);
+    }
+
+    .redsScheme {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: block;
+      @include mobile {
+        width: 145%;
+        left: -22.5%;
+      }
+    }
+
+    .windowView {
+      z-index: 2;
+      width: 9.9%;
+      height: 18.9%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 32.5%;
+      top: -7%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) and (max-width: 1370px) {
+        width: 12vw;
+        height: 12vw;
+      }
+
+      @media screen and (min-width: 541px) and (max-width: 1024px) {
+        width: 19vw;
+        height: 17vw;
+      }
+
+      @include mobile {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 31.5vw;
+        height: 31.5vw;
+        margin-bottom: 18.4vw;
+      }
+
+      img {
+        z-index: -1;
+      }
+
+      .windowViewText {
+        @include C1();
+        color: $light;
+        padding: 11.4% 14.3% 0;
+        @media screen and (min-width: 541px) and (max-width: 1370px) {
+          padding: 20px 20px 0;
+        }
+      }
+
+      .windowViewIcon {
+        margin: 0 14.3% 14.3%;
+        @media screen and (min-width: 541px) and (max-width: 1370px) {
+          margin: 0 20px 20px;
+        }
+        
+      }
+      svg {
+        // margin: 0 14.3% 14.3%;
+        // width: 9.9%;
+        // height: 18.9%;
+      }
+    }
+
+    .towers {
+      width: 15.5%;
+      height: 29.7%;
+      border: 1px solid $dark-grey;
+      position: absolute;
+      left: 12.3%;
+      bottom: 25.9%;
+      @include mobile {
+        width: 31.6vw;
+        height: 31.6vw;
+        left: 17.9%;
+        bottom: 18.2%;
+        text-align: end;
+        padding: 18px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    .floors {
+      width: 15.5%;
+      height: 29.7%;
+      border: 1px solid $dark-grey;
+      position: absolute;
+      right: 13.5%;
+      bottom: 55.7%;
+      text-align: end;
+      @include mobile {
+        padding: 18px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 31.6vw;
+        height: 31.6vw;
+        right: 0;
+      }
+    }
+
+    .number {
+      @include H1();
+      padding: 8.2%;
+      padding-bottom: 0;
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    .word {
+      @include C1();
+      padding: 8.2%;
+      padding-top: 0;
+      @include mobile {
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+.disabled {
+  display: none;
+}

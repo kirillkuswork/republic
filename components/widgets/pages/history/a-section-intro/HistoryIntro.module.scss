@@ -1,0 +1,139 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.intro {
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        position: relative;
+        min-height: var(--window-inner-height, 100vh);
+        max-height: var(--window-inner-height, 100vh);
+    }
+
+    @include mobile() {
+        position: relative;
+        min-height: var(--window-inner-height, 100vh);
+        max-height: var(--window-inner-height, 100vh);
+    }
+
+    &Bg {
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/intro-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: center;
+        overflow: hidden;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &Title {
+        @include H1();
+        color: $light;
+        position: absolute;
+        left: wv-1460(15px);
+        top: wv-1460(80px);
+        width: wv-1460(1430px);
+        height: 260px;
+        transition: all 0.2s ease;
+
+        @include laptop() {
+            top: wv-1200(80px);
+        }
+
+        @include tablet() {
+            top: wv-768(80px);
+        }
+
+        @include mobile() {
+            top: wv-380(110px);
+            left: 0;
+            width: 100vw;
+        }
+
+        &Kerning {
+            letter-spacing: 0.01em;
+        }
+
+        &First {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            display: inline-block;
+
+            @include tablet() {
+                left: wv-1200(15px);
+            }
+
+            @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+                left: wv-1200(15px);
+            }
+
+            @media screen and (max-width:1023px) {
+                left: wv-768(15px);
+            }
+
+            @include mobile() {
+                left: wv-380(20px);
+            }
+
+            &Right {
+                position: absolute;
+                right: wv-380(35px);
+                top: wv-380(70px);
+                z-index: 3;
+                display: inline-block;
+            }
+        }
+
+        &Second {
+            z-index: 3;
+            position: absolute;
+            right: wv-1460(20px);
+            top: wv-1460(155px);
+            display: inline-block;
+            line-height: 1.2;
+
+            @include mobile() {
+                top: wv-380(140px);
+                left: wv-380(20px);
+            }
+        }
+
+        &Third {
+            z-index: 3;
+            position: absolute;
+            right: wv-1460(250px);
+            top: wv-1460(320px);
+            display: inline-block;
+
+            @include mobile() {
+                top: wv-380(225px);
+                right: wv-380(20px);
+            }
+        }
+    }
+}
+
+.scrollDownBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+}

@@ -1,0 +1,241 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/main_page_functions";
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $darker-light;
+  z-index: 5;
+
+  &__img {
+    width:100%;
+    height: wv-380(260px);
+    position: absolute;
+    top:wv-380(193px);
+    z-index: 1;
+    @include wrapper();
+
+    &__clip {
+      height: 100%;
+      width: 100%;
+      clip-path: inset(0);
+
+      &__inner {
+        height: 100%;
+        width: 100%;
+        background-image: url("../../../../../../public/images/main-page/life_bg.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+  }
+}
+
+.hideScroll {
+  z-index: 1000;
+}
+
+.content_wrapper{
+  @include wrapper();
+  padding-top:wv-380(20px);
+  position: relative;
+  z-index: 2;
+  &__life{
+    @include H1();
+    color: $brick;
+  }
+  &__architectural{
+    @include H1();
+    color: $brick;
+  }
+  &__park{
+    @include H1();
+    text-align: right;
+    padding-right:wv-380(39px);
+  }
+  &__desc{
+    @include T1();
+    padding-top:wv-380(238px);
+  }
+  &__button{
+    width: wv-380(150px);
+    padding-top:wv-380(26px);
+    padding-bottom:wv-380(80px);
+    div{
+      span{
+        font-size: wv-380(14px);
+        line-height: wv-380(16px);
+      }
+    }
+  }
+
+
+}
+.houses_wrapper{
+  position: relative;
+  &__block{
+    @include wrapper();
+  }
+  &__titles{
+    border-top:1px solid rgba(57, 61, 70, .2);
+    padding-top:wv-380(13px);
+  }
+}
+.title {
+  @include H4;
+  color: $brick;
+}
+
+.button {
+ width:wv-380(150px);
+  padding-top:wv-380(25px);
+  div{
+    span{
+      font-size: wv-380(14px);
+      line-height: wv-380(16px);
+    }
+  }
+}
+
+.disclaimer {
+  @include T2;
+  display: flex;
+  align-items: center;
+  gap: wv-380(8px);
+  padding-top:wv-380(14px);
+  & span {
+    color: $dark-grey;
+    opacity: 0.5;
+  }
+}
+
+.scheme_slider_wrapper {
+  position: relative;
+  margin-top:wv-380(77px);
+  width: 100%;
+}
+
+.scheme {
+  position: relative;
+  display: block;
+  z-index: 100;
+  margin: 0;
+  user-select: none;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  & > * {
+    height: 56vh;
+    position: relative;
+    display: block;
+    z-index: 100;
+  }
+
+  &__slide {
+    width: wv-380(640px);
+  }
+}
+.slider_wrapper{
+  @include wrapper();
+  padding-top:wv-380(22px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider {
+  overflow: auto;
+  height: wv-380(112px);
+  width: 100%;
+  padding-top:wv-380(15px);
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+.slide {
+  width: auto !important;
+  padding: 0 wv-380(20px);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    transform: translateY(10px);
+
+    &_title {
+      @include H1;
+      color: $brick;
+    }
+
+    &_icon {
+      position: absolute;
+      right: 0;
+      transform: translateX(100%);
+      width: wv-380(20px);
+      height: wv-380(20px);
+
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.active &__content {
+    &_text , &_icon {
+      opacity: 1;
+    }
+
+    &_title {
+      color: $brick;
+    }
+  }
+
+  &.disabled &__content {
+    opacity: 0.1;
+  }
+}
+
+.modal {
+  &__text {
+    @include T2;
+  }
+
+  &__number {
+    @include H1;
+    color: $brick;
+  }
+}
+
+.arrow {
+  width: wv-380(30px);
+  height: wv-380(30px);
+
+  &__next {
+      float:right;
+  }
+}
+
+.image {
+  width: auto !important;
+}
+
+.hidden {
+  & > path {
+    fill: transparent !important;
+    stroke: transparent !important;
+  };
+}

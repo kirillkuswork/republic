@@ -1,0 +1,217 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.gallery {
+    // (115 + 106 + 67)
+    width: 288vw;
+    height: 100vh;
+    background-color: $dark-grey;
+    position: relative;
+    z-index: 2;
+    @include T1();
+    color: $light;
+    display: flex;
+
+    &Wrapper {
+        display: flex;
+    }
+}
+
+// first block
+.moscow {
+    @include padding-top();
+    @include padding-left();
+    @include padding-bottom();
+    width: 115vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    &Title {
+        @include H3();
+        color: $brick;
+        max-width: wv-1460(580px);
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    &Right {
+        display: flex;
+        gap: wv-1460(20px);
+    }
+
+    &Desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &DescText {
+        max-width: wv-1460(270px);
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    &DescImgWrapper {
+        width: wv-1460(340px);
+        height: wv-1460(400px);
+        overflow: hidden;
+        position: relative;
+    }
+
+    &DescImg {
+        width: 100%;
+        aspect-ratio: 340 / 400;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: center;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    &Img {
+        width: wv-1460(580px);
+        height: 100%;
+    }
+}
+
+// second block
+.song {
+    @include padding-top();
+    @include padding-left();
+    @include padding-bottom();
+    width: 106vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    gap: wv-1460(90px);
+
+    &Desc {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: stretch;
+        max-width: wv-1460(870px);
+        width: 100%;
+    }
+
+    &DescTitle {
+        @include H1();
+        max-width: wv-1460(600px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        line-height: 0.9;
+
+        &First {
+            color: $light;
+        }
+
+        &Second {
+            margin-left: auto;
+            color: $brick;
+        }
+    }
+
+    &DescText {
+        max-width: wv-1460(270px);
+        white-space: normal;
+        overflow-wrap: break-word;
+        margin-left: auto;
+    }
+
+    &ImgWrapper {
+        width: wv-1460(580px);
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &Img {
+        width: 100%;
+        aspect-ratio: 580 / 860;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: center;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.presna {
+    @include padding-top();
+    @include padding-left();
+    @include padding-bottom();
+    width: 67vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    &Desc {
+        @include T1();
+        max-width: wv-1460(260px);
+        color: $light;
+        white-space: normal;
+        overflow-wrap: break-word;
+        align-self: flex-end;
+    }
+
+    &Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &Title {
+        @include H3();
+        color: $brick;
+        max-width: wv-1460(460px);
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    &ImgWrapper {
+        width: wv-1460(460px);
+        height: wv-1460(340px);
+        overflow: hidden;
+        position: relative;
+    }
+
+    &Img {
+        width: 100%;
+        aspect-ratio: 460 / 340;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-4.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: center;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

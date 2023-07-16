@@ -1,0 +1,42 @@
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-Condensed";
+  font-stretch  : semi-condensed;
+  src           : url("../assets/fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-weight   : 400;
+}
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-SemBdSemCond";
+  font-stretch  : semi-condensed;
+  src           : url("../assets/fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-weight   : 700;
+}
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-SemiCondensed";
+  src           : url("../assets/fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-stretch  : semi-condensed;
+  font-weight   : 600;
+}
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift-Light";
+  src           : url("../assets/fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-weight   : 300;
+}
+
+@font-face {
+  font-display: block;
+  font-family   : "Bahnschrift";
+  src           : url("../assets/fonts/Bahnschrift.ttf") format("truetype");
+  font-style    : normal;
+  font-weight   : 400;
+}

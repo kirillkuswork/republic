@@ -1,0 +1,14 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+.section_container{
+  padding-top:wv-1460(116px);
+  @include laptop() {
+    padding-top:wv-1200(116px);
+  }
+  @include tablet() {
+    padding-top:wv-768(116px);
+  }
+  @include mobile() {
+    padding-top:wv-380(80px);
+  }
+}

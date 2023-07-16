@@ -1,0 +1,690 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/main_page_functions";
+
+.wrapper {
+  z-index: 61;
+  position: fixed;
+  left: 0;
+  top: vh-900(900px);
+  width: wv-1460(1460px);
+  height: vh-900(4000px);
+  background-color: $darker-light;
+}
+
+.content_wrapper {
+  position: absolute;
+  left: wv-1460(20px);
+  top: vh-900(20px);
+  width: wv-1460(1420px);
+
+  &__life {
+    @include CUSTOM_H1();
+    color: $brick;
+    position: absolute;
+    left: wv-1460(-400px);
+    top: 0;
+  }
+
+  &__architectural {
+    @include CUSTOM_H1();
+    color: $brick;
+    position: absolute;
+    right: wv-1460(-910px);
+    top: 0;
+    width: wv-1460(890px);
+  }
+
+  &__park {
+    @include CUSTOM_H1();
+    position: absolute;
+    right: wv-1460(-417px);
+    top: vh-900(141px);
+    width: wv-1460(392px);
+  }
+
+  &__desc {
+    @include CUSTOM_T1();
+    position: absolute;
+    right: 0;
+    top: vh-900(504px);
+    width: wv-1460(270px);
+
+    opacity: 0;
+  }
+
+  &__button {
+    padding-top: vh-900(26px);
+    width: wv-1460(160px);
+    min-height: 50px;
+    @include laptop() {
+      width: wv-1200(160px);
+    }
+    @include tablet() {
+      width: wv-768(148px);
+
+    }
+
+    div {
+      height: 100%
+    }
+  ;
+
+    //svg {
+    //  width: wv-1460(20px);
+    //  height: wv-1460(20px);
+    //  max-width: 30px;
+    //  max-height: 30px;
+    //  @include laptop() {
+    //    width: wv-1200(20px);
+    //    height: wv-1200(20px);
+    //  }
+    //  @include tablet() {
+    //    width: wv-768(20px);
+    //    height: wv-768(20px);
+    //  }
+    //}
+
+    opacity: 0;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: vh-900(100px);
+    width: wv-1460(1060px);
+    height: vh-900(780px);
+    clip-path: inset(0);
+
+    &__inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url("../../../../../../public/images/main-page/life_bg.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+}
+
+
+.houses_wrapper {
+  position: absolute;
+  left: 0;
+  top: vh-900(900px);
+  width: wv-1460(1460px);
+  height: vh-900(900px);
+  z-index: 62;
+}
+
+.title {
+  position: absolute;
+  top: wv-1460(25px);
+  left: wv-1460(20px);
+  width: wv-1460(400px);
+  z-index: 4;
+
+  @include laptop() {
+    top: wv-1200(25px);
+    left: wv-1200(20px);
+  }
+
+  @include tablet() {
+    left: wv-768(20px);
+    top: wv-768(13px);
+    width: wv-768(180px);
+  }
+
+  @include mobile() {
+    left: wv-380(20px);
+    top: wv-380(13px);
+    width: wv-380(180px);
+  }
+
+  @include H4;
+  color: $brick;
+}
+
+.button {
+  position: absolute;
+  left: wv-1460(20px);
+  top: wv-1460(130px);
+  width: fit-content;
+  z-index: 4;
+
+  @include laptop() {
+    left: wv-1200(20px);
+    top: wv-1200(130px);
+  }
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    top: wv-768(20px);
+    left: unset;
+    right: wv-768(20px);
+  }
+
+  @include tablet() {
+    top: wv-768(20px);
+    left: unset;
+    right: wv-768(20px);
+  }
+
+  @include mobile() {
+    top: wv-380(20px);
+    left: wv-380(245px);
+  }
+}
+
+.scheme_slider_wrapper {
+  position: absolute;
+  top: vh-900(270px);
+  left: 0;
+  width: wv-1460(1460px);
+
+}
+
+.scheme {
+  position: absolute;
+  display: block;
+  z-index: 63;
+  left: 50%;
+  transform: translateX(-50%);
+  top: wv-1460(-15px);
+  margin-left: wv-1460(40px);
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  //&:after, &:before {
+  //  position: absolute;
+  //  content: "";
+  //  background-color: $darker-light;
+  //  z-index: 5;
+  //}
+  //
+  //
+  //&:after {
+  //  bottom: -2px;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 3px;
+  //}
+  //
+  //&:before {
+  //  right: -2px;
+  //  top: 0;
+  //  height: 100%;
+  //  width: 3px;
+  //}
+
+  //&:after, &:before {
+  //  position: absolute;
+  //  content: "";
+  //  background-color: $darker-light;
+  //  z-index: 5;
+  //}
+  //
+  //
+  //&:after {
+  //  bottom: -2px;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 3px;
+  //}
+  //
+  //&:before {
+  //  right: -2px;
+  //  top: 0;
+  //  height: 100%;
+  //  width: 3px;
+  //}
+
+  @include laptop() {
+    margin: 0;
+    top: wv-1200(-10px);
+  }
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    position: relative;
+    margin: 0;
+    -ms-overflow-style: none;
+    overflow: auto;
+    scrollbar-width: none;
+    top: 0;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @include tablet() {
+    position: relative;
+    margin: 0;
+    -ms-overflow-style: none;
+    overflow: auto;
+    scrollbar-width: none;
+    top: 0;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  @include mobile() {
+    position: relative;
+    top: vh(24);
+    margin: 0;
+    -ms-overflow-style: none;
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  & > * {
+    height: vh(70);
+    position: relative;
+    display: block;
+    z-index: 63;
+
+    @include laptop() {
+      height: vh(65);
+    }
+
+    @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+      height: vh(63);
+      margin: 0 auto;
+    }
+
+    @include tablet() {
+      height: vh(63);
+      margin: 0 auto;
+    }
+
+    @include mobile() {
+      height: vh(56);
+    }
+  }
+
+  &__slide {
+    @include tablet() {
+      width: wv-768(640px);
+    }
+
+    @include mobile() {
+      width: wv-380(640px);
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto !important;
+  z-index: -1;
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    height: vh(63) !important;
+    width: unset !important;
+  }
+
+  @include tablet() {
+    height: vh(63) !important;
+    width: unset !important;
+  }
+}
+
+.slider {
+  overflow: auto;
+  position: absolute !important;
+  top: vh-900(620px);
+  height: auto;
+  left: 0;
+  width: 100%;
+  z-index: 64 !important;
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  @include laptop() {
+    height: wv-768(90px);
+    bottom: wv-768(20px);
+    left: 50%;
+    transform: translateX(-50%);
+    //width: fit-content;
+    top: vh-900(605px);
+  }
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    height: wv-768(100px);
+    bottom: wv-768(20px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    top: vh-900(695px);
+  }
+
+  @include tablet() {
+    height: wv-768(90px);
+    bottom: wv-768(20px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    top: vh-900(700px);
+  }
+
+  @include mobile() {
+    height: wv-380(80px);
+    bottom: wv-380(20px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+  }
+}
+
+.slide {
+  width: auto !important;
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    margin: wv-768(10px) 0;
+    padding: 0 wv-768(20px);
+  }
+
+  @include tablet() {
+    margin: wv-768(10px) 0;
+    padding: 0 wv-768(20px);
+  }
+
+  @include mobile() {
+    padding: 0 wv-380(20px);
+  }
+
+  & {
+    margin-left: wv-1460(30px);
+    margin-right: wv-1460(30px);
+
+    @include laptop() {
+      margin-left: wv-1200(30px);
+      margin-right: wv-1200(30px);
+    }
+
+    @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+      margin-left: unset;
+      margin-right: unset;
+    }
+
+    @include tablet() {
+      //margin: wv-768(10px) 0;
+      margin-left: unset;
+      margin-right: unset;
+    }
+
+    @include mobile() {
+      margin: wv-380(10px) 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    transition: all 0.5s;
+
+    &_title {
+      cursor: pointer;
+      @include H1;
+      color: $dark-grey;
+    }
+
+    &_text {
+      @include C1;
+      color: $brick;
+      opacity: 0;
+      height: wv-1460(16px);
+
+      @include laptop() {
+        height: wv-1200(16px);
+      }
+
+      @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+        height: wv-768(16px);
+      }
+
+      @include tablet() {
+        height: wv-768(16px);
+      }
+
+      @include mobile() {
+        height: wv-380(16px);
+      }
+    }
+
+    &_icon {
+      position: absolute;
+      right: 0;
+      transform: translateX(100%);
+      width: wv-1460(30px);
+      height: wv-1460(30px);
+      opacity: 0;
+
+      @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+        width: wv-768(20px);
+        height: wv-768(20px);
+      }
+
+      @include tablet() {
+        width: wv-768(20px);
+        height: wv-768(20px);
+      }
+
+      @include mobile() {
+        width: wv-380(20px);
+        height: wv-380(20px);
+      }
+
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.active &__content {
+    &_text, &_icon {
+      opacity: 1;
+    }
+
+    &_title {
+      color: $brick;
+    }
+  }
+
+  &.disabled &__content {
+    opacity: 0.1;
+  }
+}
+
+.modal {
+  &__text {
+    position: absolute;
+    z-index: 65;
+    right: 0;
+    top: wv-1460(15px);
+    display: block;
+    font-family: $content-300-font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: $dark-grey;
+    overflow: visible;
+    width: wv-1460(230px);
+
+    @include laptop() {
+      top: wv-1200(15px);
+      width: wv-1200(230px);
+    }
+
+    @include tablet() {
+      top: wv-768(15px);
+    }
+
+    @include mobile() {
+      top: wv-380(15px);
+      width: wv-380(230px);
+    }
+  }
+
+  &__number {
+    font-family: $primary-600-font;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-size: 169px;
+    line-height: 160px;
+    font-variation-settings: 'wdth' 75;
+
+    @include laptop() {
+      font-size: 139px;
+      line-height: 130px;
+    }
+
+    @include tablet() {
+      font-size: 64px;
+      line-height: 70px;
+    }
+
+    @include mobile() {
+      font-size: 64px;
+      line-height: 70px;
+    }
+    color: $brick;
+  }
+}
+
+.disclaimer {
+  @include T2;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: wv-1460(8px);
+
+  @include laptop() {
+    gap: wv-1200(8px);
+  }
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    top: wv-768(87px);
+    left: wv-768(20px);
+    gap: wv-768(8px);
+  }
+
+  @include tablet() {
+    top: wv-768(87px);
+    left: wv-768(20px);
+    gap: wv-768(8px);
+  }
+
+  @include mobile() {
+    top: wv-380(87px);
+    left: wv-380(20px);
+    gap: wv-380(8px);
+  }
+
+  & span {
+    color: $dark-grey;
+    opacity: 0.5;
+  }
+}
+
+.arrow {
+  position: absolute;
+
+  @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+    width: wv-768(30px);
+    height: wv-768(30px);
+    bottom: wv-768(36px);
+  }
+
+  @include tablet() {
+    width: wv-768(30px);
+    height: wv-768(30px);
+    bottom: wv-768(36px);
+  }
+
+  @include mobile() {
+    width: wv-380(30px);
+    height: wv-380(30px);
+    bottom: wv-380(36px);
+  }
+
+  &__prev {
+    @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+      left: wv-768(20px);
+    }
+
+    @include tablet() {
+      left: wv-768(20px);
+    }
+
+    @include mobile() {
+      left: wv-380(20px);
+    }
+  }
+
+  &__next {
+    @media screen and (max-width: 1024px) and (min-height: 800px) and (max-height: 1500px) {
+      right: wv-768(20px);
+    }
+
+    @include tablet() {
+      right: wv-768(20px);
+    }
+
+    @include mobile() {
+      right: wv-380(20px);
+    }
+  }
+}
+
+.aside {
+  display: flex;
+  height: 100%;
+  width: fit-content;
+  z-index: 1000;
+
+  & > div {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  & div {
+    overflow: hidden;
+  }
+}
+
+.hidden {
+  & > path {
+    fill: transparent !important;
+    stroke: transparent !important;
+  };
+}

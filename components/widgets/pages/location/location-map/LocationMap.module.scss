@@ -1,0 +1,46 @@
+@import "../../../../../styles/functions";
+@import "../../../../../styles/vars";
+
+.wrapper {
+  position: relative;
+  background: $light;
+  overflow: hidden;
+  margin-top: -2px;
+
+  .map {
+    position: relative;
+    width: 100%;
+    height: wv-1460(850px);
+    background-image: url("/images/location/map.svg");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.6s;
+
+    @include laptop() {
+      height: wv-1200(850px);
+    }
+
+    @include tablet() {
+      height: wv-768(660px);
+      background-position-x: 25%;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  .mapMobile {
+    display: none;
+    transition: all 0.6s;
+
+    @include mobile() {
+      display: block;
+      background-image: url("/images/location/mapMobile.svg");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: wv-380(660px);
+    }
+  }
+}

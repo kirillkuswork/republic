@@ -1,0 +1,16 @@
+/.htaccess
+/gulpfile.js
+/.idea
+node_modules
+docker
+.access.php
+.htaccess.restore
+.section.php
+package-lock.json
+build
+.DS_Store
+
+
+# next.js
+/.next/
+/out/

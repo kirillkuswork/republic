@@ -1,0 +1,29 @@
+@import "../../../../../styles/vars";
+
+.aside {
+    //overflow: hidden;
+  padding: 0 5px;
+  margin-bottom: wv-1460(140px);
+
+  @include laptop() {
+    margin-bottom: wv-1200(140px);
+  }
+}
+
+.aside__block {
+  & + & {
+    margin-top: wv-1460(22px);
+
+    @include laptop() {
+      margin-top: wv-1200(22px);
+    }
+
+    @include tablet() {
+      margin-top: wv-768(22px);
+    }
+
+    @include mobile() {
+      margin-top: wv-380(22px);
+    }
+  }
+}

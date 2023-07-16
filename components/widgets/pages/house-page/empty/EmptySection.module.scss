@@ -1,0 +1,14 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: -2;
+  position: relative;
+
+  @include mobile() {
+    display: none;
+  }
+}

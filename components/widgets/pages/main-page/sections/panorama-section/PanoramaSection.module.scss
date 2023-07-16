@@ -1,0 +1,51 @@
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/vars";
+.section {
+  position: relative;
+  width: 100%;
+  height: wv-1460(900px);
+  @include tablet() {
+    height: wv-768(900px);
+  }
+  background: $dark-grey;
+  overflow: hidden;
+}
+.panorama_wrapper {
+  height: wv-1460(900px);
+  @include tablet() {
+    height: wv-768(900px);
+  }
+  cursor: url("/images/location/scrollable-indicator.svg"), pointer;
+}
+
+.panorama {
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 60%;
+
+  &__controls{
+    position:absolute;
+    height: 7%;
+    top:0;
+    left:0;
+    z-index:8;
+    display:flex;
+    align-items: center;
+    gap:wv-1460(5px);
+    @include wrapper();
+    padding-top:wv-1460(20px);
+    @include laptop() {
+      padding-top: wv-1200(20px);
+      gap: wv-1200(5px);
+    }
+    @include tablet() {
+      padding-top: wv-768(5px);
+      gap: wv-768(20px);
+      width: auto;
+    }
+    @media screen and (min-width: 1025px) and (max-width: 1400px) {
+      width: auto;
+    }
+  }
+
+}

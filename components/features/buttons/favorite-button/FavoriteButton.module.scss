@@ -1,0 +1,44 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+
+
+.button {
+  cursor: pointer;
+  width: wv-1460(30px);
+  height: wv-1460(30px);
+  transition: all .2s ease;
+
+  @include laptop() {
+    width: wv-1200(30px);
+    height: wv-1200(30px);
+  }
+
+  @include tablet() {
+    width: wv-768(30px);
+    height: wv-768(30px);
+  };
+
+  @include mobile() {
+    width: wv-380(30px);
+    height: wv-380(30px);
+  }
+
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.active {
+  & svg {
+    rect {
+      fill: $brick;
+      stroke: $brick;
+    }
+
+    path {
+      stroke: $light;
+    }
+  }
+}
+

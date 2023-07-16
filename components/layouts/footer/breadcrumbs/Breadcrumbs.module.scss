@@ -1,0 +1,33 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/functions';
+
+.Link {
+    @include T2();
+    color: $light;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+
+    @include mobile {
+        margin-right: wv-380(10px);
+    }
+
+    @include hover() {
+        &:hover {
+            color: $brick;
+        }
+    }
+
+    &Last {
+        color: rgba(#f9f5f3, 0.3);
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include mobile {
+      gap: wv-380(10px);
+  }
+}

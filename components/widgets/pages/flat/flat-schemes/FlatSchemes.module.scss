@@ -1,0 +1,456 @@
+@import "../../../../../styles/vars";
+
+.container {
+  position: relative;
+  @include padding-left();
+  @include padding-bottom();
+  @include padding-top();
+  background-color: $light;
+  display: grid;
+  grid-template-columns: 73% 27%;
+  grid-template-rows: 38% 62%;
+  height: 100%;
+
+  @include tablet() {
+    @include padding-right();
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 65% 35%;
+    height: wv-768(1010px);
+  }
+
+  @include mobile() {
+    @include padding-right();
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
+    height: wv-380(678px);
+  }
+}
+
+.span {
+  position: absolute;
+  font-family: $primary-700-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: wv-1460(10px);
+  line-height: wv-1460(16px);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $light-grey;
+
+  @include laptop() {
+    font-size: wv-1200(10px);
+    line-height: wv-1200(16px);
+  }
+
+  @include tablet() {
+    font-size: wv-768(10px);
+    line-height: wv-768(16px);
+  }
+
+  @include mobile() {
+    font-size: wv-380(10px);
+    line-height: wv-380(16px);
+  }
+}
+
+.flat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: wv-1460(75px);
+  grid-row: 2 span;
+  border-right: 1px solid rgb(22%, 24%, 27%, 0.15);
+
+  @include tablet() {
+    grid-row: 1 span;
+    grid-column: 2 span;
+    border-right: none;
+    border-bottom: 1px solid rgb(22%, 24%, 27%, 0.15);
+  }
+
+  @include mobile() {
+    padding: 0 0 wv-380(20px) 0;
+    grid-row: 1 span;
+    grid-column: 2 span;
+    border-right: none;
+    border-bottom: 1px solid rgb(22%, 24%, 27%, 0.15);
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    & .active {
+      div:before {
+        border-color: $brick;
+      }
+
+      button {
+        span {
+          color: $brick !important;
+        }
+      }
+    }
+
+    @include tablet() {
+      bottom: auto;
+      top: 0;
+      width: 100%;
+      justify-content: center;
+    }
+
+    @include mobile() {
+      bottom: auto;
+      top: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: wv-1460(580px);
+    width: 100%;
+
+    @include tablet() {
+      height: wv-768(400px);
+      width: 85%;
+    }
+
+    @include mobile() {
+      height: wv-380(250px);
+      width: 100%;
+    }
+
+    & + .flat__buttons {
+      @include tablet() {
+        margin-bottom: wv-768(20px);
+      }
+
+      @include mobile() {
+        margin-bottom: wv-380(20px);
+      }
+    }
+
+    & svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__scheme {
+    @include mobile() {
+      padding: 1px;
+    }
+  }
+
+  &__top, &__bottom {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__top {
+    top: wv-1460(-40px);
+
+    @include laptop() {
+      top: wv-1200(-40px);
+    }
+
+    @include tablet() {
+      top: wv-768(-40px);
+    }
+
+    @include mobile() {
+      top: wv-380(-40px);
+    }
+  }
+
+  &__bottom {
+    bottom: wv-1460(-40px);
+
+    @include laptop() {
+      bottom: wv-1200(-40px);
+    }
+
+    @include tablet() {
+      bottom: wv-768(-40px);
+    }
+
+    @include mobile() {
+      bottom: wv-380(-40px);
+    }
+  }
+
+  &__left, &__right {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__left {
+    left: wv-1460(-90px);
+    transform: rotate(-90deg);
+
+    @include laptop() {
+      left: wv-1200(-80px);
+    }
+
+    @include tablet() {
+      left: wv-768(-80px);
+    }
+
+    @include mobile() {
+      left: wv-380(-80px);
+    }
+  }
+
+  &__right {
+    right: wv-1460(-90px);
+    transform: rotate(90deg);
+
+    @include laptop() {
+      right: wv-1200(-80px);
+    }
+
+    @include tablet() {
+      right: wv-768(-80px);
+    }
+
+    @include mobile() {
+      right: wv-380(-80px);
+    }
+  }
+}
+
+.floor {
+  position: relative;
+  @include wrapper;
+  height: 100%;
+
+  @include tablet() {
+    padding-right: 0;
+    padding-left: 0;
+    @include padding-top();
+  }
+
+  @include mobile() {
+    padding-right: 0;
+    padding-left: 0;
+    @include padding-top();
+  }
+
+  &__block {
+    position: relative;
+    padding-top: wv-1460(97px);
+
+    @include laptop() {
+      padding-top: wv-1200(97px);
+    }
+
+    @include tablet() {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      border-top: none;
+      padding-top: wv-768(95px);
+      width: 90%;
+      margin-left: auto;
+    }
+
+    @include mobile() {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      border-top: none;
+      padding-top: wv-380(95px);
+      width: 90%;
+      margin-left: auto;
+    }
+
+    svg {
+      width: 98%;
+    }
+
+    svg path:first-of-type {
+      fill: transparent;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: wv-1460(140px);
+    z-index: 5;
+
+    @include laptop() {
+      width: wv-1200(140px);
+    }
+
+    @include tablet() {
+      top: wv-768(17px);
+      width: wv-768(140px);
+      right: 0;
+      left: auto;
+      transform: none;
+    }
+
+    @include mobile() {
+      top: wv-380(17px);
+      width: wv-380(130px);
+      right: 0;
+      left: auto;
+      transform: none;
+    }
+  }
+
+  &__span {
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: wv-1460(-40px);
+
+    @include laptop() {
+      bottom: wv-1200(-40px);
+    }
+
+    @include tablet() {
+      position: relative;
+      bottom: unset;
+    }
+
+    @include mobile() {
+      position: relative;
+      bottom: unset;
+    }
+  }
+}
+
+.current {
+  fill: $brick !important;
+}
+
+.houses {
+  @include wrapper;
+  @include padding-left;
+  @include padding-right;
+  height: 100%;
+
+  @include tablet() {
+    padding-right: 0;
+    padding-left: 0;
+    @include padding-top();
+  }
+
+  @include mobile() {
+    padding-right: 0;
+    padding-left: 0;
+    @include padding-top();
+  }
+
+  &__name {
+    display: block;
+    @include C1;
+    margin-bottom: wv-1460(66px);
+
+    @include laptop() {
+      margin-bottom: wv-1200(66px);
+    }
+
+    @include tablet() {
+      margin-bottom: wv-768(75px);
+    }
+
+    @include mobile() {
+      margin-bottom: wv-380(75px);
+    }
+  }
+
+  &__block {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet() {
+      @include padding-right;
+    }
+
+    @include mobile() {
+      @include padding-right;
+    }
+  }
+
+  &__scheme {
+    position: relative;
+    padding: 0 wv-1460(10px) 0 wv-1460(20px);
+
+    @include laptop() {
+      padding: 0;
+    }
+
+    @include tablet() {
+      padding: 0;
+      height: 100%;
+    }
+
+    @include mobile() {
+      padding: 0;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    right: wv-1460(10px);
+
+    @include laptop() {
+      right: wv-1200(10px);
+      bottom: wv-1200(-15px);
+    }
+
+    @include tablet() {
+      right: wv-768(10px);
+    }
+
+    @include mobile() {
+      right: wv-380(10px);
+    }
+  }
+}
+
+.compass {
+  position: absolute;
+  top: wv-1460(50px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include laptop() {
+    top: wv-1200(50px);
+  }
+
+  @include tablet() {
+    transform: translateX(-35%);
+    top: wv-768(55px);
+  }
+
+  @include mobile() {
+    transform: translateX(-40%);
+    top: wv-380(55px);
+  }
+}

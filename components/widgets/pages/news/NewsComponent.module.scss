@@ -1,0 +1,242 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+@import "../../../../styles/main_page_functions";
+
+@mixin mobileNews() {
+  @media screen and (max-width: 540px) {
+    @content;
+  }
+}
+
+@mixin dekstopNews() {
+  @media screen and (min-width: 541px) {
+    @content;
+  }
+}
+
+.container {
+  height: fit-content;
+  // min-height: fit-content;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: wv-1460(250px);
+  padding-bottom: 27vh;
+  @include mobile() {
+    padding-bottom: 79px;
+  }
+
+  
+  .title {
+    @include wrapper();
+    @include H1();
+    color: $brick;
+    display: flex;
+    justify-content: space-between;
+    @include mobileNews() {
+      flex-direction: column;
+    }
+
+    .titleRight {
+      text-align: end;
+    }
+  }
+
+  .slider{
+    margin-top: 14vh;
+
+    @include mobileNews() {
+      display: none;
+    }
+  
+    [data-id='slider_arrows'] {
+      bottom: -120px;
+      top: inherit;
+      button:last-child {
+        // border-left: none;
+        &:after {
+          background-color: $light;
+          top: 1px;
+          width: 2px;
+          @include mobile() {
+            display: none;
+          }
+          @include tablet() {
+            display: none; 
+          }
+        }
+      }
+      @media screen and (min-width: 1465px) {
+        bottom: wv-1460(-120px);
+      }
+
+      @include laptop() {
+        bottom: wv-1200(-120px);
+      }
+    
+      @include tablet() {
+        bottom: wv-768(-80px);
+      }
+
+      button {
+        cursor: pointer;
+        &:after {
+          @include mobile() {
+            display: none;
+          }
+          @include tablet() {
+            display: none; 
+          }
+        }
+      }
+    }
+
+   
+  }
+
+  .newsMobile {
+    margin-top: wv-380(74px);
+    @include wrapper();
+    @include dekstopNews() {
+      display: none;
+    }
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 20px 20px 26px 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    @include mobileNews() {
+      width: 100%;
+      min-height:  wv-380(360px);
+      // height: wv-380(360px);
+      height: auto;
+      margin-bottom: 20px;
+
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: wv-380(20px);
+    }
+  }
+
+  .cardDates {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: wv-1460(23px);
+    @include mobileNews () {
+      margin-top: wv-380(10px);
+    }
+    
+    .cardDate {
+      @include CUSTOM_H3();
+      color:$brick;
+
+      @include mobileNews() {
+        @include H4();
+        color:$brick;
+      }
+    }
+    .cardMonth {
+      @include CUSTOM_H5();
+      color:$brick;
+
+      @include mobileNews() {
+        @include H5();
+        color:$brick;
+      }
+    }
+  }
+
+  .cardContent {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 59.26%;
+    // height:100%;
+
+    @include mobileNews() {
+      flex-direction: row;
+      height: fit-content;
+      align-items: center;
+      width: auto;
+    }
+  }
+
+  .cardPreview {
+    // width:wv-1460(320px);
+    width: 100%;
+    // height:vh-900(150px);
+    @include mobileNews() {
+      width: 100%;;
+      // height: 40.6%
+      // height: wv-380(130px);
+    }
+    img{
+      // width:wv-1460(320px);
+      width: 100%;
+      // height:vh-900(150px);
+      height: 100%;
+      object-fit: cover;
+      @include mobileNews() {
+        width: 100%;;
+        height: 100%;
+      }
+    }
+  }
+
+
+  .cardPromo {
+    position: absolute;
+    bottom: wv-1460(20px);
+    left: wv-1460(20px);
+    padding: wv-1460(5px) wv-1460(5px) wv-1460(3px); 
+    background-color: $brick;
+    @include C1();
+    color: $light;
+
+    @include mobileNews() {
+      padding: wv-380(5px) wv-380(5px) wv-380(3px); 
+      position: relative;
+      bottom: inherit;
+      left: inherit;
+    }
+  }
+  
+ 
+  
+  .cardTitle {
+    @include CUSTOM_H5();
+    // width: wv-1460(320px);
+    padding-top: wv-1460(20px);
+
+    @include mobileNews() {
+      padding-top: wv-380(20px);
+      width: 100%;
+      @include H5();
+    }
+  }
+
+  .showMore {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid #393D46;
+    @include C1();
+    column-gap: 20px ;
+    padding: 14px 20px ; 
+  }
+
+}
+
+.disabled {
+  display: none;
+}

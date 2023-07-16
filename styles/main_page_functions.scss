@@ -1,0 +1,100 @@
+@import "./vars";
+@import "./functions";
+
+@mixin tablet-p-custom() {
+  @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin bg-img() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-blend-mode: multiply, normal;
+  background-position: center;
+  @content;
+}
+@mixin CUSTOM_T1() {
+  font-family: $content-300-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: min(calc(16px / (1460px) * 100vw), calc(16px / (900px) * 100vh));
+  line-height: min(calc(20px / (1460px) * 100vw), calc(20px / (900px) * 100vh));
+  color: $dark-grey;
+
+}
+@mixin CUSTOM_T2() {
+  font-family: $content-300-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: min(calc(12px / (1460px) * 100vw), calc(12px / (900px) * 100vh));
+  line-height: min(calc(16px / (1460px) * 100vw), calc(16px / (900px) * 100vh));
+  color: $dark-grey;
+}
+@mixin CUSTOM_H1() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: min(calc(169px / (1460px) * 100vw), calc(169px / (900px) * 100vh));
+  line-height: min(calc(160px / (1460px) * 100vw), calc(160px / (900px) * 100vh));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}
+@mixin CUSTOM_H2() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-size: min(calc(98px / (1460px) * 100vw), calc(98px / (900px) * 100vh));
+  line-height:min(calc(90px / (1460px) * 100vw), calc(90px / (900px) * 100vh));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}
+@mixin CUSTOM_H2_v1() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: min(calc(70px / (1460px) * 100vw), calc(70px / (900px) * 100vh));
+  line-height:min(calc(75px / (1460px) * 100vw), calc(75px / (900px) * 100vh));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}
+
+@mixin CUSTOM_H3() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: min(calc(70px / (1460px) * 100vw), calc(70px / (900px) * 100vh));
+  line-height: min(calc(70px / (1460px) * 100vw), calc(70px / (900px) * 100vh));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}
+@mixin CUSTOM_H4() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: min(calc(40px / (1460px) * 100vw), calc(40px / (900px) * 100vh));
+  line-height: min(calc(40px / (1460px) * 100vw), calc(40px / (900px) * 100vh));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}
+@mixin CUSTOM_H5() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: min(calc(26px / (1460px) * 100vw), calc(26px / (900px) * 100vh));
+  line-height: min(calc(30px / (1460px) * 100vw), calc(30px / (900px) * 100vh));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}

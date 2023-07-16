@@ -1,0 +1,16 @@
+@import "../../../styles/vars";
+
+.platinumSvg {
+  width: 20.3vw;
+  height: 50.68vw;
+
+  @include mobile() {
+    width: 30.6vw;
+    height: 78.95vw;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

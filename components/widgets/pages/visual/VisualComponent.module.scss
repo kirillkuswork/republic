@@ -1,0 +1,182 @@
+@import "../../../../styles/vars";
+
+.container {
+  @include wrapper;
+}
+
+.section {
+  position: relative;
+  background-color: $light;
+  min-height: 90vh;
+  padding-bottom: wv-1460(91px);
+}
+
+.title {
+  @include H2;
+  padding: wv-1460(15px);
+
+  @include laptop() {
+    padding: wv-1200(15px);
+  }
+
+  @include tablet() {
+    padding: wv-768(15px);
+  }
+
+  @include mobile() {
+    padding: wv-380(15px);
+  }
+}
+
+.scheme {
+  position: relative;
+  margin: 0 auto;
+  width: wv-1460(1180px);
+  height: wv-1460(627.66px);
+
+  & svg {
+    width: 100%;
+    z-index: 2;
+  }
+
+  & .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto !important;
+    z-index: 1;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: wv-1460(20px);
+  bottom: wv-1460(15px);
+}
+
+.labels {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.label {
+  position: absolute;
+  display: inline-block;
+  @include C1;
+  padding: wv-1460(5px) wv-1460(5px) wv-1460(3px);
+  background-color: $darker-light;
+  color: $grey;
+
+  &:after {
+    position: absolute;
+    content: "";
+    background-color: $darker-light;
+    width: 1px;
+    left: 0;
+    top: 0;
+  }
+
+  &.silver, &.brown, &.green, &.gold {
+    top: wv-1460(110px);
+  }
+
+  &.silver {
+    left: wv-1460(90px);
+
+    &:after {
+      height: wv-1460(120px);
+    }
+  }
+
+  &.brown {
+    left: wv-1460(196px);
+
+    &:after {
+      height: wv-1460(170px);
+    }
+  }
+
+  &.gold {
+    left: wv-1460(340px);
+
+    &:after {
+      height: wv-1460(98px);
+    }
+  }
+
+  &.green {
+    left: wv-1460(455px);
+
+    &:after {
+      height: wv-1460(98px);
+    }
+  }
+
+  &.whites {
+    left: wv-1460(358px);
+    top: wv-1460(595px);
+
+    &:after {
+      height: wv-1460(98px);
+      bottom: 0;
+      top: auto;
+    }
+  }
+
+  &.platinum {
+    left: wv-1460(581px);
+    top: wv-1460(30px);
+
+    &:after {
+      height: wv-1460(98px);
+    }
+  }
+
+  &.reds {
+    left: wv-1460(741px);
+    top: wv-1460(450px);
+
+    &:after {
+      bottom: 0;
+      top: auto;
+      height: wv-1460(98px);
+    }
+  }
+
+  &.purple {
+    left: wv-1460(723px);
+    top: wv-1460(-50px);
+
+    &:after {
+      height: wv-1460(64px);
+    }
+  }
+
+  &__active {
+    background-color: $brick;
+    color: $light;
+
+    &:after {
+      background-color: $brick;
+    }
+  }
+}
+
+.parameters {
+  @include C1;
+  display: flex;
+  flex-direction: column;
+  gap: wv-1460(5px);
+  padding-right: wv-1460(60px);
+  width: wv-1460(220px);
+
+  @include laptop() {
+    padding-right: wv-1200(60px);
+    width: wv-1200(220px);
+  }
+}

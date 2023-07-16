@@ -1,0 +1,222 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/functions';
+
+.landscapePlug {
+    @include H2();
+    width: 100vw;
+    height: 100vh;
+    color: $grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: wv-1460(30px);
+
+    @include laptop() {
+        padding: wv-1200(30px);
+    }
+
+    @include tablet() {
+        padding: wv-768(30px);
+    }
+}
+
+.pageWrapper {
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+}
+
+.main_page_header {
+    // z-index: 1000 !important;
+    // opacity: 0;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(9, wv-1460(100px));
+    gap: wv-1460(20px);
+
+    @include laptop() {
+        grid-template-columns: repeat(9, 1fr);
+        gap: wv-1200(20px);
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        grid-template-columns: repeat(9, 1fr);
+        gap: wv-1200(20px);
+        margin-bottom: wv-1200(80px);
+    }
+
+    @include tablet() {
+        grid-template-columns: repeat(9, 1fr);
+        gap: wv-768(20px);
+    }
+
+    @include tablet-p() {
+        grid-template-columns: repeat(9, 1fr);
+        gap: wv-1200(20px);
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.column {
+    &__1 {
+        grid-column: 1 / 3;
+
+        @include tablet {
+            grid-column: 1 / 4;
+        }
+
+        @include mobile {
+            margin-bottom: wv-380(70px);
+        }
+    }
+    &__2 {
+        grid-column: 5 / -1;
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+}
+
+.fitness {
+    @include tablet {
+        width: 100%;
+    }
+
+    @include mobile {
+        width: 55%;
+    }
+
+    &__text {
+        @include T2;
+        color: $dark-grey;
+        margin-bottom: wv-1460(14px);
+
+        @include mobile {
+            font-size: wv-380(10px);
+            line-height: wv-380(12px);
+            margin-bottom: wv-380(9px);
+        }
+    }
+
+    &__icon {
+        svg {
+            width: wv-1460(77px);
+            height: wv-1460(30px);
+
+            @include tablet {
+                width: wv-768(77px);
+                height: wv-768(30px);
+            }
+
+            @include mobile {
+                width: wv-380(61px);
+                height: wv-380(24px);
+            }
+        }
+    }
+}
+
+.company {
+    position: absolute;
+    bottom: wv-1460(25px);
+    left: wv-1460(20px);
+    width: wv-1460(220px);
+
+    @include mobile {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: wv-380(120px);
+        margin-left: auto;
+    }
+
+    svg {
+        width: wv-1460(76px);
+        height: wv-1460(30px);
+
+        @include mobile {
+            width: wv-380(61px);
+            height: wv-380(24px);
+        }
+    }
+
+    &__icon {
+        margin-bottom: wv-1460(8px);
+
+        @include mobile {
+            margin-bottom: wv-380(6px);
+        }
+    }
+
+    &__text {
+        @include T2;
+        color: $light;
+
+        @include mobile {
+            font-size: wv-380(10px);
+            line-height: wv-380(12px);
+
+            opacity: 0.5;
+        }
+    }
+}
+
+.interior,
+.exterior {
+    color: $dark-grey;
+    width: 50%;
+
+    &:only-child {
+        width: 100%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+
+    &__title {
+        @include C1;
+        margin-bottom: wv-1460(9px);
+
+        @include mobile {
+            margin-bottom: wv-380(11px);
+        }
+    }
+
+    &__text {
+        @include T1;
+    }
+}
+
+.exterior {
+    margin-right: wv-1460(40px);
+
+    @include mobile {
+        margin-right: 0;
+        margin-bottom: wv-380(34px);
+    }
+}
+
+.interior {
+    @include mobile {
+        margin-bottom: wv-380(75px);
+    }
+}

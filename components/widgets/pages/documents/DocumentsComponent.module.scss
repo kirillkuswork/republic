@@ -1,0 +1,76 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/functions';
+
+.visuallyHidden {
+    @include visually-hidden;
+}
+
+.container {
+    @include wrapper();
+}
+
+.title {
+    @include H1;
+    color: $brick;
+    margin-bottom: 25px;
+
+    @include mobile() {
+        margin-bottom: 10px;
+    }
+}
+
+.desc {
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(#141D27, 0.9);
+    margin-bottom: wv-1460(90px);
+
+    @include laptop() {
+        margin-bottom: wv-1200(90px);
+    }
+
+    @include tablet() {
+        margin-bottom: wv-768(60px);
+    }
+
+    @include mobile() {
+        margin-bottom: wv-380(60px);
+        font-size: 16px;
+    }
+
+    &Link {
+      color: rgba($brick, 0.9);
+      font-weight: 600;
+      transition: all 0.2s ease;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+.documents {
+    padding-bottom: wv-1460(160px);
+
+    @include laptop() {
+        padding-bottom: wv-1200(160px);
+    }
+
+    @include tablet() {
+        padding-bottom: wv-768(60px);
+    }
+
+    @include mobile() {
+        padding-bottom: wv-380(60px);
+    }
+
+    &Category {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        @include padding-bottom();
+    }
+}

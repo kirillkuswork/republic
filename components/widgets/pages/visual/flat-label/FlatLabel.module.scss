@@ -1,0 +1,30 @@
+@import "../../../../../styles/vars";
+
+.container {
+  @include H5;
+  padding: wv-1460(6px) wv-1460(8px) wv-1460(4px);
+  transition: all .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: wv-1460(50px);
+
+  @include laptop() {
+    padding: wv-1200(6px) wv-1200(8px) wv-1200(4px);
+    width: wv-1200(50px);
+  }
+
+  & svg {
+    display: block;
+  }
+}
+
+.classic {
+  color: $light !important;
+  border: 1px solid rgba(249, 245, 243, 0.2);
+
+  & svg path {
+    transition: all .2s ease;
+    stroke: $light;
+  }
+}

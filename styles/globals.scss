@@ -1,0 +1,344 @@
+@import 'normalize';
+@import 'vars.scss';
+@import 'fonts.scss';
+@import 'functions.scss';
+@import 'nouislider.scss';
+@import 'react-select';
+@import 'react-modal';
+@import 'building-scheme';
+@import 'facade';
+@import 'locomotive-scroll';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#__next {
+	overflow: hidden;
+}
+
+html {
+    font-family: $primary-700-font;
+}
+
+body * {
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.decorator {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.houses-slider {
+    .swiper-wrapper {
+        display: flex;
+        height: 100%;
+    }
+}
+
+.placemark_republic_layout_container {
+    position: relative;
+
+    .square_layout {
+        position: absolute;
+        left: -23px;
+        top: -23px;
+        width: 105px;
+        height: 35px;
+        box-sizing: border-box;
+        padding: 5px;
+        line-height: 46px;
+        border: 2px solid #393d46;
+        background-color: #393d46;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-30%, -55%);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .square_layout:after,
+    .polygon_layout:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+    }
+
+    .square_layout:after {
+        border-top-color: #393d46;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    .square_layout:before {
+        border-top-color: #393d46;
+        border-width: 16px;
+        margin-left: -16px;
+    }
+}
+
+.placemark_belorusskaya_layout_container {
+    position: relative;
+
+    .placemark_belorusskaya_wrapper {
+        position: absolute;
+        width: 115px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 65%);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.SliderModal {
+    .swiper-pagination {
+        position: fixed;
+        bottom: 36px;
+        left: 160px;
+        text-align: start;
+        width: fit-content;
+        @include C1();
+        color: #f9f5f3;
+
+        @media screen and (max-width: 540px) {
+            bottom: 28px;
+            left: 0;
+            width: 100vw;
+            text-align: center;
+            z-index: -1;
+        }
+    }
+
+    .react-transform-wrapper {
+        overflow: initial;
+    }
+
+    .react-transform-component {
+        @media screen and (max-width: 1024px) {
+            align-items: center;
+            display: flex;
+            height: 100vh;
+        }
+    }
+
+    .modalSlideImg {
+        cursor: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='49' height='49' stroke='%23F9F5F3'/%3E%3Cpath d='M17.9289 24.9289H32.0711M25 17.8579L25 32' stroke='%23F9F5F3' stroke-width='1.5' stroke-linejoin='bevel'/%3E%3C/svg%3E%0A"),
+            zoom-in;
+    }
+
+    .modalSlideImgZoom {
+        position: relative !important;
+        width: 100vw !important;
+    }
+}
+
+.redsWorkLive {
+    .redsWorkLiveSlider {
+        .swiper-wrapper {
+            height: 84.7%;
+        }
+
+        .swiper-pagination {
+            position: sticky;
+            margin-top: 5vw;
+            bottom: 0 !important;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+
+            @include mobile() {
+                margin-top: wv-380(103px);
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: fit-content;
+            height: fit-content;
+            background: none;
+            // margin-right: 20px !important;
+            padding-bottom: 14px;
+            border-bottom: 4px solid $dark-grey;
+            border-radius: 0;
+            @include C1();
+        }
+
+        .pagination-text {
+            margin-right: 45px;
+
+            @include mobile() {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .ImageModalCard-img {
+        position: relative;
+        width: 100%;
+        height: 35.56vh;
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+.sliderFullWidth {
+  .swiper-pagination {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    bottom: 30px !important;
+
+    @include mobile() {
+      position: sticky;
+      bottom: 0px !important;
+      display: flex;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: wv-380(24px);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 60px;
+    height: 4px;
+    border-radius: 0;
+    background: #393D46;
+    opacity: 0.2;
+
+    @include mobile() {
+      flex-grow: 1;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.LifeStyleSection-gallery {
+  .swiper-wrapper {
+    align-items: center;
+  }
+}
+
+// for disabling body scroll while popups are open
+html.is-locked,
+html.is-locked body {
+    /* want to fix the height to the window height */
+    height: calc(var(--window-inner-height) - 1px);
+
+    /* want to block all overflowing content */
+    overflow: hidden;
+
+    /* want to exclude padding from the height */
+    box-sizing: border-box;
+}
+
+#__next {
+    height: fit-content;
+
+    main {
+        height: 100%;
+    }
+}
+
+.loaderFinalImage {
+    animation: move 0.6s ease normal forwards;
+}
+
+@keyframes move {
+    0% {
+        object-position: center;
+    }
+
+    100% {
+        object-position: center wv-1460(-86px);
+    }
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}

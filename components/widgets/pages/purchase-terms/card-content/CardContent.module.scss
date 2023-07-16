@@ -1,0 +1,673 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+// для корректного отображения карточек на больших экранах
+@mixin hd() {
+    @media screen and (min-width: 1500px) and (orientation: landscape) {
+        @content;
+    }
+}
+.h1 {
+    @include H1();
+    color: $brick;
+}
+
+.h5 {
+    @include H5();
+}
+
+.h5_brick {
+    @include H5();
+    color: $brick;
+}
+.h4 {
+    @include H4();
+}
+
+//типы карточек
+.card_mini {
+    position: relative;
+    width: wv-1460(340px);
+    height: wv-1460(300px);
+    display: flex;
+
+    @include laptop() {
+        width: wv-1200(340px);
+        height: wv-1200(300px);
+    }
+    @include tablet() {
+        width: wv-768(260px);
+        height: wv-768(240px);
+    }
+    @include mobile() {
+        width: 100%;
+        height: wv-380(160px);
+    }
+}
+
+.card_medium {
+    width: wv-1460(460px);
+    height: wv-1460(300px);
+    display: flex;
+    @include hd() {
+        width: 32%;
+    }
+    @include laptop() {
+        width: wv-1200(370px);
+        height: wv-1200(300px);
+    }
+    @include tablet() {
+        width: wv-768(340px);
+        height: wv-768(260px);
+    }
+    @include mobile() {
+        width: wv-380(260px);
+        height: wv-380(240px);
+        gap: wv-380(10px);
+    }
+}
+
+.card_medium_dekstop {
+    width: 32.4%;
+    height: wv-1460(300px);
+    display: flex;
+    @include hd() {
+        width: 32%;
+    }
+    @include laptop() {
+        width: 32.18%;
+        height: wv-1200(300px);
+    }
+    @include tablet() {
+        width: wv-768(340px);
+        height: wv-768(260px);
+    }
+    @include mobile() {
+        width: wv-380(260px);
+        height: wv-380(240px);
+        gap: wv-380(10px);
+    }
+}
+
+.card_medium_dinamic_content {
+    width: wv-1460(460px);
+    height: wv-1460(300px);
+    display: flex;
+    @include hd() {
+        width: 32%;
+    }
+    @include laptop() {
+        width: wv-1200(570px);
+        height: wv-1200(300px);
+    }
+    @include tablet() {
+        width: 100%;
+        height: wv-768(260px);
+    }
+    @include mobile() {
+        height: wv-380(310px);
+        width: wv-380(340px);
+        gap: wv-380(20px);
+    }
+}
+.card_large {
+    width: wv-1460(580px);
+    height: wv-1460(380px);
+    display: flex;
+    @include laptop() {
+        width: wv-1200(580px);
+        height: wv-1200(380px);
+    }
+    @include tablet() {
+        width: wv-768(460px);
+        height: wv-768(320px);
+    }
+    @include mobile() {
+        height: wv-380(300px);
+        width: wv-380(260px);
+        gap: wv-380(20px);
+    }
+}
+.card_small {
+  width: 32.4%;
+  display: flex;
+  @include hd() {
+      width: 32%;
+  }
+  @include laptop() {
+      width: 32.18%;
+  }
+  @include tablet() {
+      width: wv-768(340px);
+  }
+  @include mobile() {
+      width: 100%;
+  }
+}
+
+//контейнер карточки
+.card_content {
+    position: relative;
+    padding: wv-1460(16px) wv-1460(20px) wv-1460(20px) wv-1460(21px);
+    width: 100%;
+
+    @include laptop() {
+        padding: wv-1200(16px) wv-1200(20px) wv-1200(20px) wv-1200(21px);
+    }
+    @include tablet() {
+        padding: wv-768(16px) wv-768(20px) wv-768(20px) wv-768(21px);
+    }
+    @include mobile() {
+        padding: wv-380(21px) wv-380(20px) wv-380(20px) wv-380(21px);
+    }
+}
+
+.card__mortgage {
+    position: static;
+    // overflow: auto;
+    // -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    // scrollbar-width: none; /* for Firefox */
+    overflow-y: auto;
+
+	scrollbar-color: $dark-grey;
+		scrollbar-width: thin;
+
+		// chrome
+    &::-webkit-scrollbar {
+			width: 6px;
+			background-color: $light;
+		}
+
+		&::-webkit-scrollbar-button {
+			display: none;
+		}
+
+		&::-webkit-scrollbar-track {
+			margin: 0 3px;
+			background-color: $light;
+			border: 1px solid $dark-grey;
+			border-top: none;
+			border-bottom: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $dark-grey;
+			// border: 1px solid $darker-light;
+			// border-radius: 10px;
+    }
+}
+
+.card__scroll_hide {
+	overflow: hidden;
+}
+
+.card_content_large {
+    padding: wv-1460(16px) wv-1460(20px) wv-1460(20px) wv-1460(21px);
+    width: 100%;
+    position: relative;
+    @include laptop() {
+        padding: wv-1200(16px) wv-1200(20px) wv-1200(20px) wv-1200(21px);
+    }
+    @include tablet() {
+        padding: wv-768(16px) wv-768(20px) wv-768(20px) wv-768(21px);
+    }
+    @include mobile() {
+        padding: wv-380(20px) wv-380(30px) wv-380(20px) wv-380(20px);
+    }
+}
+//общие компоненты карточки
+.card_header {
+    width: wv-1460(320px);
+    float: right;
+    @include laptop() {
+        width: wv-1200(320px);
+    }
+    @include tablet() {
+        width: wv-768(320px);
+    }
+    @include mobile() {
+        float: left;
+        width: 100%;
+    }
+}
+.card_desc {
+    @include T1();
+    padding-top: wv-1460(10px);
+    @include laptop() {
+        padding-top: wv-1200(10px);
+    }
+    @include tablet() {
+        padding-top: wv-768(10px);
+    }
+	div {
+		&:nth-of-type(1) {
+			margin-top: 0;
+		}
+		margin-top: wv-1460(15px);
+		font-size: wv-1460(16px);
+		line-height: wv-1460(20px);
+
+		@include laptop() {
+			margin-top: wv-1200(15px);
+			font-size: wv-1200(16px);
+			line-height: wv-1200(20px);
+		}
+
+		@include tablet() {
+			margin-top: wv-768(15px);
+			font-size: wv-768(16px);
+			line-height: wv-768(20px);
+		}
+
+		span {
+			display: block;
+			font-size: wv-1460(20px);
+			line-height: wv-1460(20px);
+			margin-bottom: wv-1460(5px);
+			font-family: $content-400-font;
+
+			@include laptop() {
+				font-size: wv-1200(20px);
+				line-height: wv-1200(20px);
+				margin-bottom: wv-1200(5px);
+			}
+
+			@include tablet() {
+				font-size: wv-768(20px);
+				line-height: wv-768(20px);
+				margin-bottom: wv-768(5px);
+			}
+		}
+
+		ol {
+			margin-left: wv-1460(30px);
+
+			@include laptop() {
+				margin-left: wv-1200(30px);
+			}
+
+			@include tablet() {
+				margin-left: wv-768(30px);
+			}
+		}
+	}
+}
+.card_desc_small {
+    width: 64.5%;
+    @include T1();
+    padding-top: wv-1460(10px);
+    @include laptop() {
+        padding-top: wv-1200(10px);
+    }
+    @include tablet() {
+        padding-top: wv-768(10px);
+    }
+    @include mobile() {
+        width: 61.7%;
+        padding-top: wv-380(10px);
+        font-size: wv-380(12px);
+        line-height: wv-380(16px);
+    }
+}
+.card_desc_large {
+    @include T1();
+    padding-top: wv-1460(10px);
+    padding-right: wv-1460(16px);
+    @include laptop() {
+        padding-top: wv-1200(10px);
+    }
+    @include tablet() {
+        padding-top: wv-768(10px);
+    }
+    @include mobile() {
+        @include T2();
+    }
+}
+// стили для компонентов карточки
+.card_icon {
+    position: absolute;
+    right: wv-1460(20px);
+    bottom: wv-1460(16px);
+    @include laptop() {
+        bottom: wv-1200(16px);
+        right: wv-1200(20px);
+    }
+    @include tablet() {
+        bottom: wv-768(16px);
+        right: wv-768(20px);
+        img {
+            width: wv-768(40px);
+            height: wv-768(40px);
+        }
+    }
+    @include mobile() {
+        bottom: wv-380(16px);
+        right: wv-380(20px);
+        img {
+            width: wv-380(40px);
+            height: wv-380(40px);
+        }
+    }
+}
+.card_small_padding {
+    padding-bottom: wv-1460(80px);
+    @include laptop() {
+        padding-bottom: wv-1200(80px);
+    }
+    @include tablet() {
+        padding-bottom: wv-768(45px);
+    }
+    @include mobile() {
+        padding-bottom: wv-380(45px);
+    }
+}
+.card_small_icon {
+  position: absolute;
+  right: wv-1460(20px);
+  bottom: wv-1460(16px);
+  img {
+      width: wv-1460(80px);
+      height: wv-1460(80px);
+  }
+  @include laptop() {
+      bottom: wv-1200(16px);
+      right: wv-1200(20px);
+      img {
+          width: wv-1200(80px);
+          height: wv-380(80px);
+      }
+  }
+  @include tablet() {
+      bottom: wv-768(16px);
+      right: wv-768(20px);
+      img {
+          width: wv-768(45px);
+          height: wv-768(45px);
+      }
+  }
+  @include mobile() {
+      bottom: wv-380(16px);
+      right: wv-380(20px);
+      img {
+          width: wv-380(45px);
+          height: wv-380(45px);
+      }
+  }
+}
+.card_number {
+    position: absolute;
+    bottom: wv-1460(-10px);
+    @include laptop() {
+        bottom: wv-1200(0px);
+    }
+    @include tablet() {
+        bottom: wv-768(5px);
+    }
+    @include mobile() {
+        bottom: wv-380(5px);
+    }
+}
+
+.card_btn {
+    position: absolute;
+    bottom: wv-1460(20px);
+    @include laptop() {
+        bottom: wv-1200(20px);
+    }
+    @include tablet() {
+        bottom: wv-768(20px);
+    }
+    @include mobile() {
+        position: static;
+        padding-top: wv-380(10px);
+    }
+}
+
+.card_comfortMortgageBtn {
+    position: absolute;
+    bottom: wv-1460(26px);
+    right: wv-1460(26px);
+    width: fit-content;
+    @include laptop() {
+        bottom: wv-1200(26px);
+        right: wv-1200(26px);
+    }
+    @include tablet() {
+        bottom: wv-768(20px);
+        right: wv-768(26px);
+    }
+    @include mobile() {
+        position: relative;
+        bottom: inherit;
+        right: inherit;
+        padding-top: wv-380(10px);
+    }
+}
+
+// стили для контента из апи (installment)
+.content_installment_special {
+    > span {
+        @include T1();
+        padding-top: wv-1460(10px);
+        display: none;
+        @include laptop() {
+            padding-top: wv-1200(10px);
+        }
+        @include tablet() {
+            padding-top: wv-768(10px);
+        }
+        @include mobile() {
+            @include T2();
+            padding-top: wv-380(7px);
+            padding-bottom: wv-380(11px);
+        }
+    }
+    > div {
+        position: absolute;
+        bottom: wv-1460(20px);
+        left: 0;
+        right: 0;
+        height: wv-1460(110px);
+        ul {
+            display: flex;
+            height: 100%;
+            li {
+                width: wv-1460(150px);
+                border-right: 1px solid rgba(57, 61, 70, 0.2);
+                height: 100%;
+                > div {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: wv-1460(20px);
+                    height: 100%;
+                    justify-content: space-between;
+                    div h4 {
+                        @include H4();
+                        color: $brick;
+                    }
+                    div:first-of-type span {
+                        @include C1();
+                        color: $brick;
+                    }
+                    div:last-of-type p {
+                        @include T2();
+                        width: wv-1460(100px);
+                    }
+                }
+            }
+            li:last-child {
+                border-right: 0;
+            }
+        }
+    }
+    @include laptop() {
+        > div {
+            position: absolute;
+            bottom: wv-1200(20px);
+            left: 0;
+            right: 0;
+            height: wv-1200(110px);
+            ul {
+                display: flex;
+                height: 100%;
+                li {
+                    width: wv-1200(150px);
+                    border-right: 1px solid rgba(57, 61, 70, 0.2);
+                    height: 100%;
+                    > div {
+                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: wv-1200(20px);
+                        height: 100%;
+                        justify-content: space-between;
+                        div h4 {
+                            @include H4();
+                            color: $brick;
+                        }
+                        div:first-of-type span {
+                            @include C1();
+                            color: $brick;
+                        }
+                        div:last-of-type p {
+                            @include T2();
+                            width: wv-1200(100px);
+                        }
+                    }
+                }
+                li:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+    @include tablet() {
+        > div {
+            position: absolute;
+            bottom: wv-768(20px);
+            left: 0;
+            right: 0;
+            height: wv-768(110px);
+            ul {
+                display: flex;
+                height: 100%;
+                li {
+                    width: wv-768(150px);
+                    border-right: 1px solid rgba(57, 61, 70, 0.2);
+                    height: 100%;
+                    > div {
+                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: wv-768(20px);
+                        height: 100%;
+                        justify-content: space-between;
+                        div h4 {
+                            @include H4();
+                            color: $brick;
+                        }
+                        div:first-of-type span {
+                            @include C1();
+                            color: $brick;
+                        }
+                        div:last-of-type p {
+                            @include T2();
+                            width: wv-768(100px);
+                        }
+                    }
+                }
+                li:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+    @include mobile() {
+        > div {
+            position: absolute;
+            bottom: wv-380(12px);
+            left: wv-380(20px);
+            right: wv-380(20px);
+            height: auto;
+            ul {
+                display: flex;
+                flex-direction: column;
+                li {
+                    border-right: 0;
+                    border-bottom: 1px solid rgba(57, 61, 70, 0.2);
+                    padding-bottom: wv-380(18px);
+                    padding-top: wv-380(13px);
+                    width: 100%;
+                    > div {
+                        width: 90%;
+                        display: flex;
+                        flex-direction: row;
+                        padding-left: 0;
+                        padding-right: 0;
+                        justify-content: space-between;
+                        div:first-of-type {
+                            width: 40%;
+                        }
+                        div h4 {
+                            @include H4();
+                            color: $brick;
+                        }
+                        div:first-of-type span {
+                            @include C1();
+                            color: $brick;
+                        }
+                        div:last-of-type {
+                            width: wv-380(100px);
+                        }
+                        div:last-child p {
+                            @include T2();
+                            padding-top: 0;
+                            width: fit-content;
+                        }
+                    }
+                }
+                li:last-child {
+                    border-right: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// модальное окно для карточек с ипотекой
+.modal {
+    padding-top: wv-380(23px);
+    padding-bottom: wv-380(20px);
+    &__content {
+        margin-top: wv-380(56px);
+        border-top: 1px solid rgba(57, 61, 70, 0.2);
+        padding-top: wv-380(15px);
+    }
+    &__desc {
+        @include T1();
+
+		div {
+				&:nth-of-type(1) {
+					margin-top: 0;
+				}
+
+				margin-top: wv-380(15px);
+				font-size: wv-380(16px);
+				line-height: wv-380(20px);
+
+				span {
+					display: block;
+					font-size: wv-380(20px);
+					line-height: wv-380(20px);
+					margin-bottom: wv-380(5px);
+					font-family: $content-400-font;
+				}
+
+				ol {
+					margin-left: wv-380(30px);
+				}
+			}
+    }
+}

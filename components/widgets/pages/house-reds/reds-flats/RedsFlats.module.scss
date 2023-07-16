@@ -1,0 +1,301 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+$transition: all .3s ease;
+
+
+.container {
+  position: relative;
+  background-color: $dark-grey;
+  // width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  @include wrapper();
+  @include padding-top();
+
+  .leftSide {
+    position: absolute;
+    top: 8px;
+
+    @include mobile() {
+      position: relative;
+      top: 0;
+    }
+    .title {
+      @include H1();
+      position: relative;
+      left: wv-1460(-10px);
+      z-index: 1;
+      
+      .title1 {
+        color: $brick
+      }
+      
+      .title2 {
+        color: $light;
+        line-height: 70%;
+        margin-left: 37.9vw;
+        @include mobile() {
+          margin-left: 0;
+          text-align: end;
+        }
+      }
+    }
+    
+    .leftText {
+      @include H5();
+      color: $light; 
+      width: 18.5vw;
+      position: relative;
+      top: wv-1460(-130px);
+      @include laptop() {
+      }
+  
+      @include tablet() {
+        top: wv-768(-50px);
+      }
+  
+      @include mobile() {
+        top: 0;
+        width: 100%;
+        margin-top: wv-380(70px);
+      }
+    }
+
+  }
+
+
+  .rightSide {
+    margin-left: 24.6vw;
+    width: 72.6vw;
+    padding-top: wv-1460(60px);
+
+    @include laptop() {
+      margin-left: 24vw;
+      width: 72.6vw;
+    }
+
+    @include tablet() {
+      margin-left: 23vw;
+      width: 71.6vw;
+    }
+
+    @include mobile() {
+      width: 100%;
+      margin-left: 0;
+      padding-top: wv-380(32px);
+    }
+
+    .imageDiv {
+      width: 100%;
+      height: 54.8vw;
+      overflow: hidden;
+		@include mobile() {
+			height: 68.4vw;
+		}
+    }
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include mobile() {
+        height: 68.4vw;
+      }
+    }
+
+
+    .rightDescription {
+      display: flex;
+      column-gap: 1.85%;
+      @include padding-top();
+
+      @include mobile() {
+        display: inherit;
+      }
+    }
+
+    .rightDescriptionItem1 {
+      width: 32.1%;
+      @include mobile() {
+        width: 100%;
+      }
+    }
+
+    .rightDescriptionItem2 {
+      width: 66.05%;
+      display: flex;
+      column-gap: 3%;
+      @include mobile() {
+        width: 100%;
+        flex-direction: row-reverse;
+        margin-top: wv-380(76px);
+      }
+    }
+
+    .whiteBoxText {
+      width: 79.4%;
+      @include T1();
+      color: $light;
+      margin-bottom: 14px;
+      @include tablet() {
+        width: 100%;
+      }
+      @include mobile() {
+        width: 100%;
+      }
+    }
+
+    .whiteBoxBtn {
+      width: fit-content;
+      padding: 14px 20px;
+      margin-bottom: 12px;
+      @include C1();
+      color: $light;
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+      border: 1px solid  $light;
+      @include mobile() {
+        display: none;
+      }
+      transition: $transition;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid  $brick;
+        color: $brick;
+        svg {
+          rect {
+            fill: #AD7C53;
+          }
+    
+          path {
+            stroke: #F9F5F3;
+          }
+        }
+      }
+    }
+
+    .penthouse {
+      width: 48.5%;
+      padding: 20px 20px 0 14px;
+      height: 32.9vw;
+      border: 1px solid $brick-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include mobile() {
+        height: 57.9vw;
+        flex-direction: column-reverse;
+        padding: 16px 20px 18px 18px;
+      }
+    }
+
+    .heightText {
+      align-self: flex-end;
+      text-align: end;
+      @include C1();
+      color: $brick-light;
+      word-spacing: 9999999px;
+      @include mobile() {
+        word-spacing: normal;
+      }
+    }
+    .height {
+      @include H1();
+      color: $brick;
+      line-height: 80%;
+      @include mobile() {
+        display: flex;
+        line-height: 90%;
+      }
+    }
+
+    .heightSmall {
+      @include H5();
+      color: $brick;
+      @include mobile() {
+        margin-left: 3px;
+      }
+    }
+
+    .floor {
+      width: 48.5%;
+      padding: 20px 20px 0 14px;
+      height: 21.9vw;
+      background-color: $brick-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include mobile() {
+        height: 42.1vw;
+        flex-direction: column-reverse;
+        padding: 16px 20px 18px 18px;
+      }
+
+      .heightText , .height, .heightSmall {
+        color: $light;
+      }
+    }
+
+
+  }
+
+}
+
+
+.sliderSection {
+
+  .slider {
+    padding-top: wv-1460(219px);
+    padding-bottom: wv-1460(100px);
+    position: relative;
+    background-color: $dark-grey;
+    @include mobile() {
+      padding-top: wv-380(108px);
+    }
+
+    svg {
+      path {
+        fill: $light;
+      }
+
+  
+      &:hover {
+        path {
+          fill: $brick;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        * {
+          stroke: $light
+        }
+        &:hover {
+          rect {
+            fill: none;
+            stroke: $brick;
+          }
+  
+          path {
+            stroke: $brick;
+          }
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      &:after {
+        background-color: $dark-grey;
+        width: 2px;
+        @include mobile() {
+          display: none;
+        }
+        @include tablet() {
+          display: none; 
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,114 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+
+.wrapper {
+  position: relative;
+  z-index: 0;
+  height: 120vh;
+  background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-blend-mode: multiply, normal;
+  background-position: center;
+
+  &__img{
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.section__mask{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &__img{
+      object-fit: cover;
+      object-position: center;
+    }
+}
+
+.titles{
+  @include H1();
+  color:$light;
+  width:100%;
+  padding-top:wv-380(87px);
+  padding-left:wv-380(18px);
+  padding-right:wv-380(14px);
+
+  position: absolute;
+  z-index: 1;
+
+  &__main{
+    opacity: 0;
+    display: inline-block;
+  }
+  &__grand{
+    opacity: 0;
+    display: inline-block;
+    padding-top: wv-380(60px);
+    float:right;
+  }
+  &__open{
+    opacity: 0;
+    display: inline-block;
+  }
+}
+
+.footer{
+  opacity: 0;
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  &__button{
+    padding-bottom: wv-380(15px);
+    padding-right: wv-380(20px);
+    div{
+      width:30px;
+      height:30px;
+    }
+    button {
+      cursor: pointer;
+    }
+  }
+}
+.card{
+  width:wv-380(260px);
+  height: wv-380(100px);
+  display:flex;
+  &__content{
+    padding:wv-380(11px) wv-380(18px) wv-380(17px) wv-380(20px);
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__title{
+    width:wv-380(170px);
+  }
+  &__icon{
+    position: static;
+    display: flex;
+    align-items: flex-end;
+    div{
+      width:30px;
+      height:30px;
+    }
+  }
+}
+.h5{
+  @include H5();
+  color:$light;
+  line-height: wv-380(28px) !important;
+}

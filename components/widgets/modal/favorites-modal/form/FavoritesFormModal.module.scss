@@ -1,0 +1,443 @@
+@import "../../../../../styles/functions";
+@import "../../../../../styles/vars";
+
+.closeModalBtn {
+  position: absolute;
+  right: wv-1460(20px);
+  top: wv-1460(20px);
+  width: wv-1460(50px);
+  height: wv-1460(50px);
+  cursor: pointer;
+
+  @include laptop() {
+    right: wv-1200(20px);
+    top: wv-1200(20px);
+    width: wv-1200(50px);
+    height: wv-1200(50px);
+  }
+
+  @include tablet() {
+    right: wv-768(20px);
+    top: wv-768(20px);
+    width: wv-768(30px);
+    height: wv-768(30px);
+  }
+
+  @include mobile() {
+    right: wv-380(20px);
+    top: wv-380(20px);
+    width: wv-380(30px);
+    height: wv-380(30px);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    path, rect {
+      transition: all .2s ease;
+    }
+  }
+
+  @include hover() {
+    &:hover svg {
+      path {
+        stroke: $light;
+      }
+
+      rect {
+        fill: $brick;
+      }
+    }
+  }
+}
+
+.darkBg {
+  top: 0;
+  position: fixed;
+  background-color: rgba($dark-grey, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 1009;
+}
+
+.component {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1010;
+
+  .modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .leftImage {
+      height: 100%;
+      flex: 1;
+
+      @include tablet() {
+        display: none;
+      }
+
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    .requestContainer {
+      width: wv-1460(620px);
+      background: $light;
+
+      @include laptop() {
+        width: wv-1200(620px);
+      }
+
+      @include tablet() {
+        width: 100%;
+      }
+
+      @include mobile() {
+        width: 100%;
+      }
+
+      .requestBlock {
+        width: wv-1460(340px);
+        margin-top: 25.56vh;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include laptop() {
+          width: wv-1200(340px);
+        }
+
+        @include tablet() {
+          width: wv-768(340px);
+          margin-top: 24vh;
+        }
+
+        @include mobile() {
+          width: wv-380(340px);
+          margin-top: 24vh;
+        }
+
+        .title {
+          @include H4;
+          margin-bottom: wv-1460(40px);
+
+          @include laptop() {
+            margin-bottom: wv-1200(40px);
+          }
+
+          @include tablet() {
+            margin-bottom: wv-768(30px);
+          }
+
+          @include mobile() {
+            margin-bottom: wv-380(30px);
+          }
+        }
+
+        .successTitle {
+          @include H4;
+          margin-bottom: wv-1460(34px);
+
+          @include laptop() {
+            margin-bottom: wv-1200(34px);
+          }
+
+          @include tablet() {
+            margin-bottom: wv-768(34px);
+          }
+
+          @include mobile() {
+            margin-bottom: wv-380(34px);
+          }
+        }
+
+        .successMessage {
+          @include T1;
+        }
+
+        .form {
+          width: 100%;
+
+          .inputList {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: wv-1460(7px);
+
+            @include laptop() {
+              margin-bottom: wv-1200(7px);
+            }
+
+            @include tablet() {
+              margin-bottom: wv-768(7px);
+            }
+
+            @include mobile() {
+              margin-bottom: wv-380(7px);
+            }
+
+            .inputBlock {
+              position: relative;
+
+              &:not(:last-child) {
+                margin-bottom: wv-1460(10px);
+
+                @include laptop() {
+                  margin-bottom: wv-1200(10px);
+                }
+
+                @include tablet() {
+                  margin-bottom: wv-768(10px);
+                }
+
+                @include mobile() {
+                  margin-bottom: wv-380(10px);
+                }
+              }
+
+              .label {
+                font-weight: 700;
+                font-size: wv-1460(10px);
+                line-height: wv-1460(12px);
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                font-style: normal;
+                font-family: $primary-700-font;
+                color: $dark-grey;
+                opacity: 0.5;
+                transition: all .2s;
+                position: absolute;
+                top: wv-1460(7px);
+                left: wv-1460(20px);
+
+                @include laptop() {
+                  font-size: wv-1200(10px);
+                  line-height: wv-1200(12px);
+                  top: wv-1200(7px);
+                  left: wv-1200(20px);
+                }
+
+                @include tablet() {
+                  font-size: wv-768(10px);
+                  line-height: wv-768(12px);
+                  top: wv-768(7px);
+                  left: wv-768(20px);
+                }
+
+                @include mobile() {
+                  font-size: wv-380(10px);
+                  line-height: wv-380(12px);
+                  top: wv-380(7px);
+                  left: wv-380(20px);
+                }
+
+                & ~ .input,
+                & ~ .textArea {
+                  padding-top: wv-1460(22px);
+                  padding-bottom: wv-1460(12px);
+
+                  @include laptop() {
+                    padding-top: wv-1200(22px);
+                    padding-bottom: wv-1200(12px);
+                  }
+
+                  @include tablet() {
+                    padding-top: wv-768(22px);
+                    padding-bottom: wv-768(12px);
+                  }
+
+                  @include mobile() {
+                    padding-top: wv-380(22px);
+                    padding-bottom: wv-380(12px);
+                  }
+                }
+              }
+
+              .labelHidden {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: wv-1460(12px);
+                left: wv-1460(20px);
+                transition: all .2s;
+
+                @include laptop() {
+                  top: wv-1200(12px);
+                  left: wv-1200(20px);
+                }
+
+                @include tablet() {
+                  top: wv-768(12px);
+                  left: wv-768(20px);
+                }
+
+                @include mobile() {
+                  top: wv-380(12px);
+                  left: wv-380(20px);
+                }
+              }
+
+              .input {
+                border: 1px solid rgba($dark-grey, 0.2);
+                width: 100%;
+                height: wv-1460(50px);
+                padding: wv-1460(18px) wv-1460(20px) wv-1460(16px);
+                box-sizing: border-box;
+                background-color: transparent;
+                @include C1;
+                text-transform: none;
+
+                @include laptop() {
+                  height: wv-1200(50px);
+                  padding: wv-1200(18px) wv-1200(20px) wv-1200(16px);
+                }
+
+                @include tablet() {
+                  height: wv-768(50px);
+                  padding: wv-768(18px) wv-768(20px) wv-768(16px);
+                }
+
+                @include mobile() {
+                  height: wv-380(50px);
+                  padding: wv-380(18px) wv-380(20px) wv-380(16px);
+                }
+
+                &::placeholder {
+                  @include C1;
+                  opacity: 0.5;
+                }
+
+                &:focus-visible {
+                  outline: none;
+                  border: 1px solid $brick;
+                }
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+              }
+
+              .errorIcon {
+                position: absolute;
+                right: wv-1460(20px);
+                top: wv-1460(15px);
+                cursor: pointer;
+                display: none;
+                width: wv-1460(20px);
+                height: wv-1460(20px);
+
+                @include laptop() {
+                  right: wv-1200(20px);
+                  top: wv-1200(15px);
+                  width: wv-1200(20px);
+                  height: wv-1200(20px);
+                }
+
+                @include tablet() {
+                  right: wv-768(20px);
+                  top: wv-768(15px);
+                  width: wv-768(20px);
+                  height: wv-768(20px);
+                }
+
+                @include mobile() {
+                  right: wv-380(20px);
+                  top: wv-380(15px);
+                  width: wv-380(20px);
+                  height: wv-380(20px);
+                }
+
+                svg {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+
+            .inputError {
+              .label {
+                color: $error;
+              }
+
+              .input, .input:focus-visible {
+                border-color: $error;
+              }
+
+              .errorIcon {
+                display: block;
+              }
+            }
+          }
+
+          .agreement {
+            width: wv-1460(220px);
+            align-self: flex-start;
+            margin-bottom: wv-1460(61px);
+
+            @include laptop() {
+              width: wv-1200(220px);
+              margin-bottom: wv-1200(61px);
+            }
+
+            @include tablet() {
+              width: wv-768(220px);
+              margin-bottom: wv-768(61px);
+            }
+
+            @include mobile() {
+              width: wv-380(220px);
+              margin-bottom: wv-380(61px);
+            }
+
+            p {
+              @include T2;
+              color: rgba($dark-grey, 0.4);
+
+              a {
+                @include T2;
+
+                @include hover() {
+                  &:hover {
+                    color: rgba($dark-grey, 0.8);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .showError {
+          width: 100%;
+          margin-top: wv-1460(17px);
+
+          @include laptop() {
+            margin-top: wv-1200(17px);
+          }
+
+          @include tablet() {
+            margin-top: wv-768(17px);
+          }
+
+          @include mobile() {
+            margin-top: wv-380(17px);
+          }
+
+          p {
+            @include T2;
+            color: $error;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../styles/vars";
+
+.item {
+  display: flex;
+  align-items: center;
+  padding-bottom: wv-1460(26px);
+  padding-top: wv-1460(26px);
+  border-top: 1px solid rgba(249, 245, 243, 0.2);
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(249, 245, 243, 0.2);
+  }
+
+  @include mobile() {
+    padding-bottom: wv-380(16.5px);
+    padding-top: wv-380(16.5px);
+  }
+
+  .itemIcon {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .itemRightSide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  .itemText ,
+  .itemTextActive  {
+    @include H4();
+    color: $light;
+    margin-left: 31%;
+    margin-right: 20px;
+
+    @include mobile() {
+      margin-left: 20px;
+      @include H5();
+      color: $light;
+    }
+  }
+  .itemTextActive {
+    color: $brick;
+    @include mobile() {
+      color: $brick;
+    }
+  }
+}

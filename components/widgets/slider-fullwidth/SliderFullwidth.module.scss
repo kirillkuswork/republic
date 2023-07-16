@@ -1,0 +1,18 @@
+@import '../../../styles/vars';
+
+.slide {
+  width: 100%;
+  height: wv-1460(680px);
+  overflow: hidden;
+  
+  @include mobile {
+    height: wv-380(200px);
+  }
+}
+
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

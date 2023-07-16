@@ -1,0 +1,719 @@
+<svg
+        class="reds-simple-scheme__svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 175.19 168.56"
+>
+    <style>
+        .cls-1 {
+        fill: #e6e6e6;
+        }
+
+        .cls-2,
+        .cls-3,
+        .cls-4 {
+        fill: none;
+        stroke: #BEBDBD;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        }
+
+        .cls-2 {
+        stroke-width: 0.26px;
+        }
+        .cls-3 {
+        stroke-width: 1.42px;
+        }
+        .cls-4 {
+        stroke-width: 0.26px;
+        }
+        .cls-5 {
+        stroke-width: 1.16px;
+        }
+        .cls-6 {
+        stroke-width: 0.94px;
+        }
+        .cls-7 {
+        stroke-width: 0.96px;
+        }
+        .cls-8 {
+        stroke-width: 1.06px;
+        }
+        .cls-9 {
+        stroke-width: 1.01px;
+        }
+        .cls-10 {
+        stroke-width: 1.01px;
+        }
+        .cls-11 {
+        stroke-width: 1.01px;
+        }
+        .cls-12 {
+        stroke-width: 1.01px;
+        fill: transparent;
+        }
+        .cls-13 {
+        stroke-width: 1.01px;
+        }
+        .cls-14 {
+        stroke-width: 1.01px;
+        }
+        .cls-15 {
+        stroke-width: 1.01px;
+        }
+        .cls-16 {
+        stroke-width: 1.01px;
+        }
+        .cls-17 {
+        stroke-width: 1.01px;
+        }
+        .cls-18 {
+        stroke-width: 1.1px;
+        }
+        .cls-19 {
+        stroke-width: 1.06px;
+        }
+        .cls-21 {
+        stroke-width: 0.94px;
+        }
+        .cls-22 {
+        stroke-width: 1.06px;
+        }
+        .cls-23 {
+        stroke-width: 1.06px;
+        }
+        .cls-24 {
+        stroke-width: 1.06px;
+        }
+        .cls-25 {
+        stroke-width: 1.1px;
+        }
+        .cls-26 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        }
+    </style>
+    <g id="mini">
+        <rect
+                class="cls-1"
+                x="0.71"
+                y="148.09"
+                width="173.77"
+                height="19.76"
+        />
+        <line
+                class="cls-2"
+                x1="0.71"
+                y1="125.92"
+                x2="48.89"
+                y2="125.92"
+        />
+        <line class="cls-2" x1="48.89" y1="143" x2="0.71" y2="143"/>
+        <line
+                class="cls-3"
+                x1="48.89"
+                y1="148.09"
+                x2="0.71"
+                y2="148.09"
+        />
+        <line
+                class="cls-2"
+                x1="48.89"
+                y1="137.31"
+                x2="0.71"
+                y2="137.31"
+        />
+        <line
+                class="cls-2"
+                x1="48.89"
+                y1="131.61"
+                x2="0.71"
+                y2="131.61"
+        />
+        <line
+                class="cls-2"
+                x1="2.78"
+                y1="114.01"
+                x2="46.82"
+                y2="114.01"
+        />
+        <line
+                class="cls-2"
+                x1="2.78"
+                y1="108.31"
+                x2="46.82"
+                y2="108.31"
+        />
+        <line
+                class="cls-2"
+                x1="2.78"
+                y1="102.62"
+                x2="46.82"
+                y2="102.62"
+        />
+        <line class="cls-2" x1="2.78" y1="96.92" x2="46.82" y2="96.92"/>
+        <line class="cls-2" x1="2.78" y1="91.23" x2="46.82" y2="91.23"/>
+        <line class="cls-2" x1="2.78" y1="85.53" x2="46.82" y2="85.53"/>
+        <line class="cls-2" x1="2.78" y1="79.84" x2="46.82" y2="79.84"/>
+        <line class="cls-2" x1="46.82" y1="74.14" x2="2.78" y2="74.14"/>
+        <line class="cls-2" x1="46.82" y1="68.45" x2="2.78" y2="68.45"/>
+        <line class="cls-2" x1="44.75" y1="56.54" x2="4.85" y2="56.54"/>
+        <line class="cls-2" x1="44.75" y1="50.84" x2="4.85" y2="50.84"/>
+        <line class="cls-2" x1="44.75" y1="45.15" x2="4.85" y2="45.15"/>
+        <line class="cls-2" x1="44.75" y1="39.45" x2="4.85" y2="39.45"/>
+        <line class="cls-2" x1="44.75" y1="33.76" x2="4.85" y2="33.76"/>
+        <line class="cls-2" x1="44.75" y1="28.06" x2="4.85" y2="28.06"/>
+        <line class="cls-2" x1="44.75" y1="19.17" x2="4.85" y2="19.17"/>
+        <line class="cls-2" x1="4.85" y1="5.54" x2="44.75" y2="5.54"/>
+        <line class="cls-2" x1="130.44" y1="5.54" x2="170.34" y2="5.54"/>
+        <line class="cls-2" x1="4.85" y1="22.37" x2="44.75" y2="22.37"/>
+        <line class="cls-2" x1="174.48" y1="143" x2="126.3" y2="143"/>
+        <line
+                class="cls-3"
+                x1="174.48"
+                y1="148.09"
+                x2="126.3"
+                y2="148.09"
+        />
+        <line
+                class="cls-2"
+                x1="174.48"
+                y1="137.31"
+                x2="126.3"
+                y2="137.31"
+        />
+        <line
+                class="cls-2"
+                x1="174.48"
+                y1="131.61"
+                x2="126.3"
+                y2="131.61"
+        />
+        <line
+                class="cls-2"
+                x1="174.48"
+                y1="125.92"
+                x2="126.3"
+                y2="125.92"
+        />
+        <line
+                class="cls-2"
+                x1="174.47"
+                y1="119.7"
+                x2="126.28"
+                y2="119.7"
+        />
+        <line
+                class="cls-2"
+                x1="174.47"
+                y1="114.01"
+                x2="126.28"
+                y2="114.01"
+        />
+        <line
+                class="cls-2"
+                x1="126.3"
+                y1="108.31"
+                x2="174.48"
+                y2="108.31"
+        />
+        <line
+                class="cls-2"
+                x1="128.37"
+                y1="96.92"
+                x2="172.41"
+                y2="96.92"
+        />
+        <line
+                class="cls-2"
+                x1="128.37"
+                y1="91.23"
+                x2="172.41"
+                y2="91.23"
+        />
+        <line
+                class="cls-2"
+                x1="128.37"
+                y1="85.53"
+                x2="172.41"
+                y2="85.53"
+        />
+        <line
+                class="cls-2"
+                x1="128.37"
+                y1="79.84"
+                x2="172.41"
+                y2="79.84"
+        />
+        <line
+                class="cls-2"
+                x1="128.37"
+                y1="74.14"
+                x2="172.41"
+                y2="74.14"
+        />
+        <line
+                class="cls-2"
+                x1="172.41"
+                y1="68.45"
+                x2="128.37"
+                y2="68.45"
+        />
+        <line
+                class="cls-2"
+                x1="130.44"
+                y1="56.54"
+                x2="170.34"
+                y2="56.54"
+        />
+        <line
+                class="cls-2"
+                x1="170.34"
+                y1="50.84"
+                x2="130.44"
+                y2="50.84"
+        />
+        <line
+                class="cls-2"
+                x1="130.44"
+                y1="45.15"
+                x2="170.34"
+                y2="45.15"
+        />
+        <line
+                class="cls-2"
+                x1="170.34"
+                y1="39.45"
+                x2="130.44"
+                y2="39.45"
+        />
+        <line
+                class="cls-2"
+                x1="130.44"
+                y1="33.76"
+                x2="170.34"
+                y2="33.76"
+        />
+        <line
+                class="cls-2"
+                x1="130.44"
+                y1="28.06"
+                x2="170.34"
+                y2="28.06"
+        />
+        <line
+                class="cls-2"
+                x1="170.34"
+                y1="22.37"
+                x2="130.44"
+                y2="22.37"
+        />
+        <line
+                class="cls-2"
+                x1="130.44"
+                y1="19.17"
+                x2="170.34"
+                y2="19.17"
+        />
+        <line
+                class="cls-2"
+                x1="130.44"
+                y1="13.77"
+                x2="170.34"
+                y2="13.77"
+        />
+        <line class="cls-2" x1="4.85" y1="13.77" x2="44.75" y2="13.77"/>
+        <line class="cls-4" x1="46.82" y1="119.7" x2="2.78" y2="119.7"/>
+        <line class="cls-4" x1="44.75" y1="62.23" x2="4.85" y2="62.23"/>
+        <line
+                class="cls-4"
+                x1="128.37"
+                y1="102.62"
+                x2="172.41"
+                y2="102.62"
+        />
+        <line
+                class="cls-4"
+                x1="130.44"
+                y1="62.23"
+                x2="170.34"
+                y2="62.23"
+        />
+        <polygon
+                class="cls-3"
+                points="172.41 62.23 172.41 102.62 174.48 102.62 174.48 167.85 0.71 167.85 0.71 119.7 2.78 119.7 2.78 62.23 4.85 62.23 4.85 0.71 44.75 0.71 44.75 62.23 46.82 62.23 46.82 119.7 48.89 119.7 48.89 148.09 126.3 148.09 126.3 102.62 128.37 102.62 128.37 62.23 130.44 62.23 130.44 0.71 170.34 0.71 170.34 62.23 172.41 62.23"
+        />
+    </g>
+
+    <rect
+            id="8996_26"
+            x="4.85"
+            y="5.54"
+            width="39.9"
+            height="8.23"
+            class="cls-12"
+    />
+    <rect
+            id="8996_25"
+            x="4.85"
+            y="13.77"
+            width="39.9"
+            height="5.4"
+            class="cls-12"
+    />
+    <rect
+            id="8996_24"
+            x="4.85"
+            y="22.37"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_23"
+            x="4.85"
+            y="28.06"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_22"
+            x="4.85"
+            y="33.76"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_21"
+            x="4.85"
+            y="39.45"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_20"
+            x="4.85"
+            y="45.15"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_19"
+            x="4.85"
+            y="50.84"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_18"
+            x="4.85"
+            y="56.54"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_17"
+            x="2.78"
+            y="62.23"
+            width="44.04"
+            height="6.21"
+            class="cls-12"
+    />
+    <rect id="8996_16"
+          x="2.78"
+          y="68.45"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect
+            id="8996_15"
+            x="2.78"
+            y="74.14"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8996_14"
+            x="2.78"
+            y="79.84"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect id="8996_13"
+          x="2.78"
+          y="85.53"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_12"
+          x="2.78"
+          y="91.23"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_11"
+          x="2.78"
+          y="96.92"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_10"
+          x="2.78"
+          y="102.62"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_9"
+          x="2.78"
+          y="108.31"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_8"
+          x="2.78"
+          y="114.01"
+          width="44.04"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_7"
+          x="0.71"
+          y="119.7"
+          width="48.19"
+          height="6.21"
+          class="cls-12"
+    />
+    <rect id="8996_6"
+          x="0.71"
+          y="125.92"
+          width="48.19"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect id="8996_5"
+          x="0.71"
+          y="131.61"
+          width="48.19"
+          height="5.7"
+          class="cls-12"
+    />
+    <rect
+            id="8996_4"
+            x="0.71"
+            y="137.31"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect id="8996_3"
+          x="0.71"
+          y="143"
+          width="48.19"
+          height="5.09"
+          class="cls-12"
+    />
+    <rect id="8995_26"
+          x="130.44"
+          y="5.54"
+          width="39.9"
+          height="8.23"
+          class="cls-12"
+    />
+    <rect
+            id="8995_25"
+            x="130.44"
+            y="13.77"
+            width="39.9"
+            height="5.4"
+            class="cls-12"
+    />
+    <rect
+            id="8995_24"
+            x="130.44"
+            y="22.37"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_23"
+            x="130.44"
+            y="28.06"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_22"
+            x="130.44"
+            y="33.76"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_21"
+            x="130.44"
+            y="39.45"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_20"
+            x="130.44"
+            y="45.15"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_19"
+            x="130.44"
+            y="50.84"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_18"
+            x="130.44"
+            y="56.54"
+            width="39.9"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_17"
+            x="128.37"
+            y="62.23"
+            width="44.04"
+            height="6.21"
+            class="cls-12"
+    />
+    <rect
+            id="8995_16"
+            x="128.37"
+            y="68.45"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_15"
+            x="128.37"
+            y="74.14"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_14"
+            x="128.37"
+            y="79.84"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_13"
+            x="128.37"
+            y="85.53"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_12"
+            x="128.37"
+            y="91.23"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_11"
+            x="128.37"
+            y="96.92"
+            width="44.04"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_10"
+            x="126.3"
+            y="102.62"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_9"
+            x="126.3"
+            y="108.31"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_8"
+            x="126.3"
+            y="114.01"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_7"
+            x="126.3"
+            y="119.7"
+            width="48.19"
+            height="6.21"
+            class="cls-12"
+    />
+    <rect
+            id="8995_6"
+            x="126.3"
+            y="125.92"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_5"
+            x="126.3"
+            y="131.61"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_4"
+            x="126.3"
+            y="137.31"
+            width="48.19"
+            height="5.7"
+            class="cls-12"
+    />
+    <rect
+            id="8995_3"
+            x="126.3"
+            y="143"
+            width="48.19"
+            height="5.09"
+            class="cls-12"
+    />
+</svg>

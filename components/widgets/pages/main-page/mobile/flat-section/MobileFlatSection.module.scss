@@ -1,0 +1,43 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/main_page_functions";
+
+.wrapper {
+  position: relative;
+  height:wv-380(460px);
+  width: 100%;
+  background-color: $dark-grey;
+  object-fit: cover;
+  background-image: url("../../../../../../public/images/main-page/flat-section.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 4;
+}
+.content_wrapper{
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.text {
+  @include H1();
+  color: $light;
+}
+.button{
+  width: wv-380(60px) !important;
+  height: wv-380(60px) !important;
+  svg{
+    width: wv-380(60px) !important;
+    height: wv-380(60px) !important;
+  }
+}

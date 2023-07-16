@@ -1,0 +1,166 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+
+.item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-bottom: wv-1460(26px);  
+  padding-top: wv-1460(26px);  
+  border-top: 1px solid rgba(249, 245, 243, 0.2);
+  @include mobile() {
+    padding-bottom: wv-380(20px);  
+    padding-top: wv-380(20px);  
+  }
+
+  .itemIcon {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .itemRightSide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  .itemText ,
+  .itemTextActive  {
+    @include H4();
+    color: $light;
+    margin-left: 31%;
+    margin-right: 20px;
+    
+    @include mobile() {
+      margin-left: 20px;
+      @include H5();
+      color: $light;
+    }
+  }
+  .itemTextActive {
+    color: $brick;
+    @include mobile() {
+      color: $brick;
+    }
+  }
+
+  &:hover {
+    @media screen and (min-width: 541px) {
+      .itemText {
+        color: $brick;
+      }
+    }
+  }
+
+}
+
+.itemDescription {
+  padding-left: 33.4%;
+  padding-bottom: wv-1460(55px);  
+  padding-top: wv-1460(21px);  
+  @include T0();
+  color: $light;
+  border-top: 1px solid $brick-light;
+  @include mobile() {
+    @include T1();
+    color: $light;
+    padding-left: 0;
+    padding-bottom: wv-380(57px);  
+    padding-top: wv-380(13px); 
+  }
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    li {
+      padding-left: wv-1460(16px);
+      margin-bottom: 5px;
+      position: relative;
+
+      @include laptop() {
+        padding-left: wv-1200(16px);
+      }
+    
+      @include tablet() {
+        padding-left: wv-768(16px);
+      }
+    
+      @include mobile() {
+        padding-left: wv-380(16px);
+      }
+    }
+    li:before {
+      background-color: $brick;
+      border-radius: 50%;
+      content: "";
+      height: wv-1460(4px);
+      width: wv-1460(4px);
+      position: absolute;
+      left: 0;
+      top: wv-1460(9px);
+
+      @include laptop() {
+        height: wv-1200(4px);
+        width: wv-1200(4px);
+        top: wv-1200(10px);
+      }
+    
+      @include tablet() {
+        height: wv-768(4px);
+        width: wv-768(4px);
+        top: wv-768(10px);
+      }
+    
+      @include mobile() {
+        height: wv-380(4px);
+        width: wv-380(4px);
+        top: wv-380(10px);
+      }
+    }
+  }
+
+  ol {
+    li {
+      padding-left: wv-1460(16px);
+      margin-left: wv-1460(16px);
+      margin-bottom: 5px;
+      position: relative;
+
+      @include laptop() {
+        padding-left: wv-1200(16px);
+        margin-left: wv-1200(16px);
+      }
+    
+      @include tablet() {
+        padding-left: wv-768(16px);
+        margin-left: wv-768(16px);
+      }
+    
+      @include mobile() {
+        padding-left: wv-380(16px);
+        margin-left: wv-380(16px);
+      }
+    }
+
+    li::marker {
+      color: $brick;
+    }
+  }
+}
+
+.button {
+  &_active {
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  svg {
+    transition: transform 0.2s ease-in-out;
+  }
+}

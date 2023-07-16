@@ -1,0 +1,44 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+
+.button {
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: wv-1460(5px);
+
+  @include laptop() {
+    gap: wv-1200(5px);
+  }
+
+  @include tablet() {
+    gap: wv-768(5px);
+  }
+
+  @include mobile() {
+    gap: wv-380(5px);
+  }
+}
+
+.description {
+  @include T2;
+  display: block;
+  color: $light;
+  opacity: 0.5;
+  padding-top: wv-1460(7px);
+
+  @include laptop() {
+    padding-top: wv-1200(5px);
+  }
+
+  @include tablet() {
+    padding-top: wv-768(5px);
+  }
+
+  @include mobile() {
+    padding-top: wv-380(5px);
+  }
+}

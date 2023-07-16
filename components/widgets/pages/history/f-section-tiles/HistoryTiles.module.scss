@@ -1,0 +1,151 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.tiles {
+    background-color: $dark-grey;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+    padding-left: wv-1460(20px);
+    padding-bottom: wv-1460(20px);
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        height: fit-content;
+        width: 100%;
+        gap: wv-768(150px);
+        padding-top: 25px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid rgba($light, 0.2);
+        padding-left: 0;
+    }
+
+    @include mobile() {
+        height: fit-content;
+        width: 100%;
+        padding-top: 25px;
+        gap: wv-380(150px);
+        padding-bottom: 80px;
+        border-bottom: 1px solid rgba($light, 0.2);
+        padding-left: 0;
+    }
+
+    &Title {
+        @include H4();
+        color: $brick;
+        width: wv-1460(460px);
+        position: absolute;
+        top: wv-1460(20px);
+        right: wv-1460(20px);
+        white-space: normal;
+        overflow-wrap: break-word;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            position: relative;
+            width: 90%;
+            max-width: 340px;
+            top: auto;
+            right: auto;
+        }
+
+        @include mobile() {
+            position: relative;
+            width: 90%;
+            max-width: 340px;
+            top: auto;
+            right: auto;
+        }
+    }
+
+    &Img {
+        z-index: 82;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: wv-1460(450px);
+        height: auto;
+
+        background-image: url('../../../../../public/images/main-page/cast_iron.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            width: wv-380(220px);
+        }
+
+        @include mobile() {
+            width: wv-380(220px);
+        }
+    }
+
+    &Desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: auto;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        @include mobile() {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &DescSmall {
+        @include C1();
+        color: $light;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            text-align: right;
+            width: 100%;
+            margin-left: auto;
+            margin-top: 18px;
+        }
+
+        @include mobile() {
+            text-align: right;
+            width: 100%;
+            margin-left: auto;
+            margin-top: 18px;
+        }
+    }
+
+    &DescLarge {
+        width: wv-1460(832px);
+        margin-top: 18px;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        @include mobile() {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}

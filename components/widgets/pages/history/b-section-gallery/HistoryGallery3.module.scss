@@ -1,0 +1,120 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.presna {
+    @include padding-top();
+    @include padding-left();
+    @include padding-bottom();
+    background-color: $dark-grey;
+    position: relative;
+    z-index: 100;
+    @include T1();
+    color: $light;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20vw;
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        flex-direction: column;
+        @include padding-right();
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        @include padding-right();
+        height: auto;
+        padding-bottom: 80px;
+    }
+
+    &Desc {
+        @include T1();
+        max-width: wv-1460(280px);
+        color: $light;
+        white-space: normal;
+        overflow-wrap: break-word;
+        align-self: flex-end;
+        margin-left: wv-1460(20px);
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            max-width: 100%;
+            margin-left: 0;
+            margin-bottom: 96px;
+        }
+
+        @include mobile() {
+            max-width: 100%;
+            margin-left: 0;
+            margin-bottom: 96px;
+        }
+    }
+
+    &Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &Title {
+        @include H3();
+        color: $brick;
+        max-width: wv-1460(460px);
+        white-space: normal;
+        overflow-wrap: break-word;
+
+        @include laptop() {
+            max-width: wv-1200(550px);
+        }
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            max-width: 100%;
+            margin-bottom: wv-380(20px);
+        }
+
+        @include mobile() {
+            max-width: 100%;
+            margin-bottom: wv-380(20px);
+        }
+    }
+
+    &ImgWrapper {
+        width: wv-1460(460px);
+        height: wv-1460(340px);
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+            margin-left: auto;
+            width: wv-380(250px);
+            height: wv-380(180px);
+        }
+
+        @include mobile() {
+            margin-left: auto;
+            width: wv-380(250px);
+            height: wv-380(180px);
+        }
+    }
+
+    &Img {
+        width: 100%;
+        aspect-ratio: 460 / 340;
+        background-image: linear-gradient(180deg, rgba(0, 25, 112, 0.5) 0%, rgba(0, 27, 121, 0) 64.85%),
+            url('../../../../../public/images/history-page/gallery-4.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-blend-mode: multiply, normal;
+        background-position: center;
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

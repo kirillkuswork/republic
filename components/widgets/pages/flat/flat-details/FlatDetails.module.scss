@@ -1,0 +1,67 @@
+@import "../../../../../styles/vars";
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__margin {
+    margin-bottom: wv-1460(115px);
+
+    @include laptop() {
+      margin-bottom: wv-1200(80px);
+    }
+
+    @include tablet() {
+      padding-left: wv-768(20px);
+      margin-bottom: wv-768(20px);
+      padding-bottom: wv-768(20px);
+      border-left: 1px solid rgb(98%, 96%, 95%, 0.15);
+      grid-column-gap: wv-768(20px);
+    }
+
+    @include mobile() {
+      padding-bottom: wv-380(20px);
+      margin-bottom: wv-380(20px);
+      padding-left: wv-380(20px);
+      border-left: 1px solid rgb(98%, 96%, 95%, 0.15);
+      grid-column-gap: wv-380(20px);
+    }
+  }
+}
+
+
+.row {
+  border-top: 1px solid rgb(98%, 96%, 95%, 0.15);
+  grid-column: 2 span;
+
+  @include tablet() {
+    display: none;
+  }
+
+  @include mobile() {
+    display: none;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  & + & {
+    margin-left: wv-1460(5px);
+
+    @include laptop() {
+      margin-left: wv-1200(5px);
+    }
+
+    @include tablet() {
+      margin-left: wv-768(5px);
+    }
+
+    @include mobile() {
+      margin-left: wv-380(5px);
+    }
+  }
+}

@@ -1,0 +1,338 @@
+@import "../../styles/vars";
+
+$transition: all .3s ease;
+
+.close_modal_mini_light {
+  & rect, & path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+      }
+
+      path {
+        stroke: $light;
+      }
+    }
+  }
+}
+
+.close_modal_large_light {
+  & rect, & path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+      }
+
+      path {
+        stroke: $light;
+      }
+    }
+  }
+}
+
+.heart {
+  cursor: pointer;
+  rect {
+    transition: $transition;
+  }
+
+  path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+        stroke: $brick;
+      }
+
+      path {
+        stroke: $light;
+      }
+    }
+  }
+}
+
+.PDF {
+  rect {
+    transition: $transition;
+  }
+
+  path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+      }
+
+      path {
+        fill: $light;
+      }
+    }
+  }
+}
+
+.dark-grey, .light {
+  rect {
+    transition: $transition;
+  }
+
+  path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+        stroke: $brick;
+      }
+
+      path {
+        stroke: $light;
+      }
+    }
+  }
+}
+
+.arrow_next_dark_small {
+  rect {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+      }
+    }
+  }
+}
+
+.header_logo {
+  svg path {
+    transition: $transition;
+  }
+}
+
+.social  {
+  rect, path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        stroke: $brick;
+      }
+
+      path {
+        fill: $brick;
+      }
+    }
+  }
+}
+
+.arrow_dark_stroke_large {
+  rect, path {
+    transition: $transition;
+  }
+
+  &:hover {
+    @include hover() {
+
+      path {
+        fill: $brick;
+      }
+    }
+  }
+}
+
+.arrow_prev_dark_stroke_medium,
+.arrow_next_dark_stroke_medium {
+  cursor: pointer;
+
+  rect, path {
+    transition: $transition;
+  }
+
+  &:hover {
+    @include hover() {
+
+      path {
+        fill: $brick;
+      }
+    }
+  }
+}
+
+.arrow_next_dark_stroke_medium_div ,
+.arrow_prev_dark_stroke_medium_div {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #393D46;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    @include hover() {
+      border: 1px solid $brick;
+      path {
+        fill: $brick;
+      }
+    }
+  }
+}
+
+.arrow_next_transparent_small,
+.arrow_next_transparent_small_light,
+.arrow_prev_transparent_small_light {
+  cursor: pointer;
+
+  rect, path {
+    transition: $transition;
+  }
+
+  @include hover() {
+
+    &:hover {
+      rect, path {
+        stroke: #AD7C53
+      }
+    }
+  }
+}
+
+.arrow_next_transparent_small_light_hover,
+.arrow_prev_transparent_small_light_hover {
+  cursor: pointer;
+
+  rect, path {
+    transition: $transition;
+  }
+
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $light;
+      }
+
+      path {
+        stroke: $brick;
+      }
+    }
+  }
+}
+
+
+.arrow_down_light ,
+.circle_minus ,
+.circle_open ,
+.zoom_plus_dark_large ,
+.zoom_minus_dark_large,
+.zoom_plus_dark_circle,
+.zoom_minus_dark_circle ,
+.arrow_next_dark_large ,
+.arrow_next_light_large ,
+.arrow_prev_light_large ,
+.close_modal_large_transparent_gold ,
+.close_modal_large_light ,
+.close_modal_small_light ,
+.arrow_next_dark_medium {
+  cursor: pointer;
+
+  rect, path {
+    transition: $transition;
+  }
+  @include hover() {
+    &:hover {
+      rect {
+        fill: $brick;
+      }
+
+      path {
+        stroke: $light;
+      }
+    }
+  }
+}
+
+.circle_open {
+  z-index: 1;
+}
+
+.reset {
+  width: wv-1460(14px);
+  height: wv-1460(14px);
+
+  @include laptop() {
+    width: wv-1200(14px);
+    height: wv-1200(14px);
+  }
+
+  @include tablet() {
+    width: wv-768(14px);
+    height: wv-768(14px);
+  }
+
+  @include mobile() {
+    width: wv-380(14px);
+    height: wv-380(14px);
+  }
+
+  &__circle {
+    width: wv-1460(20px);
+    height: wv-1460(20px);
+
+    @include laptop() {
+      width: wv-1200(20px);
+      height: wv-1200(20px);
+    }
+
+    @include tablet() {
+      width: wv-768(20px);
+      height: wv-768(20px);
+    }
+
+    @include mobile() {
+      width: wv-380(20px);
+      height: wv-380(20px);
+    }
+  }
+}
+
+#mask0_11_342, #mask0_9_244, #mask1_9_244, #mask0_11_342, #mask1_11_342, #mask0_9_216, #mask0_9_233 {
+  mask-type:luminance
+}
+
+
+.zoom_minus_transparent_large ,
+.zoom_plus_transparent_large {
+  @include hover() {
+    &:hover {
+      rect {
+        // fill: $brick;
+        stroke: $brick;
+      }
+
+      path {
+        stroke: $brick;
+      }
+    }
+  }
+}

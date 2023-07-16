@@ -1,0 +1,23 @@
+.ReactModal {
+  &__Overlay {
+    position: relative;
+    display: block;
+    z-index: 400 !important;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    background-color: transparent !important;
+
+    &--after-open {
+      opacity: 1;
+    }
+
+    &--before-close{
+      opacity: 0;
+    }
+  }
+
+  &__Content {
+    position: relative;
+  }
+}
+

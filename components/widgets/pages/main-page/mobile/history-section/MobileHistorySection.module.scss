@@ -1,0 +1,59 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/main_page_functions";
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height:wv-380(660px);
+  clip-path: inset(0);
+  background-image: url("../../../../../../public/images/main-page/history_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 4;
+}
+.content_wrapper {
+  @include wrapper();
+  padding-top: wv-380(20px);
+
+  &__title{
+    @include H4();
+    color:$brick;
+  }
+  &__history_button{
+    padding-top:wv-380(30px);
+    width: wv-380(190px);
+    div{
+      span{
+        font-size: wv-380(14px);
+        line-height: wv-380(16px);
+      }
+    }
+  }
+}
+.points{
+  width:100%;
+  padding-top: wv-380(80px);
+  padding-bottom: wv-380(30px);
+  &__card {
+    width: wv-380(340px);
+    height: wv-380(360px);
+    border: 1px solid rgba(249, 245, 243, .3);
+    &__wrapper{
+      @include wrapper();
+      padding-top: wv-380(20px);
+      padding-bottom: wv-380(20px);
+    }
+    &__title{
+      @include H4();
+      color:$light;
+    }
+    &__desc{
+      @include T1();
+      color:$light;
+      padding-top: wv-380(34px);
+    }
+  }
+
+}

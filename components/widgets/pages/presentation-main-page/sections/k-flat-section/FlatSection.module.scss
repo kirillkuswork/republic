@@ -1,0 +1,136 @@
+@import '../../../../../../styles/vars';
+@import '../../../../../../styles/functions';
+@import '../../../../../../styles/main_page_functions';
+
+.wrapper {
+    z-index: 111;
+    position: fixed;
+    left: 0;
+    top: vh-900(900px);
+    width: wv-1460(1460px);
+    height: vh-900(900px);
+    background-color: $dark-grey;
+}
+.content_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: vh(100);
+    padding-top: vh(26.7);
+    padding-bottom: vh(26.7);
+
+    clip-path: inset(0);
+}
+.bg_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url('../../../../../../public/images/main-page/flat-section.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    a {
+        width: wv-1460(100px) !important;
+        height: wv-1460(100px) !important;
+
+        & > span {
+            width: wv-1460(100px);
+            height: wv-1460(100px);
+            @include tablet {
+                width: wv-768(100px);
+                height: wv-768(100px);
+            }
+
+            @include mobile {
+                width: wv-380(60px);
+                height: wv-380(60px);
+            }
+        }
+
+        svg {
+            width: wv-1460(20.7167px) !important;
+            height: wv-1460(17.65px) !important;
+        }
+    }
+}
+.text {
+    @include CUSTOM_H1();
+    color: $light;
+    margin-bottom: wv-1460(50px);
+}
+
+.main_page_footer {
+    z-index: 110 !important;
+    position: fixed;
+    left: 0;
+    bottom: var(--main_page_footer_bottom, 0);
+    opacity: var(--main_page_footer_opacity, 0);
+    width: 100vw;
+}
+
+.animated_button {
+    width: wv-1460(100px) !important;
+    height: wv-1460(100px) !important;
+
+    @include laptop {
+        width: wv-1200(100px) !important;
+        height: wv-1200(100px) !important;
+    }
+
+    @include tablet {
+        width: wv-768(100px) !important;
+        height: wv-768(100px) !important;
+    }
+
+    @include mobile {
+        width: wv-380(100px) !important;
+        height: wv-380(100px) !important;
+    }
+
+    & > span {
+        width: wv-1460(100px) !important;
+        height: wv-1460(100px) !important;
+
+        @include tablet {
+            width: wv-768(100px) !important;
+            height: wv-768(100px) !important;
+        }
+
+        @include mobile {
+            width: wv-380(60px) !important;
+            height: wv-380(60px) !important;
+        }
+    }
+
+    svg {
+        width: wv-1460(20px) !important;
+        height: vh-900(20px) !important;
+
+        @include laptop {
+            width: wv-1200(20px) !important;
+            height: wv-1200(20px) !important;
+        }
+
+        @include tablet {
+            width: wv-768(20px) !important;
+            height: wv-768(20px) !important;
+        }
+
+        @include mobile {
+            width: wv-380(20px) !important;
+            height: wv-380(20px) !important;
+        }
+    }
+}

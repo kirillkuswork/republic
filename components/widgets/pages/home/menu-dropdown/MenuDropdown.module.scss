@@ -1,0 +1,75 @@
+@import "../../../../../styles/vars";
+
+.list {
+  transition: all .4s ease;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.open {
+  opacity: 1;
+  margin: wv-1460(10px) 0 wv-1460(32px);
+
+  @include laptop() {
+    margin: wv-1200(10px) 0 wv-1200(32px);
+  }
+
+  @include tablet() {
+    margin: wv-768(10px) 0 wv-768(22px);
+  }
+
+  @include mobile() {
+    margin: wv-380(10px) 0 wv-380(22px);
+  }
+}
+
+.item {
+  @include C1;
+  margin-top: wv-1460(4px);
+  font-size: wv-1460(19px);
+  line-height: wv-1460(16px);
+
+  @include laptop() {
+    margin-top: wv-1200(4px);
+    font-size: wv-1200(14px);
+    line-height: wv-1200(16px);
+  }
+
+  @include tablet-p() {
+    margin-top: wv-768(4px);
+    font-size: wv-768(14px);
+    line-height: wv-768(16px);
+  }
+
+  @include tablet() {
+    margin-top: wv-768(4px);
+    font-size: wv-768(14px);
+    line-height: wv-768(16px);
+  }
+
+  @include mobile() {
+    margin-top: wv-380(4px);
+    font-size: wv-380(16px);
+    line-height: wv-380(16px);
+  }
+
+  & + & {
+    margin-top: wv-1460(4px);
+
+    @include laptop() {
+      margin-top: wv-1200(4px);
+    }
+
+    @include tablet() {
+      margin-top: wv-768(4px);
+    }
+
+    @include mobile() {
+      margin-top: wv-380(4px);
+    }
+  }
+}
+
+.current {
+  color: $brick;
+}

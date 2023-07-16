@@ -1,0 +1,19 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+.aside__block {
+  & + & {
+    margin-top: wv-1460(22px);
+    width: 100%;
+    @include laptop() {
+      margin-top: wv-1200(22px);
+    }
+
+    @include tablet() {
+      margin-top: wv-768(22px);
+    }
+
+    @include mobile() {
+      margin-top: wv-380(22px);
+    }
+  }
+}

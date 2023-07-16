@@ -1,0 +1,33 @@
+@import "../../../../styles/functions";
+@import "../../../../styles/vars";
+.container{
+  overflow-x: hidden;
+  position: relative;
+}
+.landscapePlug {
+  @include H2();
+  width: 100vw;
+  height: 100vh;
+  color: $grey;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: wv-1460(30px);
+  @include laptop() {
+    padding: wv-1200(30px);
+  }
+  @include tablet() {
+    padding: wv-768(30px);
+  }
+}
+
+.main_page_header {
+  opacity: 0;
+}
+.mob_div{
+  width: 100vw;
+  overflow-x: hidden;
+}

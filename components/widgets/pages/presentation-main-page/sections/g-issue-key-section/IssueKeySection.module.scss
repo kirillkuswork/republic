@@ -1,0 +1,138 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/main_page_functions";
+.wrapper {
+  z-index: 71;
+  position: fixed;
+  left: 0;
+  top: vh-900(900px);
+  width: wv-1460(1460px);
+  height: vh-900(1000px);
+  background-color:$light;
+}
+.bg_image{
+  img{
+    object-fit: cover;
+    height: vh(100) !important;
+    width: wv-1460(1460px);
+
+  }
+}
+.filter{
+  filter: brightness(0.4);
+}
+.house{
+  position: absolute;
+  left:wv-1460(140px);
+  top: vh-900(417px);
+  &__card{
+    width: wv-1460(340px);
+    height: vh-900(460px);
+    @include tablet-p-custom(){
+      width: wv-768(300px);
+      height: wv-768(400px);
+    }
+    @include tablet(){
+      width: wv-768(340px);
+      height: wv-768(460px);
+    }
+    @include laptop(){
+      width: wv-1200(340px);
+      height: wv-1200(460px);
+    }
+    background-color: $dark-grey !important;
+    &__container{
+      padding:wv-1460(20px);
+      display:flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    &__buttons{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-end;
+      gap: wv-1460(5px);
+      @include laptop(){
+        gap: wv-1200(5px);
+      }
+      @include tablet(){
+        gap: wv-768(5px);
+      }
+      @include tablet-p-custom(){
+        gap: wv-768(10px);
+      }
+      div{
+        width: 32px;
+        height: 36px;
+      }
+      button{
+        cursor:pointer;
+        @include hover() {
+
+          &:hover {
+            rect, path {
+              stroke: $brick;
+            }
+          }
+        }
+      }
+    }
+    &__content{
+      display: flex;
+      width: 100%;
+      padding-top:vh-900(50px);
+      flex-direction: column;
+    }
+    &__titles{
+      display: flex;
+      flex-direction: row;
+      gap: wv-1460(2px);
+      padding-bottom:7px;
+      padding-top:13px;
+      border-bottom:1px solid rgba(249, 245, 243, .2);
+      width: 100%;
+      h3 {
+        @include H3();
+        color:$brick;
+      }
+      div{
+        width: 21px;
+        height: 21px;
+      }
+      svg{
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+    &__desc{
+      @include T1();
+      color: $light;
+      padding-top:vh-900(14px);
+      width:wv-1460(200px);
+      @include tablet(){
+        width: wv-768(200px);
+      }
+      @include laptop(){
+        width: wv-1200(200px);
+      }
+    }
+    &__presentation{
+      @include T2();
+      color: rgba(249, 245, 243, .5);
+      display:flex;
+      height:100%;
+      justify-content:flex-end;
+      flex-direction: column;
+      &__text{
+        width:wv-1460(100px);
+        @include tablet(){
+          width: wv-768(100px);
+        }
+        @include laptop(){
+          width: wv-1200(100px);
+        }
+      }
+    }
+  }
+}

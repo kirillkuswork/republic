@@ -1,0 +1,57 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+
+.SliderHand {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: transparent;
+  padding-top: 15px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #F1F1F1;
+    z-index: -1;
+  }
+  &__hand {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: auto;
+    height: wv-1460(40.8px);
+
+    @include laptop() {
+      transform: translateY(50px);
+      height: wv-1200(40.8px);
+      z-index: 3;
+    }
+
+    @media (min-device-width: 1023px) and (max-device-width: 1370px) and (orientation:portrait) {
+      transform: translateY(0px);
+      height: wv-1200(40.8px);
+      z-index: 3;
+    }
+
+    @include tablet() {
+      height: wv-768(40.8px);
+    }
+
+    @include mobile() {
+      height: wv-380(30.8px);
+    }
+  }
+}
+.right {
+  justify-content: flex-end;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+

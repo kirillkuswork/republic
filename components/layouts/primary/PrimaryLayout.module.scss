@@ -1,0 +1,53 @@
+@import "../../../styles/vars";
+@import "../../../styles/functions";
+
+.container {
+  padding-top: wv-1460(90px);
+  min-height: 100vh;
+
+  @include laptop() {
+    padding-top: wv-1200(90px);
+  }
+  @media screen and (min-width: 1023px) and (max-width: 1024px) {
+    min-height: auto;
+  }
+
+  @include tablet() {
+    padding-top: wv-768(90px);
+    min-height: auto;
+  }
+
+  @include mobile() {
+    min-height: auto;
+    padding-top: wv-380(90px);
+  }
+}
+
+.dark {
+  background-color: $dark-grey;
+}
+
+.light {
+  background-color: $light;
+}
+
+.dark-light {
+  background-color: $darker-light;
+}
+
+.fit-content {
+  height: fit-content;
+}
+
+.one-screen {
+  height: 100vh !important;
+
+  @media screen and (max-height: 630px) and (max-width: 1023px) {
+    height: 170vh !important;
+  }
+}
+
+.transparent {
+  background-color: transparent;
+  padding-top: 0;
+}

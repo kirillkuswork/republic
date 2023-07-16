@@ -1,0 +1,153 @@
+@import '../../../../../styles/vars';
+@import '../../../../../styles/functions';
+
+.container {
+    position: relative;
+    background-color: $light;
+    padding-bottom: wv-1460(157px);
+    // width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+
+    @include mobile() {
+        padding-bottom: wv-380(80px);
+    }
+
+    .textSection {
+        display: flex;
+        justify-content: space-between;
+        @include wrapper();
+        @include padding-top();
+        margin-bottom: wv-1460(117px);
+
+        @include mobile() {
+            flex-direction: column;
+        }
+
+        .title {
+            @include H1();
+            display: flex;
+        }
+
+        .titleColor {
+            color: $brick;
+        }
+
+        .description {
+            width: 18.5%;
+            @include T1();
+
+            @include tablet() {
+                width: 35%;
+            }
+
+            @include mobile() {
+                width: 100%;
+                margin-top: 14px;
+            }
+        }
+    }
+
+    .arrowPrev {
+        position: absolute;
+        top: 40%;
+        left: 5.5%;
+        z-index: 1;
+        // transform: rotate(180deg);
+
+        @include mobile() {
+            display: none;
+        }
+    }
+
+    .arrowNext {
+        position: absolute;
+        top: 40%;
+        right: 5.5%;
+        z-index: 1;
+
+        @include mobile() {
+            display: none;
+        }
+    }
+    .slider {
+        // height: 50vw;
+
+        .slide {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .imgSmallRight {
+            width: 13.01vw;
+            height: 8.22vw;
+            position: absolute;
+            right: -6.5%;
+            top: 39.9%;
+            @include mobile() {
+                display: none;
+            }
+        }
+        .imgSmallLeft {
+            width: 13.01vw;
+            height: 8.22vw;
+            position: absolute;
+            left: -6.5%;
+            top: 39.9%;
+            @include mobile() {
+                display: none;
+            }
+        }
+        .imgNumDiv {
+            // height: 40.62vw;
+            height: auto;
+            width: 64.38vw;
+            position: relative;
+            @include mobile() {
+                width: 89.47vw;
+                // height: 56.31vw;
+                height: auto;
+            }
+        }
+        // .imgDiv {
+        //   width: 100%;
+        //   height: 100%;
+        // }
+        .img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .number {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .svgMask {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .roomDescription {
+        @include T2();
+        margin-left: 32.25%;
+        // font-size: 1.33vh;
+    }
+
+    .roomNumber {
+        @include H1();
+        color: $brick;
+        font-size: 18.78vh;
+        line-height: 65%;
+        @include mobile() {
+            // font-size: 18.78vh;
+            line-height: 65%;
+        }
+    }
+}
+
+.disabled {
+    display: none;
+}

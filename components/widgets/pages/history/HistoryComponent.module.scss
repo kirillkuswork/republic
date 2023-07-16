@@ -1,0 +1,71 @@
+@import '../../../../styles/vars';
+@import '../../../../styles/functions';
+
+.landscapePlug {
+    @include H2();
+    width: 100vw;
+    height: 100vh;
+    color: $grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: wv-1460(30px);
+    @include laptop() {
+        padding: wv-1200(30px);
+    }
+    @include tablet() {
+        padding: wv-768(30px);
+    }
+}
+
+.wrapper {
+    overflow-x: hidden;
+    background-color: $dark-grey;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+    margin-right: -1vw;
+
+    &Sticky {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-color: transparent;
+    }
+
+    @media screen and (min-width: 541px) and (max-width: 1090px) and (orientation: portrait) {
+        flex-direction: column;
+    }
+}
+
+.scrollDownBtn {
+    position: absolute;
+    z-index: 20;
+    bottom: wv-1460(20px);
+    right: wv-1460(30px);
+}
+
+.introDivider {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: 2;
+    position: sticky;
+}
+
+.mobileContainer {
+    @include padding-left();
+    @include padding-right();
+}
+
+.visuallyHidden {
+    @include visually-hidden();
+}

@@ -1,0 +1,24 @@
+@import '../../../../../styles/vars';
+
+.text {
+  @include T1;
+  display: block;
+  color: $light;
+  width: wv-1460(280px);
+  text-align: start;
+  letter-spacing: normal;
+  font-variation-settings: "wdth" 100;
+  text-transform: none;
+
+  @include laptop() {
+    width: wv-1200(280px);
+  }
+
+  @include tablet() {
+    width: wv-768(250px);
+  }
+
+  @include mobile() {
+    width: wv-380(250px);
+  }
+}

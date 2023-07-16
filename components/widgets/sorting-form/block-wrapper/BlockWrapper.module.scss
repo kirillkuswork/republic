@@ -1,0 +1,22 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/functions";
+
+.label {
+  display: block;
+  @include T2();
+  color: $light;
+  opacity: 0.5;
+  margin-bottom: wv-1460(9px);
+
+  @include laptop() {
+    margin-bottom: wv-1200(9px);
+  }
+
+  @include tablet() {
+    margin-bottom: wv-768(9px);
+  }
+
+  @include mobile() {
+    margin-bottom: wv-380(9px);
+  }
+}

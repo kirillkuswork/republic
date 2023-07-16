@@ -1,0 +1,42 @@
+@import "../../../styles/vars";
+
+.videoContainer {
+  position: relative;
+  height: wv-1460(540px);
+  @include mobile() {
+    width: 100%;
+    height: wv-380(350px);
+  }
+
+  video {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // width: 100%;
+    // height: 100%;
+    // z-index: -1;
+    // transform-origin: center center;
+  }
+
+  .playBtn {
+    width: 60px;;
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.disabled {
+  display: none;
+}

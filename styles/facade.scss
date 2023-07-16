@@ -1,0 +1,135 @@
+@import "vars";
+
+.facade {
+  .cls-1,
+  .cls-10,
+  .cls-11,
+  .cls-12,
+  .cls-13,
+  .cls-14,
+  .cls-15,
+  .cls-16,
+  .cls-17,
+  .cls-18,
+  .cls-19,
+  .cls-2,
+  .cls-20,
+  .cls-21,
+  .cls-3 {
+    fill: transparent;
+  }
+  .cls-2,
+  .cls-3 {
+    stroke: #bcbcbc;
+  }
+  .cls-15,
+  .cls-2,
+  .cls-3 {
+    stroke-width: 0.14px;
+  }
+  .cls-3 {
+    stroke-linecap: square;
+  }
+  .cls-4 {
+    fill: url(#Concentric_Circles);
+  }
+  .cls-5 {
+    fill: url(#Concentric_Circles-3);
+  }
+  .cls-6 {
+    fill: url(#Concentric_Circles-5);
+  }
+  .cls-7 {
+    fill: url(#Concentric_Circles-7);
+  }
+  .cls-8 {
+    fill: url(#Concentric_Circles-9);
+  }
+  .cls-9 {
+    fill: url(#Concentric_Circles-11);
+  }
+  .cls-10,
+  .cls-11,
+  .cls-12,
+  .cls-13,
+  .cls-14,
+  .cls-15,
+  .cls-16,
+  .cls-17,
+  .cls-18,
+  .cls-19,
+  .cls-20,
+  .cls-21 {
+    stroke: #000;
+  }
+  .cls-10,
+  .cls-12,
+  .cls-13,
+  .cls-14,
+  .cls-15,
+  .cls-17 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .cls-10,
+  .cls-11 {
+    stroke-width: 0.28px;
+  }
+  .cls-11,
+  .cls-16,
+  .cls-18,
+  .cls-19,
+  .cls-20,
+  .cls-21 {
+    stroke-miterlimit: 10;
+  }
+  .cls-12 {
+    stroke-width: 0.21px;
+  }
+  .cls-13 {
+    stroke-width: 0.71px;
+  }
+  .cls-14 {
+    stroke-width: 0.43px;
+  }
+  .cls-16 {
+    stroke-width: 0.28px;
+  }
+  .cls-17 {
+    stroke-width: 0.57px;
+  }
+  .cls-18 {
+    stroke-width: 0.94px;
+  }
+  .cls-19 {
+    stroke-width: 0.94px;
+  }
+  .cls-21 {
+    stroke-width: 1px;
+  }
+
+  &__svg &__floor {
+    stroke: transparent;
+    pointer-events: visible;
+    transition: fill .3s;
+    fill: rgba(141, 65, 41, 0);
+
+    &:hover {
+
+    }
+
+    &_active {
+      cursor: pointer;
+      stroke: $brick;
+      stroke-width: 2px;
+      fill: rgba(201, 162, 125, 0.3);
+    }
+  }
+}
+
+.facade {
+  &__floor {
+    fill: transparent !important;
+    stroke: transparent !important;
+  }
+}

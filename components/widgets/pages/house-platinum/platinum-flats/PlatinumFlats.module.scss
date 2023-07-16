@@ -1,0 +1,264 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+$transition: all .3s ease;
+
+
+.container {
+  position: relative;
+  background-color: $dark-grey;
+  // width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  @include wrapper();
+  @include padding-top();
+
+  .leftSide {
+    position: absolute;
+    top: wv-1460(8px);
+
+    @include mobile() {
+      position: relative;
+      top: 0;
+    }
+    .title {
+      @include H1();
+      position: relative;
+      left: wv-1460(-10px);
+      z-index: 1;
+      
+      .title1 {
+        color: $brick
+      }
+      
+      .title2 {
+        color: $light;
+        line-height: 70%;
+        margin-left: 37.9vw;
+        @include mobile() {
+          margin-left: 0;
+          text-align: end;
+        }
+      }
+    }
+    
+
+  }
+
+
+  .rightSide {
+    margin-left: 24vw;
+    width: 72.6vw;
+    padding-top: wv-1460(60px);
+
+    @include laptop() {
+      margin-left: 24vw;
+      width: 72.6vw;
+    }
+
+    @include tablet() {
+      margin-left: 23vw;
+      width: 71.6vw;
+    }
+
+    @include mobile() {
+      width: 100%;
+      margin-left: 0;
+      padding-top: wv-380(70px);
+    }
+
+    .imageDiv {
+      width: 100%;
+      height: 54.8vw;
+      overflow: hidden;
+    }
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include mobile() {
+        height: 68.4vw;
+      }
+    }
+
+
+    .rightDescription {
+      display: flex;
+      column-gap: 1.85%;
+      @include padding-top();
+
+      @include mobile() {
+        display: inherit;
+      }
+    }
+
+    .rightDescriptionItem1 {
+      width: 32.1%;
+      @include mobile() {
+        width: 100%;
+      }
+    }
+
+    .rightDescriptionItem2 {
+      width: 66.05%;
+      display: flex;
+      column-gap: 3%;
+      justify-content: space-between;
+      @include mobile() {
+        width: 100%;
+        flex-direction: row-reverse;
+        margin-top: wv-380(4px);
+        margin-bottom: wv-380(70px);
+      }
+    }
+
+
+    .leftText {
+      @include H5();
+      color: $light; 
+      width: wv-1460(270px);
+  
+      @include tablet() {
+        width: wv-1460(330px);
+      }
+  
+      @include mobile() {
+        width: 100%;
+        margin-bottom: wv-380(32px);
+      }
+    }
+
+    .rightText {
+      width: wv-1460(270px);
+      @include T1();
+      color: $light;
+      
+      @include tablet() {
+        width: wv-1460(330px);
+      }
+
+      @include mobile() {
+        width: 100%;
+      }
+    }
+
+    
+   
+    .floor {
+      position: absolute;
+      top: wv-1460(560px);
+      left: wv-1460(20px);
+      width: wv-1460(340px);
+      height: wv-1460(320px);
+      padding: 20px 20px 0 14px;
+      border: 1px solid $brick-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include mobile() {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        margin-left: wv-380(180px);
+        width: wv-380(160px);
+        height: wv-380(160px);
+        flex-direction: column-reverse;
+        padding: 16px 20px 18px 18px;
+      }
+
+      .heightText {
+        align-self: flex-end;
+        text-align: end;
+        @include C1();
+        color: $brick-light;
+        word-spacing: 9999999px;
+        @include mobile() {
+          word-spacing: normal;
+        }
+      }
+      .height {
+        @include H1();
+        color: $brick;
+        line-height: 80%;
+        @include mobile() {
+          display: flex;
+          line-height: 90%;
+        }
+      }
+
+      .heightSmall {
+        @include H5();
+        color: $brick;
+        @include mobile() {
+          margin-left: 3px;
+        }
+      }
+
+      .height, .heightSmall {
+        color: $brick;
+      }
+      .heightText {
+        color: $brick-light;
+      }
+    }
+
+  }
+
+}
+
+
+.sliderSection {
+
+  .slider {
+    padding-top: wv-1460(219px);
+    padding-bottom: wv-1460(100px);
+    position: relative;
+    background-color: $dark-grey;
+    @include mobile() {
+      padding-top: wv-380(108px);
+    }
+
+    svg {
+      path {
+        fill: $light;
+      }
+
+  
+      &:hover {
+        path {
+          fill: $brick;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        * {
+          stroke: $light
+        }
+        &:hover {
+          rect {
+            fill: none;
+            stroke: $brick;
+          }
+  
+          path {
+            stroke: $brick;
+          }
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      &:after {
+        background-color: $dark-grey;
+        width: 2px;
+        @include mobile() {
+          display: none;
+        }
+        @include tablet() {
+          display: none; 
+        }
+      }
+    }
+  }
+  
+}

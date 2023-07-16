@@ -1,0 +1,27 @@
+//@function wv-2400($size-in-px) {
+//  @return $size-in-px / 2400px * 100vw;
+//}
+
+@function wv-1460($size-in-px) {
+  @return $size-in-px / 1460px * 100vw;
+}
+
+@function wv-1200($size-in-px) {
+  @return $size-in-px / 1200px * 100vw;
+}
+
+@function wv-768($size-in-px) {
+  @return $size-in-px / 768px * 100vw;
+}
+
+@function wv-380($size-in-px) {
+  @return $size-in-px / 380px * 100vw;
+}
+
+@function vh-900($size-in-px) {
+  @return calc($size-in-px / (900px) * var(--vh, 1vh) * 100);
+}
+
+@function vh($size-in-px) {
+  @return calc($size-in-px * var(--vh, 1vh));
+}

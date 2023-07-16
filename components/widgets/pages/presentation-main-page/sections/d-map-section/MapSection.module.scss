@@ -1,0 +1,405 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/functions";
+@import "../../../../../../styles/main_page_functions";
+.wrapper {
+  z-index: 41;
+  position: fixed;
+  left: wv-1460(1460px);
+  top:0;
+  width: wv-1460(1460px);
+  height: 100%;
+
+  background-color:$light;
+  &__desc_text {
+    @include CUSTOM_T1();
+    position: absolute;
+    right: wv-1460(690px);
+    bottom: 0;
+    width: min(calc(270px / (1460px) * 100vw), calc(270px / (900px) * var(--vh, 1vh)*100));
+  }
+}
+
+@mixin title() {
+  font-family: $primary-600-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: min(calc(169px / (1460px) * 100vw), calc(169px / (900px) * var(--vh, 1vh)*100));
+  line-height: min(calc(160px / (1460px) * 100vw), calc(160px / (900px) * var(--vh, 1vh)*100));
+  color: $dark-grey;
+  font-variation-settings: 'wdth' 75;
+}
+
+.top_content_wrapper {
+  position: absolute;
+  left: wv-1460(12px);
+  top: vh-900(8px);
+  width: wv-1460(818px);
+
+  &__get_text {
+    @include title();
+    color: $brick;
+
+    position: absolute;
+    left: wv-1460(82px);
+    top: 0;
+    width: wv-1460(340px);
+  }
+  &__from_text {
+    @include title();
+    color: $brick;
+
+    position: absolute;
+    left: wv-1460(948px);
+    top: 0;
+    width: wv-1460(140px);
+    text-align: right;
+  }
+  &__presnya_text {
+    @include title();
+    color: $brick;
+
+    position: absolute;
+    left: 0;
+    top: vh-900(140px);
+    width: wv-1460(418px);
+    text-align: right;
+  }
+  &__main_text {
+    @include title();
+    color: $dark-grey;
+
+    position: absolute;
+    left: wv-1460(980px);
+    top: vh-900(280px);
+    width: wv-1460(470px);
+  }
+
+  &__button{
+    position: absolute;
+    left: wv-1460(8px);
+    top: vh-900(152px);
+    width: wv-1460(180px);
+    min-height: 50px;
+    @include laptop() {
+      width: wv-1200(180px);
+    }
+    @include tablet() {
+      width: wv-768(180px);
+
+    }
+    div{height:100%};
+    //svg{
+    //  width:wv-1460(20px);
+    //  height:wv-1460(20px);
+    //  max-width: 30px;
+    //  max-height: 30px;
+    //  @include laptop() {
+    //    width: wv-1200(20px);
+    //    height:wv-1200(20px);
+    //  }
+    //  @include tablet() {
+    //    width: wv-768(20px);
+    //    height:wv-768(20px);
+    //  }
+    //}
+  }
+}
+.menu_wrapper{
+  @include wrapper;
+  position: fixed;
+  left: wv-1460(1460px);
+  width: wv-1460(140px);
+  border-left:1px solid rgba(57, 61, 70, .2);
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  background-color: $light;
+  z-index: 49;
+  top: 0;
+
+  @include tablet() {
+    padding:0;
+  }
+}
+.menu_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  &:last-child{
+    border-top:1px solid rgba(57, 61, 70, .2);
+  }
+
+  &__link {
+    @include C1();
+    padding-top:wv-1460(16px) ;
+    cursor:pointer;
+    &:hover{
+      color:$brick;
+    }
+  }
+  &__link_close {
+    @include C1();
+    padding-top:wv-1460(16px) ;
+    cursor:pointer;
+    color:$brick;
+  }
+
+  &__svg {
+    width: 31px;
+    height: 31px;
+    margin-top: 13px;
+
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+    button{
+      width: 31px;
+      height: 31px;
+    }
+  }
+}
+.map{
+  z-index: 43;
+  position: fixed;
+  left: wv-1460(1460px);
+  top:0;
+  width: wv-1460(1460px);
+  height: 100%;
+  background-image: url("../../../../../../public/images/main-page/map.svg");
+  background-blend-mode: multiply, normal;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: bottom;
+  background-color: $light;
+  cursor: default;
+  @include tablet() {
+    width: wv-768(768px);
+    background-position: 35%;
+  }
+  @include tablet-p-custom() {
+    background-position: 35%;
+  }
+
+  &__wrapper {
+    position: absolute;
+    left: wv-1460(13px);
+    top: vh-900(10px);
+    width: wv-1460(1290px);
+    height: vh-900(900px);
+    clip-path: inset(0);
+
+    &__full_text{
+      @include title();
+      color: $brick;
+
+      position: absolute;
+      left: wv-1460(-423px);
+      top: 0;
+      width: wv-1460(423px);
+    }
+    &__freedom_text{
+      @include title();
+      color: $brick;
+
+      position: absolute;
+      right: wv-1460(1085px);
+      top: 0;
+      width: wv-1460(500px);
+      text-align: right;
+    }
+    &__locomotiv_text{
+      @include title();
+      color: $dark-grey;
+
+      position: absolute;
+      left: wv-1460(-563px);;
+      top: vh-900(160px);
+      width: wv-1460(862px);
+    }
+  }
+
+
+}
+.panorama{
+  z-index: 44;
+  position: fixed;
+  left: wv-1460(1460px);
+  top:0;
+  width: wv-1460(1460px);
+  height: 100%;
+  background-color: $light;
+
+
+  &__wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: inset(0);
+    cursor: url("/images/location/scrollable-indicator.svg"), pointer;
+
+    @include tablet() {
+      cursor: pointer;
+    }
+
+    &__img {
+      z-index: 45;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: calc((3590px / (900px) * var(--vh, 1vh)*100) + (140px / (1460px) * 100vw));
+      object-fit: contain;
+      object-position: 0;
+    }
+
+    &__buttons_wrapper {
+      z-index: 46;
+      position: absolute;
+      left: wv-1460(20px);
+      top: wv-1460(20px);
+      width: wv-1460(65px);
+      height: wv-1460(30px);
+
+      @include laptop() {
+        left: wv-1200(20px);
+        top: wv-1200(20px);
+        width: wv-1200(85px);
+        height: wv-1200(40px);
+      }
+
+      @include tablet() {
+        left: wv-768(20px);
+        top: wv-768(20px);
+        width: wv-768(65px);
+        height: wv-768(30px);
+      }
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__button {
+      width: wv-1460(30px);
+      height: wv-1460(30px);
+      cursor: pointer;
+
+      @include laptop() {
+        width: wv-1200(40px);
+        height: wv-1200(40px);
+      }
+
+      @include tablet() {
+        width: wv-768(30px);
+        height: wv-768(30px);
+      }
+    }
+  }
+
+}
+.scrollableIndicator {
+  position: absolute;
+  top: wv-1460(262px);
+  right: wv-1460(335px);
+  transition: all 0.8s;
+  z-index:46;
+
+  @include laptop() {
+    top: wv-1200(262px);
+    left: wv-1200(335px);
+  }
+
+  @include tablet() {
+    top: wv-768(100px);
+    left: wv-768(18px);
+  }
+
+  @include mobile() {
+    left: wv-380(18px);
+    top: wv-380(84px);
+  }
+
+  .desktop {
+    @include tablet() {
+      display: none;
+    }
+
+    @include mobile() {
+      display: none;
+    }
+    .svg {
+      width: wv-1460(50px);
+      height: wv-1460(50px);
+
+      @include laptop() {
+        width: wv-1200(50px);
+        height: wv-1200(50px);
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .cursor {
+      position: absolute;
+      bottom: wv-1460(-20px);
+      left: wv-1460(20px);
+
+      @include laptop() {
+        bottom: wv-1200(-20px);
+        left: wv-1200(20px);
+      }
+
+      svg {
+        width: wv-1460(25px);
+        height: wv-1460(25px);
+
+        @include laptop() {
+          width: wv-1200(25px);
+          height: wv-1200(25px);
+        }
+      }
+    }
+  }
+
+  .mobile {
+    display: none;
+
+    @include tablet() {
+      display: block;
+
+      svg {
+        width: wv-768(18px);
+        height: wv-768(14px);
+      }
+    }
+
+    @include mobile() {
+      display: block;
+
+      svg {
+        width: wv-380(18px);
+        height: wv-380(14px);
+      }
+    }
+  }
+
+  &_show {
+    opacity: 1;
+  }
+
+  &_hide {
+    opacity: 0;
+  }
+}

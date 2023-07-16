@@ -1,0 +1,25 @@
+@import "../../../../../styles/vars";
+@import "../../../../../styles/functions";
+
+$transition: all .3s ease;
+
+
+    .iconList {
+      margin-top: wv-1460(176px);
+
+      @include mobile() {
+        margin-top: wv-380(78px);
+      }
+
+      .iconListTitle {
+        @include C1();
+        color: $light;
+        opacity: 0.5;
+        padding-bottom: 28px;  
+        @include mobile() {
+          padding-bottom: 19px;  
+        }    
+      }
+  
+      
+    }
